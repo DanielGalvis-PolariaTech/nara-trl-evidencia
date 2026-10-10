@@ -1,0 +1,25 @@
+{
+  "hora": "2026-10-10T20:24:48.583Z",
+  "antes": [
+    {
+      "id": "umv2ud24i",
+      "email": "trl-qa-20261010-s3-admin@trl-qa.invalid",
+      "status": "Activo",
+      "org": "TRL-QA-20261010"
+    }
+  ],
+  "coincidenciasOrg": 1,
+  "via": "organización",
+  "despues": [
+    {
+      "id": "umv2ud24i",
+      "email": "trl-qa-20261010-s3-admin@trl-qa.invalid",
+      "status": "Inactivo",
+      "org": "TRL-QA-20261010"
+    }
+  ],
+  "paso11": "sí",
+  "paso13": [
+    "trl-qa-20261010-s3-admin@trl-qa.invalid · Inactivo"
+  ]
+}

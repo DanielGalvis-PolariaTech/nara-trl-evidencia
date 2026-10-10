@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>6.19 — Revisión de código del registro de eventos (nara-api 1f04025) · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>6.19 — Revisión de código del registro de eventos (nara-api 1f04025)</h1>
+<p>Diff de referencia: <code>git diff 00f1e6d 1f04025</code> (commit 39a69b0).</p>
+<h2>Qué se agregó</h2>
+<ul>
+<li><code>libs/auth-core/src/session.service.ts</code> → <code>logAccess({action, accountId, email, status, path})</code> escribe un documento en la colección Mongo <code>access_log</code> (id aleatorio, <code>at</code> en ms). Errores silenciados.</li>
+<li><code>apps/auth/src/login/login.service.ts</code>: <code>login_ok</code> (200), <code>login_fail</code> (401), <code>login_locked</code> (429, tanto al bloquear como al rechazar con bloqueo vigente), y <code>login_fail</code> para «Cuenta no disponible».</li>
+<li><code>apps/{ai,ops,people}/src/shared/require-roles.ts</code>: <code>http_401</code> (token inválido o cuenta no cargable) y <code>http_403</code> (rol sin permiso o cambio de clave pendiente).</li>
+<li>Alerta: <code>maybeAlertLoginFails</code> cuenta <code>login_fail</code>+<code>login_locked</code> de los últimos 10 min; con ≥20 agrega una alerta <code>sev: alta</code>, <code>term: login_bruteforce</code> en <code>program_settings.app_state.alerts</code> (una por ventana de 10 min).</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Versiones revisadas y desplegadas (consulta hacia las 13:40, Bogotá) · NARA TRL</title><link rel="stylesheet" href="../../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Versiones revisadas y desplegadas (consulta hacia las 13:40, Bogotá)</h1>
+<table>
+<thead>
+<tr>
+<th>Repo</th>
+<th>Revisado (pedido)</th>
+<th>Desplegado en el momento de la consulta</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>nara-api</td>
+<td>92d7f73 (deploy dep-db578449v7es738r8erg, live 12:22)</td>
+<td><strong>dcef48e</strong> (dep-db583vek1f9s73e53sd0, live 13:21 Bogotá = 18:21Z). 92d7f73 quedó <code>deactivated</code></td>
+<td><code>render-nara.js deploys --limite 3</code> -&gt; <code>render_deploys.json</code></td>
+</tr>
+<tr>
+<td>nara-web</td>
+<td>ce9fc8f (Vercel nara-d0ki89efo, Production, Ready, hace ~1 h)</td>
+<td><strong>3596eeb</strong> (Vercel nara-nn2lbw9b2, Production, hace ~15 min)</td>
+<td><code>npx --no-install vercel ls nara-web --prod -m githubCommitSha=&lt;sha&gt;</code> (solo lectura)</td>
+</tr>
+</tbody></table>
+<ul>
+<li>dcef48e (PR #7, aef796a): Retry-After en 429 y límite de login por IP en el gateway (rate-limit.ts, login.service.ts, auth.proxy.ts, login-ip-limit.ts nuevo, http.ts). No toca staff-app-state.ts, staff.context.ts, teo-conversations.service.ts ni session.service.ts. Se leyó con la API de GitHub (get_commit), no con git local.</li>
+<li>3596eeb (PR #11, eb054a0): alta offline del experto, sync-queue, loading.tsx y Playwright R-04. package.json agrega @playwright/test (dev) y conserva <code>overrides.source-map-js &gt;=1.2.2</code>. No toca IaPanel.tsx ni scripts/export-demo-credenciales-xlsx.mjs.</li>
+<li>Los dos despliegues nuevos ocurrieron entre las 13:20 y las 13:21 (Bogotá), durante la prueba de carga de la sesión 2026-10-10-8.</li>
+<li>CI (GitHub Actions <code>ci.yml</code>): éxito en 92d7f73 (run 38071392161, jobs gitleaks y build-test) y en ce9fc8f (run 38071387255, jobs gitleaks y build-test).</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

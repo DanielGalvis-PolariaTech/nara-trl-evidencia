@@ -1,0 +1,2 @@
+render-nara: Render respondió 400 en GET /metrics/http-latency?startTime=2026-10-10T17%3A36%3A21Z&endTime=2026-10-10T18%3A06%3A21Z&resource=srv-db3rqlqd0e5s73basggg: {"message":"required parameter [quantile] not present"}
+

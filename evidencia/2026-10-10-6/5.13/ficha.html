@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha 5.13 / 6.16 (dependencias) · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha 5.13 / 6.16 (dependencias)</h1>
+<ul>
+<li><strong>Versión:</strong> lockfiles de nara-web 8378cb9 y nara-api 1f04025, copiados con <code>git show</code> a <code>copia-nara-web/</code> y <code>copia-nara-api/</code>.</li>
+<li><strong>Fecha:</strong> 2026-10-10 11:32 (Bogotá).</li>
+<li><strong>Método:</strong> <code>npm audit --package-lock-only</code> (texto y JSON).</li>
+<li><strong>Resultado:</strong><ul>
+<li>nara-web: 0 critical, <strong>6 high</strong>, 2 moderate, 554 dependencias.<ul>
+<li><code>next</code> 16.4.0 ya está fuera del rango vulnerable y <code>xlsx</code> se eliminó.</li>
+<li>5 de las high son de la cadena de eslint (<code>eslint-config-next</code>, <code>@next/eslint-plugin-next</code>, <code>fast-glob</code>, <code>micromatch</code>, <code>braces</code>). Son solo de desarrollo y <code>docs/trl-deps-audit-plan.md</code> las cubre con un plan.</li>
+<li><strong><code>source-map-js</code> 1.2.1 (high, DoS)</strong> llega a producción por <code>next/node_modules/postcss</code> (<code>dev=false</code> en el lockfile). Tiene corrección simple (<code>fixAvailable: true</code>) y el plan no la menciona.</li>
+<li>Nuevas moderate por <code>exceljs</code> → <code>uuid</code> &lt;11.1.1 (producción).</li>
+</ul>
+</li>
+<li>nara-api: 0 critical, 0 high, 20 moderate, 743 dependencias. Sin regresión.</li>
+</ul>
+</li>
+<li><strong>Estado:</strong> 5.13 <strong>Parcial</strong> (una high sin plan) · 6.16 <strong>Pasa</strong> (0 critical e inventario).</li>
+<li><strong>Evidencia:</strong> <code>npm-audit-nara-*.json|.txt</code>, <code>resumen_audit.json</code>.</li>
+<li><strong>Limitaciones:</strong> auditoría del lockfile, no del build desplegado.</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

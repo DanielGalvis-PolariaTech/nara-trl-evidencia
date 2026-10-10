@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha 5.6 (S-1) — regresión · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha 5.6 (S-1) — regresión</h1>
+<ul>
+<li><strong>Versión:</strong> nara-api 1f04025.</li>
+<li><strong>Fecha:</strong> 2026-10-10 11:27 (Bogotá).</li>
+<li><strong>Método:</strong> <code>GET /api/auth/me</code> con el token válido de prueba1.paciente (control) y 4 variantes alteradas: un carácter de la firma, el id de otra cuenta con la misma firma, el vencimiento extendido 10 años y la firma vacía.</li>
+<li><strong>Resultado:</strong> el control da 200 (paciente) y las 4 variantes dan 401 «No autenticado.» (148–161 ms). Las banderas de la cookie siguen bien (<code>HttpOnly; Secure; SameSite=Lax; Max-Age=43200</code>).</li>
+<li><strong>Estado:</strong> <strong>Pasa</strong> (sin regresión).</li>
+<li><strong>Evidencia:</strong> <code>s1-regresion.json</code>, <code>../_prep/logins_por_rol.json</code>.</li>
+<li><strong>Limitaciones:</strong> regresión reducida (sin las variantes firmadas con el secreto de desarrollo).</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

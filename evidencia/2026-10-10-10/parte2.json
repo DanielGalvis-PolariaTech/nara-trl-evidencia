@@ -1,0 +1,50 @@
+{
+  "sin": {
+    "parte21": {
+      "esperado": 401,
+      "status": 401,
+      "ms": 147,
+      "ok": true
+    }
+  },
+  "paciente": {
+    "parte21": {
+      "esperado": 403,
+      "status": 403,
+      "ms": 224,
+      "ok": true
+    }
+  },
+  "experto": {
+    "parte21": {
+      "esperado": 403,
+      "status": 403,
+      "ms": 215,
+      "ok": true
+    }
+  },
+  "clinico": {
+    "parte21": {
+      "esperado": 403,
+      "status": 403,
+      "ms": 192,
+      "ok": true
+    }
+  },
+  "observador": {
+    "parte21": {
+      "esperado": 403,
+      "status": 403,
+      "ms": 220,
+      "ok": true
+    }
+  },
+  "admin": {
+    "parte21": null,
+    "parte22": {
+      "paso9": "sí",
+      "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for getByText('TRL-QA-20261010-S3-admin', { exact: true }).filter({ visible: true }).first()\n",
+      "ok": false
+    }
+  }
+}

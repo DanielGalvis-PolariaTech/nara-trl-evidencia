@@ -1,0 +1,13 @@
+{
+  "personas": 2,
+  "territorios": 0,
+  "cuentas": 1,
+  "alertasAbiertas": [
+    {
+      "id": "a-new-b1990a3a-8ab0-430f-9da9-a35f98d45ea7",
+      "pid": "b1990a3a-8ab0-430f-9da9-a35f98d45ea7",
+      "sev": "info",
+      "status": "open"
+    }
+  ]
+}

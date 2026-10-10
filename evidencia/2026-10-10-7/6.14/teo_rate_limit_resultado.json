@@ -1,0 +1,258 @@
+{
+  "commit_inicio": "1f04025720e8a797c724c187554f8f4789aaaafa",
+  "login": {
+    "status": 200,
+    "at": "2026-10-10T16:54:37.432Z"
+  },
+  "rafaga": [
+    {
+      "n": 1,
+      "at": "2026-10-10T16:54:37.433Z",
+      "status": 400,
+      "ms": 265,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 2,
+      "at": "2026-10-10T16:54:37.698Z",
+      "status": 400,
+      "ms": 196,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 3,
+      "at": "2026-10-10T16:54:37.895Z",
+      "status": 400,
+      "ms": 202,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 4,
+      "at": "2026-10-10T16:54:38.098Z",
+      "status": 400,
+      "ms": 202,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 5,
+      "at": "2026-10-10T16:54:38.301Z",
+      "status": 400,
+      "ms": 194,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 6,
+      "at": "2026-10-10T16:54:38.496Z",
+      "status": 400,
+      "ms": 248,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 7,
+      "at": "2026-10-10T16:54:38.745Z",
+      "status": 400,
+      "ms": 198,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 8,
+      "at": "2026-10-10T16:54:38.943Z",
+      "status": 400,
+      "ms": 198,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 9,
+      "at": "2026-10-10T16:54:39.141Z",
+      "status": 400,
+      "ms": 196,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 10,
+      "at": "2026-10-10T16:54:39.338Z",
+      "status": 400,
+      "ms": 186,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 11,
+      "at": "2026-10-10T16:54:39.525Z",
+      "status": 400,
+      "ms": 198,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 12,
+      "at": "2026-10-10T16:54:39.723Z",
+      "status": 400,
+      "ms": 204,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 13,
+      "at": "2026-10-10T16:54:39.928Z",
+      "status": 400,
+      "ms": 194,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 14,
+      "at": "2026-10-10T16:54:40.122Z",
+      "status": 400,
+      "ms": 212,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 15,
+      "at": "2026-10-10T16:54:40.334Z",
+      "status": 400,
+      "ms": 198,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 16,
+      "at": "2026-10-10T16:54:40.532Z",
+      "status": 400,
+      "ms": 212,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 17,
+      "at": "2026-10-10T16:54:40.745Z",
+      "status": 400,
+      "ms": 198,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 18,
+      "at": "2026-10-10T16:54:40.944Z",
+      "status": 400,
+      "ms": 209,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 19,
+      "at": "2026-10-10T16:54:41.154Z",
+      "status": 400,
+      "ms": 192,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 20,
+      "at": "2026-10-10T16:54:41.346Z",
+      "status": 400,
+      "ms": 192,
+      "error": "Escriba una pregunta.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    },
+    {
+      "n": 21,
+      "at": "2026-10-10T16:54:41.538Z",
+      "status": 429,
+      "ms": 199,
+      "error": "Demasiadas peticiones a TEO. Espere un minuto e intente de nuevo.",
+      "ok": false,
+      "model": null,
+      "provider": null,
+      "retry_after": null
+    }
+  ],
+  "duracion_rafaga_ms": 4306,
+  "conteo": {
+    "400": 20,
+    "429": 1
+  },
+  "espera_ms": 64607,
+  "tras_espera": {
+    "n": 22,
+    "at": "2026-10-10T16:55:46.360Z",
+    "status": 400,
+    "ms": 489,
+    "error": "Escriba una pregunta.",
+    "ok": false,
+    "model": null,
+    "provider": null,
+    "retry_after": null
+  },
+  "commit_fin": "1f04025720e8a797c724c187554f8f4789aaaafa"
+}

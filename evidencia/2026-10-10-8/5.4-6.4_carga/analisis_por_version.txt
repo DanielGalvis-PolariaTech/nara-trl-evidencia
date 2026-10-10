@@ -1,0 +1,36 @@
+## Solo 92d7f73: inicio a deploy_ended de dcef48e (18:06:34-18:21:36Z)
+{"ventana":["2026-10-10T18:06:30Z","2026-10-10T18:21:36Z"],"peticiones":15579,"errores":0,"tasa_error_pct":0,"p50":369,"p90":1265,"p95":1663,"p99":3698,"max":9254,"estados":{"200":15579}}
+## Posible dcef48e (18:21:37-18:23:00Z, bajada de carga)
+{"ventana":["2026-10-10T18:21:37Z","2026-10-10T18:23:00Z"],"peticiones":466,"errores":0,"tasa_error_pct":0,"p50":327,"p90":1196,"p95":1236,"p99":3706,"max":3844,"estados":{"200":466}}
+## Ventana sin mezcla de versiones (web dpl_FVHf + API 92d7f73): 18:06:30-18:20:59Z
+{"ventana":["2026-10-10T18:06:30Z","2026-10-10T18:20:59Z"],"peticiones":14875,"errores":0,"tasa_error_pct":0,"p50":374,"p90":1275,"p95":1678,"p99":3698,"max":9254,"estados":{"200":14875}}
+## Tramo previo al despliegue (18:06:30-18:20:44Z) - nara-api 92d7f73, nara-web dpl_FVHf
+{"ventana":["2026-10-10T18:06:30Z","2026-10-10T18:20:44Z"],"peticiones":14503,"errores":0,"tasa_error_pct":0,"p50":378,"p90":1284,"p95":1695,"p99":3698,"max":9254,"estados":{"200":14503}}
+## Meseta 65 previa al despliegue (18:15:00-18:20:44Z)
+{"ventana":["2026-10-10T18:15:00Z","2026-10-10T18:20:44Z"],"peticiones":8863,"errores":0,"tasa_error_pct":0,"p50":527,"p90":1499,"p95":1874,"p99":3709,"max":5995,"estados":{"200":8863}}
+clinico /api/app-state           n   197 p50 1262 p95 2434 max 3428
+clinico /api/auth/login          n     1 p50 762 p95 762 max 762
+clinico /api/auth/me             n   195 p50 248 p95 811 max 1771
+clinico /api/patients            n   195 p50 393 p95 1086 max 1821
+clinico /api/people              n   197 p50 340 p95 1081 max 2113
+clinico /api/territories         n   197 p50 338 p95 1098 max 2319
+clinico /api/worklists           n   197 p50 313 p95 1076 max 2717
+experto /api/app-state           n   163 p50 1280 p95 2452 max 3404
+experto /api/auth/login          n     1 p50 2319 p95 2319 max 2319
+experto /api/auth/me             n   164 p50 239 p95 844 max 1997
+experto /api/patients            n   163 p50 433 p95 1240 max 2660
+experto /api/people              n   163 p50 423 p95 925 max 1725
+experto /api/territories         n   163 p50 334 p95 954 max 1766
+experto /api/worklists           n   164 p50 306 p95 1074 max 1908
+observador /api/app-state        n   148 p50 1139 p95 1740 max 2746
+observador /api/auth/login       n     1 p50 431 p95 431 max 431
+observador /api/auth/me          n   149 p50 251 p95 805 max 1886
+observador /api/experts          n   147 p50 290 p95 923 max 1914
+observador /api/people           n   148 p50 3717 p95 4741 max 5995
+observador /api/territories      n   148 p50 398 p95 1196 max 1607
+paciente /api/app-state          n  1982 p50 1197 p95 1972 max 3725
+paciente /api/auth/login         n     9 p50 561 p95 1694 max 1694
+paciente /api/auth/me            n  1987 p50 291 p95 1082 max 2601
+paciente /api/patients/me        n  1984 p50 360 p95 1743 max 3108
+## CONTAMINADA por despliegue y reemplazo de instancia (18:20:45-18:22:50Z) - bajada de carga
+{"ventana":["2026-10-10T18:20:45Z","2026-10-10T18:22:50Z"],"peticiones":1542,"errores":0,"tasa_error_pct":0,"p50":329,"p90":1197,"p95":1237,"p99":3694,"max":4059,"estados":{"200":1542}}

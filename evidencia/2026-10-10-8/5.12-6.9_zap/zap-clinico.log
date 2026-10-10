@@ -1,0 +1,108 @@
+No check for updates for over 3 month - add-ons may well be out of date
+Job passiveScan-config set maxAlertsPerRule = 10
+Job passiveScan-config set scanOnlyInScope = true
+Job requestor set url = https://www.proyectonara.com/
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/ingreso
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/inicio
+Job requestor set method = GET
+Job requestor set responseCode = 200
+Job requestor set url = https://www.proyectonara.com/clinico
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/clinico/aprobaciones
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/clinico/crisis
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/clinico/crisis/historial
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/clinico/pacientes
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/personas
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/perfil
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/informes
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/auth/me
+Job requestor set method = GET
+Job requestor set responseCode = 200
+Job requestor set url = https://www.proyectonara.com/api/app-state
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/patients
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/patients/me
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/people
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/territories
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/experts
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/worklists
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/flags
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/assets
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/health
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/health/db
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/accounts
+Job requestor set method = GET
+Job spider set context = nara-clinico
+Job spider set maxDuration = 3
+Job spider set maxChildren = 20
+Job spider set processForm = false
+Job spider set postForm = false
+Job spider set threadCount = 2
+Job passiveScan-wait set maxDuration = 5
+Job report set template = traditional-html
+Job report set reportDir = D:/WORK/NARA/pruebas/evidencia/2026-10-10-8/5.12-6.9_zap
+Job report set reportFile = zap-baseline-clinico.html
+Job report set reportTitle = ZAP baseline pasivo autenticado - NARA - rol clinico
+Job report set template = traditional-json
+Job report set reportDir = D:/WORK/NARA/pruebas/evidencia/2026-10-10-8/5.12-6.9_zap
+Job report set reportFile = zap-baseline-clinico.json
+Job passiveScan-config started
+Job passiveScan-config finished, time taken: 00:00:00
+Job requestor started
+Job requestor requesting URL https://www.proyectonara.com/
+Job requestor requesting URL https://www.proyectonara.com/ingreso
+Job requestor requesting URL https://www.proyectonara.com/inicio
+Job requestor requesting URL https://www.proyectonara.com/clinico
+Job requestor requesting URL https://www.proyectonara.com/clinico/aprobaciones
+Job requestor requesting URL https://www.proyectonara.com/clinico/crisis
+Job requestor requesting URL https://www.proyectonara.com/clinico/crisis/historial
+Job requestor requesting URL https://www.proyectonara.com/clinico/pacientes
+Job requestor requesting URL https://www.proyectonara.com/personas
+Job requestor requesting URL https://www.proyectonara.com/perfil
+Job requestor requesting URL https://www.proyectonara.com/informes
+Job requestor requesting URL https://www.proyectonara.com/api/auth/me
+Job requestor requesting URL https://www.proyectonara.com/api/app-state
+Job requestor requesting URL https://www.proyectonara.com/api/patients
+Job requestor requesting URL https://www.proyectonara.com/api/patients/me
+Job requestor requesting URL https://www.proyectonara.com/api/people
+Job requestor requesting URL https://www.proyectonara.com/api/territories
+Job requestor requesting URL https://www.proyectonara.com/api/experts
+Job requestor requesting URL https://www.proyectonara.com/api/worklists
+Job requestor requesting URL https://www.proyectonara.com/api/flags
+Job requestor requesting URL https://www.proyectonara.com/api/assets
+Job requestor requesting URL https://www.proyectonara.com/api/health
+Job requestor requesting URL https://www.proyectonara.com/api/health/db
+Job requestor requesting URL https://www.proyectonara.com/api/accounts
+Job requestor finished, time taken: 00:00:26
+Job spider started
+Job spider requesting URL https://www.proyectonara.com
+Job spider found 123 URLs
+Job spider finished, time taken: 00:00:15
+Job passiveScan-wait started
+Job passiveScan-wait finished, time taken: 00:00:01
+Job report started
+Job report generated report D:\WORK\NARA\pruebas\evidencia\2026-10-10-8\5.12-6.9_zap\zap-baseline-clinico.html
+Job report finished, time taken: 00:00:00
+Job report started
+Job report generated report D:\WORK\NARA\pruebas\evidencia\2026-10-10-8\5.12-6.9_zap\zap-baseline-clinico.json
+Job report finished, time taken: 00:00:00
+Automation plan succeeded!

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha — 5.4 y 6.4 · Carga a la concurrencia objetivo (65 usuarios) · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha — 5.4 y 6.4 · Carga a la concurrencia objetivo (65 usuarios)</h1>
+<ul>
+<li><strong>ID de prueba:</strong> K6-CARGA-65 (criterios 5.4 y 6.4)</li>
+<li><strong>Fecha y hora:</strong> 2026-10-10, 18:06:34 a 18:22:45 UTC (13:06 a 13:22 Bogotá)</li>
+<li><strong>Ejecutado por:</strong> subagente <code>ejecutor-pruebas-trl</code> (Claude Opus 5.5) desde el portátil de [dato real omitido] (máquina distinta del servidor), k6 2.2.0</li>
+<li><strong>Entorno:</strong> producción tratada como staging. <code>https://www.proyectonara.com</code> (Vercel <code>nara-web</code>, despliegue <code>dpl_FVHfT9wmkA8oZBivBdABMLyUrtcU</code>) → <code>nara-api</code> en Render plan <code>1c-2g</code> (1 CPU / 2 GB, Ohio, instancia <code>…-nl5hq</code>) → Atlas <code>nara</code>.</li>
+<li><strong>Versión evaluada:</strong> <code>nara-api</code> <strong><code>92d7f73</code></strong>. A mitad de la bajada de carga Lucho desplegó <code>nara-api</code> <code>dcef48e</code> (Render <code>dep-db583vek1f9s73e53sd0</code>, 18:20:45–18:21:36Z; <code>/api/health</code> ya respondía <code>dcef48e</code> a las 18:22:11Z) y <code>nara-web</code> <code>dpl_xNipoZa2zjPMm81K74kDN14p33Jn</code> (creado 18:20:32Z). k6 no se detuvo porque el cambio no se vio en vivo. Por decisión de [dato real omitido] la carga no se repite: el veredicto usa solo el <strong>tramo previo al inicio del despliegue de Render (18:06:30–18:20:44Z)</strong>, que contiene la <strong>meseta completa de 65 usuarios (18:15:34–18:20:34Z, 5 min)</strong>. El tramo 18:20:45–18:22:45Z queda declarado como <strong>contaminado</strong>.</li>
+<li><strong>Datos usados:</strong> volumen real de producción (sin conteo del día: no hay lectura autorizada de la base). Las cuentas de prueba ven solo el territorio «Prueba» (10 pacientes; <code>TRL-QA-20261010-clin</code> ve 0).</li>
+<li><strong>Procedimiento:</strong> copia corregida <code>k6_carga_mezcla.js</code> (desviación declarada; el original <code>pruebas/scripts_ajustados/k6_carga.js</code> falla desde la 2.ª iteración, ver <code>original_smoke/k6.log</code>: 10 de 19 peticiones en 401). Mismos escalones (2 min a 26, 5 min en 26, 2 min a 65, 5 min en 65, 2 min a 0), rutas por rol, pausas y umbrales del original. Mezcla: 6 expertos, 7 clínicos (en lugar del administrador, sin cuenta de prueba), 6 observadores y 46 pacientes (<code>prueba1</code>–<code>prueba5</code>). Comando: <code>k6 run --summary-export=resultado_carga.json --out csv=series_carga.csv.gz -e BASE_URL=https://www.proyectonara.com -e VUS_OBJETIVO=65 -e ETIQUETA=carga k6_carga_mezcla.js</code> (claves solo en el entorno del proceso, <code>_herramientas/k6_run.js</code>).</li>
+<li><strong>Resultado:</strong> <strong>5.4 Pasa</strong> (con la desviación del script) sobre <code>92d7f73</code>. <strong>6.4 Parcial (provisional):</strong> cumple los umbrales, pero no es la versión final congelada y las cuentas de prueba no recorren el volumen acordado.</li>
+</ul>
+<h2>Métricas</h2>
+<table>
+<thead>
+<tr>
+<th>Medida</th>
+<th>Corrida completa (k6, mezcla versiones)</th>
+<th><strong>Tramo previo al despliegue (18:06:30–18:20:44Z)</strong></th>
+<th>Meseta 65 VUs previa (18:15:00–18:20:44Z)</th>
+<th>Meseta 26 VUs (18:08–18:12:59Z)</th>
+<th>Umbral</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Peticiones</td>
+<td>16.045</td>
+<td>14.503</td>
+<td>8.863</td>
+<td>3.365</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Errores</td>
+<td>0 (0 %)</td>
+<td>0 (0 %)</td>
+<td>0</td>
+<td>0</td>
+<td>&lt; 1 %</td>
+</tr>
+<tr>
+<td>p50</td>
+<td>365 ms</td>
+<td>378 ms</td>
+<td>527 ms</td>
+<td>324 ms</td>
+<td>—</td>
+</tr>
+<tr>
+<td>p95</td>
+<td>1.647 ms</td>
+<td><strong>1.695 ms</strong></td>
+<td><strong>1.874 ms</strong></td>
+<td>1.219 ms</td>
+<td>&lt; 2.000 ms</td>
+</tr>
+<tr>
+<td>p99</td>
+<td>3.698 ms</td>
+<td>3.698 ms</td>
+<td>3.709 ms</td>
+<td>3.684 ms</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Máximo</td>
+<td>9.254 ms</td>
+<td>9.254 ms</td>
+<td>5.995 ms</td>
+<td>3.864 ms</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Código de salida de k6</td>
+<td>0</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p>p95 por tramos de 30 s en la meseta de 65 (<code>analisis_30s.txt</code>): 2.241, 1.540, 1.466, 1.585, 2.714, 2.062, 2.746, 1.511, 1.470, 1.457 y 1.470 ms (4 de 11 tramos ≥ 2 s). Holgura escasa: la meseta pasa por 126 ms.</p>
+<p>Rutas que más pesan (meseta 65): <code>/api/app-state</code> p50 ≈ 1,2 s en todos los roles (p95 2,43 s en clínico y 2,45 s en experto); <strong><code>/api/people</code> del observador p50 3.717 ms y p95 4.741 ms</strong>, y ya con 26 usuarios p50 3.703 ms (independiente de la carga; responde 389 bytes sin elementos).</p>
+<p>Servidor (Render, <code>../5.5_capacidad/carga_*.json</code>), tramo previo: CPU 0,005–0,010 en reposo y 0,109–0,162 (máx.) de 1 CPU en la meseta; memoria de 350 a 682 MB de 2 GB. Peticiones en Render: hasta 1.597/min en la meseta, todas 200.</p>
+<h2>Tramo contaminado (desviación declarada)</h2>
+<p>18:20:45–18:22:45Z (bajada de 65 a 0): 1.542 peticiones, 0 errores, p95 1.237 ms, máx. 4.059 ms. En ese tramo Render reemplazó la instancia (<code>…-nl5hq</code> termina en 18:22 con 684 MB; <code>…-kf244</code> arranca en 18:22 con 366 MB): es un <strong>reinicio del servicio</strong> por el despliegue. No hubo errores ni cortes observables desde k6 ni desde la sonda de versión. Las cifras de ese tramo no se atribuyen a ninguna versión.</p>
+<h2>Evidencia</h2>
+<p><code>resultado_carga.json</code>, <code>resultado_carga_2026-10-10T18-22-45-190Z.json</code>, <code>k6_carga.log</code>, <code>series_carga.csv.gz</code>, <code>analisis_por_minuto.json</code>, <code>analisis_30s.txt</code>, <code>analisis_mesetas.txt</code>, <code>analisis_por_version.txt</code>, <code>grafica_carga.svg</code>, <code>k6_carga_mezcla.js</code>, <code>original_smoke/</code>, <code>../5.5_capacidad/</code>, <code>../version/vigilancia_version.csv</code>.</p>
+<h2>Limitaciones</h2>
+<ul>
+<li>Script corregido (cookie y mezcla de roles): desviación.</li>
+<li>Generador único (una IP). Las cuentas de prueba ven 10 pacientes (o 0): las listas trabajan con pocos elementos; el volumen acordado (≈ 454 personas) está en la base pero estas cuentas no lo recorren.</li>
+<li>Sin cuenta de administrador en la mezcla.</li>
+<li>Sin latencia del lado del servidor (<code>render-nara.js metricas latencia</code> falla) ni métricas de Atlas.</li>
+</ul>
+<p>Script original sin <code>noCookiesReset</code>; <code>/api/people</code> del observador ≈ 3,7 s; <code>/api/app-state</code> ≈ 1,2 s; métrica de latencia de <code>render-nara.js</code> rota; despliegues durante la prueba.</p>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

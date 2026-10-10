@@ -1,0 +1,197 @@
+{
+  "fecha": "2026-10-10T18:50:49.842Z",
+  "cuentas": [
+    {
+      "rol": "experto",
+      "login_http": 200,
+      "login_ok": true,
+      "login_ms": 961,
+      "rutas": {
+        "/api/patients": {
+          "http": 200,
+          "ms": 502,
+          "elementos": 10,
+          "huella": "a43aeb048cf7c4e9"
+        },
+        "/api/people": {
+          "http": 200,
+          "ms": 372,
+          "elementos": 10,
+          "huella": "d90434ea0be1bb7f"
+        },
+        "/api/territories": {
+          "http": 200,
+          "ms": 371,
+          "elementos": 6,
+          "huella": "566031fb6d942890"
+        },
+        "/api/worklists": {
+          "http": 200,
+          "ms": 338,
+          "elementos": 9,
+          "huella": "ca51e7869118c6b2"
+        },
+        "/api/experts": {
+          "http": 200,
+          "ms": 272,
+          "elementos": 6,
+          "huella": "f3873559b7580762"
+        }
+      }
+    },
+    {
+      "rol": "clinico",
+      "login_http": 200,
+      "login_ok": true,
+      "login_ms": 437,
+      "rutas": {
+        "/api/patients": {
+          "http": 200,
+          "ms": 412,
+          "elementos": 10,
+          "huella": "a43aeb048cf7c4e9"
+        },
+        "/api/people": {
+          "http": 200,
+          "ms": 330,
+          "elementos": 10,
+          "huella": "d90434ea0be1bb7f"
+        },
+        "/api/territories": {
+          "http": 200,
+          "ms": 299,
+          "elementos": 6,
+          "huella": "566031fb6d942890"
+        },
+        "/api/worklists": {
+          "http": 200,
+          "ms": 285,
+          "elementos": 5,
+          "huella": "bc445eeef3aebc0a"
+        },
+        "/api/accounts": {
+          "http": 200,
+          "ms": 279,
+          "elementos": 10,
+          "huella": "dd419d80c1eccac5"
+        }
+      }
+    },
+    {
+      "rol": "observador",
+      "login_http": 200,
+      "login_ok": true,
+      "login_ms": 460,
+      "rutas": {
+        "/api/people": {
+          "http": 200,
+          "ms": 3729,
+          "elementos": null,
+          "huella": "9f8d056d5bb85c5f"
+        },
+        "/api/territories": {
+          "http": 200,
+          "ms": 323,
+          "elementos": 6,
+          "huella": "566031fb6d942890"
+        },
+        "/api/experts": {
+          "http": 200,
+          "ms": 281,
+          "elementos": 6,
+          "huella": "fc8c7d7691b84032"
+        }
+      }
+    },
+    {
+      "rol": "paciente1",
+      "login_http": 200,
+      "login_ok": true,
+      "login_ms": 439,
+      "rutas": {
+        "/api/patients/me": {
+          "http": 200,
+          "ms": 382,
+          "elementos": null,
+          "huella": "0c8fbf0ef223a544"
+        }
+      }
+    },
+    {
+      "rol": "paciente2",
+      "login_http": 200,
+      "login_ok": true,
+      "login_ms": 464,
+      "rutas": {
+        "/api/patients/me": {
+          "http": 200,
+          "ms": 310,
+          "elementos": null,
+          "huella": "0c964fe7293e5154"
+        }
+      }
+    },
+    {
+      "rol": "paciente3",
+      "login_http": 200,
+      "login_ok": true,
+      "login_ms": 435,
+      "rutas": {
+        "/api/patients/me": {
+          "http": 200,
+          "ms": 326,
+          "elementos": null,
+          "huella": "716c8c86b16c9e36"
+        }
+      }
+    },
+    {
+      "rol": "paciente4",
+      "login_http": 200,
+      "login_ok": true,
+      "login_ms": 488,
+      "rutas": {
+        "/api/patients/me": {
+          "http": 200,
+          "ms": 343,
+          "elementos": null,
+          "huella": "2021e79b357c3317"
+        }
+      }
+    },
+    {
+      "rol": "paciente5",
+      "login_http": 200,
+      "login_ok": true,
+      "login_ms": 434,
+      "rutas": {
+        "/api/patients/me": {
+          "http": 200,
+          "ms": 357,
+          "elementos": null,
+          "huella": "52a1ccc4cca4b5b5"
+        }
+      }
+    },
+    {
+      "rol": "soak-clin",
+      "login_http": 200,
+      "login_ok": true,
+      "login_ms": 443,
+      "rutas": {
+        "/api/patients": {
+          "http": 200,
+          "ms": 340,
+          "elementos": 0,
+          "huella": "b8b787685a97a699"
+        },
+        "/api/people": {
+          "http": 200,
+          "ms": 283,
+          "elementos": 0,
+          "huella": "b31ea8e4a1ee68b8"
+        }
+      }
+    }
+  ]
+}

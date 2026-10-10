@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha 6.19 (A09 registro y alertas) · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha 6.19 (A09 registro y alertas)</h1>
+<ul>
+<li><strong>Versión:</strong> nara-api 1f04025.</li>
+<li><strong>Fecha:</strong> 2026-10-10 11:28–11:30 (Bogotá).</li>
+<li><strong>Método:</strong><ul>
+<li>Revisión del código (<code>revision_codigo.md</code>).</li>
+<li>Se provocaron 4 eventos: 1 login fallido de prueba.observador (sin bloqueo), 1 login correcto de la misma cuenta (reinicia el contador), 1 respuesta 401 sin cookie y 1 respuesta 403 del observador.</li>
+<li>Se leyeron los logs de Render con <code>render-nara.js logs</code>.</li>
+</ul>
+</li>
+<li><strong>Resultado:</strong><ul>
+<li>El código ya registra en la colección <code>access_log</code> el login correcto, el fallido y el bloqueado, y los 401/403 de <code>requireRoles</code>. Hay una alerta dentro de la app ante 20 fallos en 10 minutos.</li>
+<li>Los eventos no aparecen en Render (<code>[]</code>). Que hayan quedado en <code>access_log</code> no se verificó, porque habría que leer la base.</li>
+<li>Brechas:<ul>
+<li>no se guarda la IP ni la ruta;</li>
+<li>el correo queda en claro;</li>
+<li>no se registran los 403/404 por alcance de objeto ni el 401 de <code>/auth/me</code>;</li>
+<li>la alerta no sale por correo ni por webhook;</li>
+<li>no hay retención definida;</li>
+<li>cualquier petición anónima escribe un registro en la base.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Estado:</strong> <strong>Parcial</strong>.</li>
+<li><strong>Evidencia:</strong> <code>eventos_provocados.json</code>, <code>render_logs_raw.txt</code>, <code>render_logs_tras_eventos.txt</code>, <code>revision_codigo.md</code>.</li>
+<li><strong>Limitaciones:</strong> sin lectura de la base (el contexto pide no tocarla). No se probó la alerta (habría que provocar 20 fallos).</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

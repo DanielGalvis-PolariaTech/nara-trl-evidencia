@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha 5.10 · S-5: sexto intento con la clave correcta y fin del bloqueo · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha 5.10 · S-5: sexto intento con la clave correcta y fin del bloqueo</h1>
+<ul>
+<li><strong>ID de prueba:</strong> 5.10 (S-5, caso T-02)</li>
+<li><strong>Fecha y hora:</strong> 2026-10-10 11:54:05 a 12:09:21 (UTC-5)</li>
+<li><strong>Ejecutado por:</strong> subagente <code>ejecutor-pruebas-trl</code></li>
+<li><strong>Entorno:</strong> API directa <code>https://nara-api-wyvw.onrender.com/api/auth/login</code>. Commit de <code>/api/health</code> al inicio y al final de cada fase (bloqueo, sondeo, fin): <code>1f04025720e8a797c724c187554f8f4789aaaafa</code> (sin cambio).</li>
+<li><strong>Datos usados:</strong> la cuenta del soak <code>TRL-QA-20261010-clin</code> (<code>trl-qa-20261010.clinico@nara.com</code>). La clave se leyó al ejecutar desde <code>soak_prod.local</code> y no se escribió en ningún archivo. Correo inexistente con prefijo: <code>trl-qa-20261010-noexiste-s5@nara.com</code>.</li>
+<li><strong>Procedimiento:</strong> script <code>s5_login.js</code>, fases <code>bloqueo</code> (5 claves incorrectas, la 6.ª correcta y 1 intento con el correo inexistente), <code>sondeo</code> (clave correcta a los 14 min 35 s del 5.º fallo) y <code>fin</code> (clave correcta a los 15 min 14 s).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Hora (UTC-5)</th>
+<th>Intento</th>
+<th>HTTP</th>
+<th>Mensaje</th>
+<th>ms</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>11:54:05.397</td>
+<td>clave incorrecta</td>
+<td>401</td>
+<td>Correo o contraseña incorrectos.</td>
+<td>397</td>
+</tr>
+<tr>
+<td>2</td>
+<td>11:54:05.796</td>
+<td>clave incorrecta</td>
+<td>401</td>
+<td>Correo o contraseña incorrectos.</td>
+<td>336</td>
+</tr>
+<tr>
+<td>3</td>
+<td>11:54:06.133</td>
+<td>clave incorrecta</td>
+<td>401</td>
+<td>Correo o contraseña incorrectos.</td>
+<td>391</td>
+</tr>
+<tr>
+<td>4</td>
+<td>11:54:06.524</td>
+<td>clave incorrecta</td>
+<td>401</td>
+<td>Correo o contraseña incorrectos.</td>
+<td>341</td>
+</tr>
+<tr>
+<td>5</td>
+<td>11:54:06.866</td>
+<td>clave incorrecta</td>
+<td><strong>429</strong></td>
+<td>Demasiados intentos. Espere unos minutos e intente de nuevo.</td>
+<td>564</td>
+</tr>
+<tr>
+<td>6</td>
+<td>11:54:07.431</td>
+<td><strong>clave correcta</strong></td>
+<td><strong>429</strong></td>
+<td>Demasiados intentos. Espere unos minutos e intente de nuevo.</td>
+<td>189</td>
+</tr>
+<tr>
+<td>—</td>
+<td>11:54:07.620</td>
+<td>correo inexistente (1 intento)</td>
+<td>401</td>
+<td>Correo o contraseña incorrectos.</td>
+<td>341</td>
+</tr>
+<tr>
+<td>sondeo</td>
+<td>12:08:41.533</td>
+<td>clave correcta (14 min 35 s)</td>
+<td>429</td>
+<td>Demasiados intentos. Espere unos minutos e intente de nuevo.</td>
+<td>454</td>
+</tr>
+<tr>
+<td>fin</td>
+<td>12:09:20.673</td>
+<td>clave correcta (15 min 14 s)</td>
+<td><strong>200</strong></td>
+<td>— (<code>ok: true</code>, cookie de sesión presente; no se guardó)</td>
+<td>493</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>Resultado:</strong> <strong>Pasa.</strong><ul>
+<li>El 6.º intento, con la clave correcta, no entra (429).</li>
+<li>El mensaje de una clave incorrecta es idéntico al de un correo inexistente («Correo o contraseña incorrectos.»), y los tiempos son parecidos (336-397 ms frente a 341 ms; muestra pequeña).</li>
+<li>El bloqueo sigue vigente a los 14 min 35 s y termina solo: a los 15 min 14 s del 5.º fallo, la clave correcta entra (200).</li>
+</ul>
+</li>
+<li><strong>Métricas:</strong> duración del bloqueo observada entre 14 min 35 s (todavía bloqueada) y 15 min 14 s (ya libre); la definida es 15 min.</li>
+<li><strong>Evidencia adjunta:</strong> <code>s5_bloqueo_1791651248117.json</code>, <code>s5_sondeo_1791652122147.json</code>, <code>s5_fin_1791652161515.json</code>, <code>s5_login.js</code>.</li>
+<li><strong>Limitaciones declaradas:</strong> no se probó el bloqueo con 5 intentos sobre el correo inexistente (solo 1 intento, como pedía el contexto). Por eso no se verificó en ejecución que el 429 del correo inexistente sea idéntico, aunque el código cuenta igual a los dos. No se probó el límite por IP (no existe según el código). La comparación de tiempos tiene n = 1 para el correo inexistente. El 429 no trae <code>Retry-After</code>. La guía pide la evidencia en <code>seguridad/s5-intentos-login.md</code>; está en esta carpeta.</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

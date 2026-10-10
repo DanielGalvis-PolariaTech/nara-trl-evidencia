@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha — 5.12 y 6.9 · ZAP baseline PASIVO autenticado por rol · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha — 5.12 y 6.9 · ZAP baseline PASIVO autenticado por rol</h1>
+<ul>
+<li><strong>ID de prueba:</strong> ZAP-BASELINE-PASIVO (criterios 5.12 y 6.9)</li>
+<li><strong>Fecha y hora:</strong> 2026-10-10, 17:55 a 18:03 UTC (12:55 a 13:03 Bogotá)</li>
+<li><strong>Ejecutado por:</strong> subagente <code>ejecutor-pruebas-trl</code> (Claude Opus 5.5), Claude Code, desde el portátil de [dato real omitido]</li>
+<li><strong>Entorno:</strong> producción tratada como staging. <code>https://www.proyectonara.com</code> (Vercel <code>nara-web</code>, despliegue de producción <code>dpl_FVHfT9wmkA8oZBivBdABMLyUrtcU</code>, creado 12:21 Bogotá; commit no expuesto por la CLI: <code>main</code> de <code>nara-web</code> estaba en <code>ce9fc8f</code> según <code>git ls-remote</code>) → <code>nara-api</code> <strong><code>92d7f73</code></strong> (<code>/api/health</code> antes y después: <code>92d7f73</code>).</li>
+<li><strong>Herramienta:</strong> OWASP ZAP 2.17.0 portable, Automation Framework (<code>-cmd -autorun</code>), Java 17. Directorio de inicio temporal (<code>-dir</code>, fuera del repo).</li>
+<li><strong>Datos usados:</strong> cuentas <code>prueba.experto</code>, <code>prueba.clinico</code>, <code>prueba.observador</code>, <code>prueba1.paciente</code> (territorio «Prueba»). No hay cuenta de administrador de prueba.</li>
+<li><strong>Procedimiento:</strong> por rol, <code>_herramientas/zap_rol.js</code> inicia sesión por la API pública, y lanza ZAP con la cookie <code>nara_sid</code> inyectada por la regla 0 del replacer (<code>-config</code>, nunca en archivos). Plan <code>plan-&lt;rol&gt;.yaml</code> (generado por <code>generar_plan.js</code>): <code>passiveScan-config</code> → <code>requestor</code> (GET de la raíz, <code>/ingreso</code>, las pantallas del rol y 13 rutas GET de la API, con aserción de <code>200</code> en la primera pantalla del rol para comprobar que la sesión es válida) → <code>spider</code> (3 min máx., <strong>sin enviar formularios</strong>, sin POST) → <code>passiveScan-wait</code> → informes HTML y JSON. Excluidos: <code>logout|salir|cerrar-sesion</code>, <code>/api/teo</code> y <code>/api/auth/login</code>. <strong>No hay job <code>activeScan</code></strong>.</li>
+<li><strong>Resultado:</strong> <strong>Parcial</strong> (ver abajo).</li>
+</ul>
+<h2>Alertas por rol</h2>
+<table>
+<thead>
+<tr>
+<th>Rol</th>
+<th>High</th>
+<th>Medium</th>
+<th>Low</th>
+<th>Informational</th>
+<th>URLs del spider</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Experto de campo</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>4</td>
+<td>115</td>
+</tr>
+<tr>
+<td>Clínico</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>4</td>
+<td>123</td>
+</tr>
+<tr>
+<td>Observador</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>4</td>
+<td>118</td>
+</tr>
+<tr>
+<td>Paciente</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>4</td>
+<td>130</td>
+</tr>
+<tr>
+<td>Administrador</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>No hay cuenta de prueba</td>
+</tr>
+</tbody></table>
+<p>Medium (las mismas en los 4 roles):</p>
+<ul>
+<li>10055 CSP <code>script-src &#39;unsafe-inline&#39;</code> (confianza alta), en todas las pantallas.</li>
+<li>10055 CSP <code>style-src &#39;unsafe-inline&#39;</code> (confianza alta).</li>
+<li>10098 Cross-Domain Misconfiguration: las pantallas HTML responden <code>Access-Control-Allow-Origin: *</code>. Verificación manual (<code>cors_origen_ajeno.jsonl</code>): las rutas <code>/api/*</code> <strong>no</strong> devuelven <code>Access-Control-Allow-Origin</code> a un origen ajeno (con cookie), así que el navegador no deja leer datos de la API desde otro sitio; el <code>*</code> afecta solo al HTML de las pantallas (sin datos personales en el HTML inicial).</li>
+</ul>
+<p>Informational: 10027 comentarios sospechosos en chunks JS de terceros (falsos positivos: <code>query</code>, <code>from</code> en código minificado), 10109, 10015 (<code>Cache-Control: public, max-age=0, must-revalidate</code> en pantallas autenticadas), 10050.</p>
+<h2>Umbrales</h2>
+<ul>
+<li>5.12: informe contra versión congelada → <strong>no</strong>: <code>92d7f73</code> no es la versión final (Lucho sigue desplegando). 0 High → <strong>sí</strong>. Medium anotadas con plan → <strong>no</strong> hay plan escrito en el proyecto (el reporte 2026-10-10-4 solo registra la CSP como Info).</li>
+<li>6.9: 5 informes, uno por rol → <strong>no</strong>: 4 de 5 (falta administrador). 0 High en cada uno → sí. Medium con plan → no.</li>
+</ul>
+<h2>Evidencia</h2>
+<p><code>zap-baseline-&lt;rol&gt;.html</code> y <code>.json</code>, <code>zap-&lt;rol&gt;.log</code>, <code>plan-&lt;rol&gt;.yaml</code>, <code>generar_plan.js</code>, <code>cors_origen_ajeno.jsonl</code>; script de lanzamiento <code>../_herramientas/zap_rol.js</code>.</p>
+<h2>Limitaciones</h2>
+<ul>
+<li>Spider clásico (sin JavaScript): las pantallas del SPA solo se ven como HTML inicial; las llamadas a la API se cubren con la lista explícita de 13 GET. No se probó el Ajax spider (memoria del portátil).</li>
+<li>Las dos primeras corridas del rol experto (17:55 y 17:57 UTC) <strong>no quedaron autenticadas</strong>: la sustitución <code>${ZAP_SID}</code> del job <code>replacer</code> del Automation Framework no se aplicó y ZAP envió la cookie literal (la aserción dio 307 en <code>/inicio</code> y 401 en <code>/api/auth/me</code>). Sus informes se sobrescribieron con la tercera corrida, que sí quedó autenticada (sin avisos de aserción). Efecto lateral: esas dos corridas usaron el directorio por defecto <code>%USERPROFILE%\ZAP</code> y dejaron en <code>config.xml</code> dos reglas del replacer <strong>activas</strong> llamadas «cookie de sesion del rol» (valor literal <code>nara_sid=${ZAP_SID}</code>, sin secreto). Hay que desactivarlas o borrarlas a mano antes de usar ZAP con ese perfil; el agente no puede editar archivos fuera de la evidencia.</li>
+<li>Es solo pasivo. El escaneo activo de lectura se registra aparte (sección «ZAP activo» abajo, si se ejecuta).</li>
+</ul>
+<p>H-ZAP (CSP <code>unsafe-inline</code> y <code>ACAO: *</code> en HTML, Medium sin plan) — ver reporte.</p>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

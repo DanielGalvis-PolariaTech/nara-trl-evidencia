@@ -1,0 +1,50 @@
+{
+  "fecha": "2026-10-10T19:55:42.620Z",
+  "etiqueta": "antes_de_cerrar_alertas",
+  "personasActivasConPrefijo": [],
+  "pacientesConPrefijoEnPatients": [],
+  "territoriosConPrefijo": [
+    {
+      "name": "TRL-QA-E2E-20261010-Terr-442498",
+      "active": false
+    }
+  ],
+  "cuentasTrlQa": [
+    {
+      "id": "umv2t1340",
+      "email": "trl-qa+obs442498@trl-qa.invalid",
+      "status": "Inactivo",
+      "role": "observador"
+    },
+    {
+      "id": "umv2t52io",
+      "email": "trl-qa+ruta666105@trl-qa.invalid",
+      "status": "Inactivo",
+      "role": "paciente"
+    }
+  ],
+  "alertasDePersonasDeLaSuite": [
+    {
+      "id": "a-new-b1990a3a-8ab0-430f-9da9-a35f98d45ea7",
+      "pid": "b1990a3a-8ab0-430f-9da9-a35f98d45ea7",
+      "sev": "info",
+      "status": "open",
+      "tipo": null
+    },
+    {
+      "id": "a-new-1abe43b8-1cf3-40d3-ac8d-2becfbcbd0b2",
+      "pid": "1abe43b8-1cf3-40d3-ac8d-2becfbcbd0b2",
+      "sev": "info",
+      "status": "open",
+      "tipo": null
+    },
+    {
+      "id": "a-new-ef55c650-f631-4bae-a7c2-47944edb171e",
+      "pid": "ef55c650-f631-4bae-a7c2-47944edb171e",
+      "sev": "info",
+      "status": "open",
+      "tipo": null
+    }
+  ],
+  "totalAlertasEnAppState": 9
+}

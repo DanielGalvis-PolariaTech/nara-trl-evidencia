@@ -1,0 +1,243 @@
+{
+  "nombre": "TRL-QA-20261010-P9 48351",
+  "correo": "trl-qa+20261010-p948351@trl-qa.invalid",
+  "serie": [
+    {
+      "seg": 1,
+      "id": "n1791613652863",
+      "code": "BUC-1209",
+      "estado": "Crisis",
+      "visita": true,
+      "alertas": [
+        "a-n1791613652863/crisis/PHQ-9 pregunta 9 > 0"
+      ],
+      "crisisLog": 1
+    },
+    {
+      "seg": 5,
+      "id": "n1791613652863",
+      "code": "BUC-1209",
+      "estado": "Crisis",
+      "visita": true,
+      "alertas": [
+        "a-n1791613652863/crisis/PHQ-9 pregunta 9 > 0"
+      ],
+      "crisisLog": 1
+    },
+    {
+      "seg": 15,
+      "id": "n1791613652863",
+      "code": "BUC-1209",
+      "estado": "Crisis",
+      "visita": true,
+      "alertas": [
+        "a-n1791613652863/crisis/PHQ-9 pregunta 9 > 0"
+      ],
+      "crisisLog": 1
+    },
+    {
+      "seg": 30,
+      "id": "n1791613652863",
+      "code": "BUC-1209",
+      "estado": "Crisis",
+      "visita": true,
+      "alertas": [
+        "a-n1791613652863/crisis/PHQ-9 pregunta 9 > 0"
+      ],
+      "crisisLog": 1
+    },
+    {
+      "seg": 45,
+      "id": "n1791613652863",
+      "code": "BUC-1209",
+      "estado": "Crisis",
+      "visita": true,
+      "alertas": [
+        "a-n1791613652863/crisis/PHQ-9 pregunta 9 > 0"
+      ],
+      "crisisLog": 1
+    }
+  ],
+  "escrituras": [
+    {
+      "t": 1791613649056,
+      "m": "POST",
+      "u": "/api/auth/login",
+      "alerts": false,
+      "alertaP9": false,
+      "consents": false,
+      "status": "",
+      "msDesdeP9": -6537,
+      "msDesdeGuardar": -11456
+    },
+    {
+      "t": 1791613649161,
+      "http": 200,
+      "u": "/api/auth/login",
+      "msDesdeP9": -6432,
+      "msDesdeGuardar": -11351
+    },
+    {
+      "t": 1791613650135,
+      "m": "PUT",
+      "u": "/api/app-state",
+      "alerts": true,
+      "alertaP9": false,
+      "consents": true,
+      "status": "open",
+      "msDesdeP9": -5458,
+      "msDesdeGuardar": -10377
+    },
+    {
+      "t": 1791613650152,
+      "http": 200,
+      "u": "/api/app-state",
+      "msDesdeP9": -5441,
+      "msDesdeGuardar": -10360
+    },
+    {
+      "t": 1791613652310,
+      "m": "PATCH",
+      "u": "/api/accounts/me",
+      "alerts": false,
+      "alertaP9": false,
+      "consents": false,
+      "status": "",
+      "msDesdeP9": -3283,
+      "msDesdeGuardar": -8202
+    },
+    {
+      "t": 1791613652324,
+      "http": 200,
+      "u": "/api/accounts/me",
+      "msDesdeP9": -3269,
+      "msDesdeGuardar": -8188
+    },
+    {
+      "t": 1791613652889,
+      "m": "POST",
+      "u": "/api/people",
+      "alerts": false,
+      "alertaP9": false,
+      "consents": false,
+      "status": "",
+      "msDesdeP9": -2704,
+      "msDesdeGuardar": -7623
+    },
+    {
+      "t": 1791613652889,
+      "m": "POST",
+      "u": "/api/worklists",
+      "alerts": false,
+      "alertaP9": false,
+      "consents": false,
+      "status": "programada",
+      "msDesdeP9": -2704,
+      "msDesdeGuardar": -7623
+    },
+    {
+      "t": 1791613652901,
+      "http": 201,
+      "u": "/api/worklists",
+      "msDesdeP9": -2692,
+      "msDesdeGuardar": -7611
+    },
+    {
+      "t": 1791613652902,
+      "http": 200,
+      "u": "/api/people",
+      "msDesdeP9": -2691,
+      "msDesdeGuardar": -7610
+    },
+    {
+      "t": 1791613655643,
+      "m": "POST",
+      "u": "/api/patients",
+      "alerts": false,
+      "alertaP9": false,
+      "consents": false,
+      "status": "Crisis",
+      "msDesdeP9": 50,
+      "msDesdeGuardar": -4869
+    },
+    {
+      "t": 1791613655652,
+      "http": 403,
+      "u": "/api/patients",
+      "msDesdeP9": 59,
+      "msDesdeGuardar": -4860
+    },
+    {
+      "t": 1791613656093,
+      "m": "PUT",
+      "u": "/api/app-state",
+      "alerts": true,
+      "alertaP9": true,
+      "consents": true,
+      "status": "new",
+      "msDesdeP9": 500,
+      "msDesdeGuardar": -4419
+    },
+    {
+      "t": 1791613656108,
+      "http": 200,
+      "u": "/api/app-state",
+      "msDesdeP9": 515,
+      "msDesdeGuardar": -4404
+    },
+    {
+      "t": 1791613660490,
+      "m": "POST",
+      "u": "/api/people",
+      "alerts": false,
+      "alertaP9": false,
+      "consents": false,
+      "status": "Crisis",
+      "msDesdeP9": 4897,
+      "msDesdeGuardar": -22
+    },
+    {
+      "t": 1791613660490,
+      "m": "POST",
+      "u": "/api/worklists",
+      "alerts": false,
+      "alertaP9": false,
+      "consents": false,
+      "status": "crisis",
+      "msDesdeP9": 4897,
+      "msDesdeGuardar": -22
+    },
+    {
+      "t": 1791613660494,
+      "http": 200,
+      "u": "/api/people",
+      "msDesdeP9": 4901,
+      "msDesdeGuardar": -18
+    },
+    {
+      "t": 1791613660504,
+      "http": 201,
+      "u": "/api/worklists",
+      "msDesdeP9": 4911,
+      "msDesdeGuardar": -8
+    },
+    {
+      "t": 1791613661056,
+      "m": "PUT",
+      "u": "/api/app-state",
+      "alerts": true,
+      "alertaP9": true,
+      "consents": true,
+      "status": "new",
+      "msDesdeP9": 5463,
+      "msDesdeGuardar": 544
+    },
+    {
+      "t": 1791613661071,
+      "http": 200,
+      "u": "/api/app-state",
+      "msDesdeP9": 5478,
+      "msDesdeGuardar": 559
+    }
+  ]
+}

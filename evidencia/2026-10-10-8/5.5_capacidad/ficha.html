@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha — 5.5 · Capacidad base y recursos · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha — 5.5 · Capacidad base y recursos</h1>
+<ul>
+<li><strong>ID de prueba:</strong> CAPACIDAD-BASE-01 (criterio 5.5)</li>
+<li><strong>Fecha y hora:</strong> 2026-10-10, 17:36 a 19:00 UTC (métricas de Render antes, durante y después de la carga y el estrés)</li>
+<li><strong>Ejecutado por:</strong> subagente <code>ejecutor-pruebas-trl</code> (Claude Opus 5.5), <code>render-nara.js metricas</code> (solo lectura)</li>
+<li><strong>Entorno y tamaño:</strong> Render <code>nara-api</code> plan <strong><code>1c-2g</code> (1 CPU / 2 GB)</strong>, Ohio, una instancia. Vercel <code>nara-web</code> delante. Atlas <code>nara</code> (plan no documentado, sin métricas).</li>
+<li><strong>Versiones:</strong> la capacidad con la mezcla realista se evalúa con el <strong>tramo de la carga previo al despliegue (18:06:30–18:20:44Z, <code>nara-api</code> <code>92d7f73</code>, instancia <code>…-nl5hq</code>)</strong>. El estrés y la carga de recuperación quedaron enteros sobre <strong><code>dcef48e</code></strong> (instancia <code>…-kf244</code>, desde 18:22Z). Los dos números de capacidad no son de la misma versión.</li>
+<li><strong>Resultado:</strong> <strong>Parcial</strong> — hay número de capacidad y gráficas del servidor, pero <strong>no hay gráficas de la base de datos</strong> (sin acceso a Atlas) y la latencia del lado del servidor no se pudo leer.</li>
+</ul>
+<h2>Capacidad base (usuarios simultáneos que cumplen p95 &lt; 2 s y errores &lt; 1 %)</h2>
+<table>
+<thead>
+<tr>
+<th>Perfil</th>
+<th>Versión</th>
+<th>Capacidad</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mezcla realista (6 expertos, 7 clínicos, 6 observadores, 46 pacientes; incluye <code>/api/app-state</code>)</td>
+<td><code>92d7f73</code></td>
+<td><strong>65 usuarios, al límite</strong>: meseta de 5 min a 65 antes del despliegue, p95 1.874 ms, 0 errores; 4 de 11 tramos de 30 s con p95 ≥ 2 s</td>
+<td><code>../5.4-6.4_carga/analisis_por_version.txt</code>, <code>analisis_30s.txt</code></td>
+</tr>
+<tr>
+<td>La misma mezcla, meseta de 3 min</td>
+<td><code>dcef48e</code></td>
+<td>65 usuarios: p95 1.481 ms, 0 errores</td>
+<td><code>../6.6_recuperacion/analisis_meseta.txt</code></td>
+</tr>
+<tr>
+<td>Clínico, 3 rutas ligeras (script de estrés)</td>
+<td><code>dcef48e</code></td>
+<td><strong>≈ 111 usuarios</strong> (p95 1.577 ms con 111; 2.122 ms con 127)</td>
+<td><code>../6.5_estres/analisis_30s.txt</code></td>
+</tr>
+</tbody></table>
+<p>Throughput máximo de la API: ≈ 55 peticiones/s (3.300–3.380/min en Render), plano desde ≈ 277 VUs.</p>
+<h2>Recursos (Render)</h2>
+<table>
+<thead>
+<tr>
+<th>Momento</th>
+<th>Versión</th>
+<th>CPU (fracción de 1 CPU)</th>
+<th>Memoria</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Línea base 17:36–18:06Z</td>
+<td><code>92d7f73</code></td>
+<td>0,0002–0,015</td>
+<td>350–370 MB</td>
+</tr>
+<tr>
+<td>Carga, meseta 26 VUs</td>
+<td><code>92d7f73</code></td>
+<td>0,055–0,085</td>
+<td>410–518 MB</td>
+</tr>
+<tr>
+<td>Carga, meseta 65 VUs (18:15–18:20Z)</td>
+<td><code>92d7f73</code></td>
+<td>0,109–0,162</td>
+<td>526–682 MB</td>
+</tr>
+<tr>
+<td>Despliegue (18:21–18:23Z)</td>
+<td>cambio</td>
+<td>instancia nueva 0,063 → 0,002</td>
+<td><code>…-nl5hq</code> 684 MB → <code>…-kf244</code> 366–455 MB</td>
+</tr>
+<tr>
+<td>Estrés, 111–344 VUs</td>
+<td><code>dcef48e</code></td>
+<td>0,12–0,218 (máx.)</td>
+<td>489–643 MB</td>
+</tr>
+<tr>
+<td>Tras el estrés (18:47–18:51Z)</td>
+<td><code>dcef48e</code></td>
+<td>0,007–0,010</td>
+<td>583 → 493 MB (baja sola)</td>
+</tr>
+<tr>
+<td>Carga de recuperación 65 VUs</td>
+<td><code>dcef48e</code></td>
+<td>0,075–0,186</td>
+<td>526–694 MB</td>
+</tr>
+</tbody></table>
+<p>Ni la CPU ni la memoria de Render se acercan a su límite cuando la latencia ya pasa de 2 s: el cuello no es el cómputo de Render (ver 6.5).</p>
+<h2>Evidencia</h2>
+<p><code>linea_base_{cpu,memoria,peticiones}.json</code>, <code>linea_base_latencia.json</code> (error 400 de Render: falta <code>quantile</code>), <code>carga_*.json</code>, <code>estres_*.json</code>, <code>despues_*.json</code>; gráficas <code>../5.4-6.4_carga/grafica_carga.svg</code> y <code>../6.5_estres/grafica_estres.svg</code>.</p>
+<h2>Limitaciones</h2>
+<ul>
+<li>Sin métricas de Atlas (conexiones, operaciones, CPU de la base): no se cumple «gráficas de la base».</li>
+<li><code>render-nara.js metricas latencia</code> no funciona (Render exige <code>quantile</code>); la latencia es solo la del cliente (k6).</li>
+<li>Generador único en red doméstica; versiones distintas entre carga y estrés.</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha · 5.3 ★, 6.1 ★ y 6.6 ★ · Suite e2e en producción sin alertas · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha · 5.3 ★, 6.1 ★ y 6.6 ★ · Suite e2e en producción sin alertas</h1>
+<ul>
+<li><strong>Fecha y hora:</strong> 2026-10-10, de 14:36 a 15:00 (Bogotá); de 19:36 a 20:00 UTC.</li>
+<li><strong>Ejecutado por:</strong> subagente <code>ejecutor-pruebas-trl</code>, desde el portátil de pruebas (una máquina distinta del servidor).</li>
+<li><strong>Entorno:</strong> producción tratada como staging. Web <code>https://www.proyectonara.com</code> (Vercel <code>nara-nn2lbw9b2</code>, <code>main</code> = <code>3596eeb</code> según [dato real omitido]). API <code>https://nara-api-wyvw.onrender.com</code>, commit <code>dcef48e80fab145ca614deb2d38daf23a6b799f9</code> (Render <code>dep-db583vek1f9s73e53sd0</code>). La versión no cambió entre el inicio y el final del bloque (<code>../versiones.txt</code>).</li>
+<li><strong>Versión:</strong> vigente <code>dcef48e</code>/<code>3596eeb</code>, <strong>no confirmada como final</strong>.</li>
+<li><strong>Comando:</strong> <code>herramientas\qa\laboratorio\correr_e2e_prod.ps1</code>, sin <code>-Alertas</code>. Evidencia en <code>pruebas\evidencia\2026-10-10-e2e-prod\</code>.</li>
+<li><strong>Datos usados:</strong> cuentas <code>prueba.*</code> del territorio «Prueba». La suite crea sus datos con <code>TRL-QA-E2E-20261010-</code>.</li>
+</ul>
+<h2>Corridas</h2>
+<table>
+<thead>
+<tr>
+<th>Corrida</th>
+<th>Hora (Bogotá)</th>
+<th>Resultado</th>
+<th>Carpeta</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2 (completa)</td>
+<td>14:41–14:50</td>
+<td>42 casos: 35 pasan, 3 fallan y 4 se omiten (T-03, S-1 vencido, S-5 con bloqueo de cuenta y C-03, todos por diseño en producción)</td>
+<td>raíz: <code>salida.txt</code>, <code>playwright-report\</code>, <code>test-results\</code></td>
+</tr>
+<tr>
+<td>3 (<code>-Grep</code>, paciente)</td>
+<td>14:53</td>
+<td>T-01 paciente y 4.4 pasan con <code>prueba5.paciente</code> (Activo)</td>
+<td><code>repeticion_paciente_prueba5\</code></td>
+</tr>
+</tbody></table>
+<p>Cambios en la suite (<code>pruebas/scripts_ajustados/e2e.spec.js</code>):</p>
+<ul>
+<li>S-5: espera 401 en los intentos 1 a 4 y 429 con «Demasiados intentos…» en el 5.º y el 6.º.</li>
+<li>Variable opcional <code>E2E_PACIENTE_EMAIL</code> para elegir la cuenta paciente.</li>
+</ul>
+<p>Ninguna aserción se relajó.</p>
+<h2>Los 5 flujos (4.4 a 4.8)</h2>
+<table>
+<thead>
+<tr>
+<th>Flujo</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4.5 Experto</td>
+<td>Pasa (19,3 s), sin errores de consola ni de red</td>
+</tr>
+<tr>
+<td>4.6 Clínico</td>
+<td>Pasa (35,7 s). <code>/clinico/pacientes/&lt;id&gt;</code> abre con el <code>id</code> de <code>/api/people</code></td>
+</tr>
+<tr>
+<td>4.7 Administrador</td>
+<td>Pasa (1,1 min)</td>
+</tr>
+<tr>
+<td>4.8 Observador</td>
+<td>Pasa (19,2 s)</td>
+</tr>
+</tbody></table>
+<h2>Puntos de revisión del plan</h2>
+<ul>
+<li><strong>(a)</strong> <code>/clinico/pacientes/&lt;id&gt;</code> abre con el <code>id</code> de <code>/api/people</code>: <strong>sí</strong> (4.6 pasa).</li>
+<li><strong>(b)</strong> La ficha clínica de una persona recién evaluada y sin aprobar muestra «Ruta asignada»: <strong>sí</strong> (4.6, C-02). En cambio, el paciente sin aprobar no ve servicios (<code>prueba1</code>).</li>
+<li><strong>(c)</strong> Un 401 del login trae el mensaje en <code>error</code> a través del gateway: <strong>sí</strong>. Intentos 1 a 4: «Correo o contraseña incorrectos.». 5.º y 6.º: 429 con «Demasiados intentos. Espere unos minutos e intente de nuevo.».</li>
+<li><strong>(d)</strong> El límite por IP de <code>dcef48e</code> no frenó ningún login de la suite: 0 respuestas 429 en logins válidos.</li>
+</ul>
+<h2>Fallo de la app: A-05 (informe semanal del administrador)</h2>
+<ul>
+<li><code>/informe?t=admin-weekly</code> seguía en «Cargando NARA» a los 5 s.</li>
+<li>Causa observada en la traza: la web espera las rutas de arranque del administrador, y <code>GET /api/patients</code> tardó 8.628 ms.</li>
+<li>Medido aparte por API, 3 de 3 rondas con el administrador:<ul>
+<li><code>/patients</code>: 8.542–8.611 ms (455 filas);</li>
+<li><code>/people</code>: 3.649–3.700 ms;</li>
+<li><code>/accounts</code>: unos 2.700 ms;</li>
+<li><code>/worklists</code>: 1.830–1.941 ms.</li>
+</ul>
+</li>
+<li>El clínico tarda unos 0,3 s en las mismas rutas.</li>
+<li>Evidencia: <code>tiempos_arranque_por_rol.json</code> y <code>test-results\e2e-A-05-…\</code>.</li>
+</ul>
+<h2>Limpieza</h2>
+<ul>
+<li>La suite archivó 4 personas (Exp, Cli, Ruta y Arch), dejó el territorio <code>TRL-QA-E2E-20261010-Terr-442498</code> inactivo y desactivó 2 cuentas (<code>umv2t1340</code> observador y <code>umv2t52io</code> paciente).</li>
+<li>Quedaron 3 alertas «Informativa» abiertas en «Cola abierta» de <code>/clinico/crisis</code>, de las personas Ruta-666105, Cli-442498 y Exp-442498, aunque esas personas ya estaban archivadas.<ul>
+<li><code>prueba.clinico</code> las marcó como vistas por la interfaz a las 19:58:10, 19:58:17 y 19:58:25Z.</li>
+<li>Verificación posterior: 0 personas activas con prefijo y 0 alertas de la suite; quedan 6 alertas de terceros, sin tocar.</li>
+<li>Evidencia: <code>limpieza_antes_de_cerrar_alertas.json</code> y <code>limpieza_despues_de_cerrar_alertas.json</code>.</li>
+</ul>
+</li>
+<li><code>limpieza.json</code> de la suite solo guarda el último proceso de Playwright. El primero (2 alertas) está en <code>salida.txt</code>.</li>
+</ul>
+<h2>Secretos en la evidencia</h2>
+<ul>
+<li>Las trazas que archiva la suite (<code>trace: &#39;on&#39;</code>) contenían las claves de <code>PROD_PASS</code> y <code>PROD_ADMIN_PASS</code> (636 coincidencias) y 340 cookies <code>nara_sid</code>.</li>
+<li>Se reemplazaron en sitio por <code>&lt;CLAVE-REDACTADA&gt;</code> y <code>&lt;TOKEN-REDACTADO&gt;</code> con <code>_herramientas/redactar_secretos.ps1</code>: 132 archivos y 824 entradas.</li>
+<li>Revisión posterior: 0 coincidencias. Las trazas siguen abriendo (405 entradas en la muestra).</li>
+</ul>
+<h2>Resultado</h2>
+<ul>
+<li><strong>5.3:</strong> Pasa. Los 5 flujos pasan contra la nube real, desde otra máquina; 4.4, con la cuenta paciente Activo.</li>
+<li><strong>6.1:</strong> Parcial. Misma evidencia, pero la versión no está confirmada como final ni congelada formalmente.</li>
+<li><strong>6.6:</strong> Pasa. Completa el Parcial del reporte -8 con los flujos e2e sobre <code>dcef48e</code>, la misma versión del estrés. Corrieron unas 2 h después del estrés, no 5 min.</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

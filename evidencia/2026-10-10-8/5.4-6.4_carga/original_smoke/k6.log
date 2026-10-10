@@ -1,0 +1,157 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: D:/WORK/NARA/pruebas/scripts_ajustados/k6_carga.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 1 max VUs, 10m30s max duration (incl. graceful stop):
+              * default: 3 iterations shared among 1 VUs (maxDuration: 10m0s, gracefulStop: 30s)
+
+
+running (00m01.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m01.0s/10m0s  0/3 shared iters
+
+running (00m02.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m02.0s/10m0s  0/3 shared iters
+
+running (00m03.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m03.0s/10m0s  0/3 shared iters
+
+running (00m04.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m04.0s/10m0s  0/3 shared iters
+
+running (00m05.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m05.0s/10m0s  0/3 shared iters
+
+running (00m06.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m06.0s/10m0s  0/3 shared iters
+
+running (00m07.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m07.0s/10m0s  0/3 shared iters
+
+running (00m08.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m08.0s/10m0s  0/3 shared iters
+
+running (00m09.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m09.0s/10m0s  0/3 shared iters
+
+running (00m10.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m10.0s/10m0s  0/3 shared iters
+
+running (00m11.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m11.0s/10m0s  0/3 shared iters
+
+running (00m12.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m12.0s/10m0s  0/3 shared iters
+
+running (00m13.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m13.0s/10m0s  0/3 shared iters
+
+running (00m14.0s), 1/1 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 1 VUs  00m14.0s/10m0s  0/3 shared iters
+
+running (00m15.0s), 1/1 VUs, 1 complete and 0 interrupted iterations
+default   [  33% ] 1 VUs  00m15.0s/10m0s  1/3 shared iters
+
+running (00m16.0s), 1/1 VUs, 1 complete and 0 interrupted iterations
+default   [  33% ] 1 VUs  00m16.0s/10m0s  1/3 shared iters
+
+running (00m17.0s), 1/1 VUs, 1 complete and 0 interrupted iterations
+default   [  33% ] 1 VUs  00m17.0s/10m0s  1/3 shared iters
+
+running (00m18.0s), 1/1 VUs, 1 complete and 0 interrupted iterations
+default   [  33% ] 1 VUs  00m18.0s/10m0s  1/3 shared iters
+
+running (00m19.0s), 1/1 VUs, 1 complete and 0 interrupted iterations
+default   [  33% ] 1 VUs  00m19.0s/10m0s  1/3 shared iters
+
+running (00m20.0s), 1/1 VUs, 1 complete and 0 interrupted iterations
+default   [  33% ] 1 VUs  00m20.0s/10m0s  1/3 shared iters
+
+running (00m21.0s), 1/1 VUs, 1 complete and 0 interrupted iterations
+default   [  33% ] 1 VUs  00m21.0s/10m0s  1/3 shared iters
+
+running (00m22.0s), 1/1 VUs, 1 complete and 0 interrupted iterations
+default   [  33% ] 1 VUs  00m22.0s/10m0s  1/3 shared iters
+
+running (00m23.0s), 1/1 VUs, 1 complete and 0 interrupted iterations
+default   [  33% ] 1 VUs  00m23.0s/10m0s  1/3 shared iters
+
+running (00m24.0s), 1/1 VUs, 1 complete and 0 interrupted iterations
+default   [  33% ] 1 VUs  00m24.0s/10m0s  1/3 shared iters
+
+running (00m25.0s), 1/1 VUs, 1 complete and 0 interrupted iterations
+default   [  33% ] 1 VUs  00m25.0s/10m0s  1/3 shared iters
+
+running (00m26.0s), 1/1 VUs, 2 complete and 0 interrupted iterations
+default   [  67% ] 1 VUs  00m26.0s/10m0s  2/3 shared iters
+
+running (00m27.0s), 1/1 VUs, 2 complete and 0 interrupted iterations
+default   [  67% ] 1 VUs  00m27.0s/10m0s  2/3 shared iters
+
+running (00m28.0s), 1/1 VUs, 2 complete and 0 interrupted iterations
+default   [  67% ] 1 VUs  00m28.0s/10m0s  2/3 shared iters
+
+running (00m29.0s), 1/1 VUs, 2 complete and 0 interrupted iterations
+default   [  67% ] 1 VUs  00m29.0s/10m0s  2/3 shared iters
+
+running (00m30.0s), 1/1 VUs, 2 complete and 0 interrupted iterations
+default   [  67% ] 1 VUs  00m30.0s/10m0s  2/3 shared iters
+
+running (00m31.0s), 1/1 VUs, 2 complete and 0 interrupted iterations
+default   [  67% ] 1 VUs  00m31.0s/10m0s  2/3 shared iters
+
+running (00m32.0s), 1/1 VUs, 2 complete and 0 interrupted iterations
+default   [  67% ] 1 VUs  00m32.0s/10m0s  2/3 shared iters
+
+running (00m33.0s), 1/1 VUs, 2 complete and 0 interrupted iterations
+default   [  67% ] 1 VUs  00m33.0s/10m0s  2/3 shared iters
+     █ login
+
+       ✓ login 200 y ok:true
+
+     █ lecturas
+
+       ✓ /api/auth/me 200
+       ✗ /api/app-state 200
+        ↳  33% — ✓ 1 / ✗ 2
+       ✗ /api/patients 200
+        ↳  33% — ✓ 1 / ✗ 2
+       ✗ /api/people 200
+        ↳  33% — ✓ 1 / ✗ 2
+       ✗ /api/territories 200
+        ↳  33% — ✓ 1 / ✗ 2
+       ✗ /api/worklists 200
+        ↳  33% — ✓ 1 / ✗ 2
+
+     checks.........................: 47.36% ✓ 9        ✗ 10 
+     data_received..................: 46 kB  1.4 kB/s
+     data_sent......................: 2.9 kB 88 B/s
+     group_duration.................: avg=6.2s     min=913.09ms med=7.17s    max=9.54s    p(90)=8.84s    p(95)=9.19s   
+     http_req_blocked...............: avg=12.16ms  min=0s       med=0s       max=231.16ms p(90)=0s       p(95)=23.11ms 
+     http_req_connecting............: avg=1.78ms   min=0s       med=0s       max=33.84ms  p(90)=0s       p(95)=3.38ms  
+   ✓ http_req_duration..............: avg=336.92ms min=164.47ms med=216.9ms  max=2.2s     p(90)=364.08ms p(95)=690.83ms
+       { expected_response:true }...: avg=498.58ms min=199.58ms med=260.41ms max=2.2s     p(90)=858.6ms  p(95)=1.52s   
+   ✗ http_req_failed................: 52.63% ✓ 10       ✗ 9  
+     http_req_receiving.............: avg=683.39µs min=0s       med=0s       max=12.26ms  p(90)=144.37µs p(95)=1.87ms  
+     http_req_sending...............: avg=29.12µs  min=0s       med=0s       max=553.3µs  p(90)=0s       p(95)=55.32µs 
+     http_req_tls_handshaking.......: avg=9.4ms    min=0s       med=0s       max=178.73ms p(90)=0s       p(95)=17.87ms 
+     http_req_waiting...............: avg=336.2ms  min=164.47ms med=216.9ms  max=2.18s    p(90)=363.39ms p(95)=689.1ms 
+     http_reqs......................: 19     0.565495/s
+     iteration_duration.............: avg=11.19s   min=8.39s    med=10.87s   max=14.32s   p(90)=13.63s   p(95)=13.97s  
+     iterations.....................: 3      0.089289/s
+   ✗ tasa_error.....................: 52.63% ✓ 10       ✗ 9  
+     tiempo_login...................: avg=523.05ms min=523.05ms med=523.05ms max=523.05ms p(90)=523.05ms p(95)=523.05ms
+     vus............................: 1      min=1      max=1
+     vus_max........................: 1      min=1      max=1
+running (00m33.6s), 0/1 VUs, 3 complete and 0 interrupted iterations
+default ✓ [ 100% ] 1 VUs  00m33.6s/10m0s  3/3 shared iters
+time="2026-10-10T13:06:13-05:00" level=error msg="thresholds on metrics 'http_req_failed, tasa_error' have been crossed"
+
+[k6_run] código de salida: 99

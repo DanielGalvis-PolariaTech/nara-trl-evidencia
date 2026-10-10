@@ -1,0 +1,23 @@
+Sat Oct 10 15:45:09 UTC 2026
+### WEB /ingreso con UA de navegador
+HTTP/1.1 403 Forbidden
+Cache-Control: private, no-store, max-age=0
+Content-Type: text/html; charset=utf-8
+Server: Vercel
+X-Vercel-Challenge-Token: 2.1791647110.60.OGMxNTM4ODA2MzZiMzdhMmEwMGEwMjk5ZTA2ZmQxMjQ7YTQwNjEzNGY7YWU0YmY2Y2RiZjJkMzc3MTNlZTgyYTg2ZmRlNGNlOGY5ZjIxMTM3MTszOyMkXjoSz+9DPs48boqJG5Og1Hmi7y+ZAe5afxjEnXbv5nxAgxpwXPoncd9OdTUsts6TxIKhjWKY9GGir5Mb/cVvag==.dec7c35074a1a831bbdc820bd68d15e4
+X-Vercel-Id: iad1::1791647110-PZUq9l0khdfmf87Ic8wefVSQkKIlDUZh
+X-Vercel-Mitigated: challenge
+Date: Sat, 10 Oct 2026 15:45:10 GMT
+Transfer-Encoding: chunked
+
+### WEB /ingreso curl
+HTTP/1.1 403 Forbidden
+Cache-Control: private, no-store, max-age=0
+Content-Type: text/html; charset=utf-8
+Server: Vercel
+X-Vercel-Challenge-Token: 2.1791647110.60.NTMyMzkzYTQ2MWY1YWUwMmJkZTVjZjU3YWEyMTk2ODk7ZWJiOTE0NTc7MzVkNjA0YjFiMzdmMjFlMzAzM2ZjODExMzRiMWFjZDJmMzM1MTljNDszO31aestx/IafqfyJfkRU2sR+JvxA6SwpueNB4l36g3jfOkpIJXpkbzBVJYRIIqwLFlNReBpQ3nxmTHhGY8TeE/z71g==.5b9ae71f5b93ed0f52d5d3c96e55f4b6
+X-Vercel-Id: iad1::1791647110-x9drAOEqtSRaTKHDjeQUuVgpq4cWYecM
+X-Vercel-Mitigated: challenge
+Date: Sat, 10 Oct 2026 15:45:10 GMT
+Transfer-Encoding: chunked
+

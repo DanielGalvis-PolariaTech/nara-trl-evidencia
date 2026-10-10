@@ -1,0 +1,23 @@
+inicio 2026-10-10T00:42:16.4740156-05:00
+PASA  P-8 experto1 solo Bucaramanga · 200 pacientes
+PASA  P-8 clinico1 solo Bucaramanga · 200 pacientes
+PASA  people experto1 con ?terr=Cali no ve Cali · 0
+PASA  H-002 clinico1 sin datos de cuentas · 4 cuentas
+PASA  admin lista todas las cuentas · 36
+PASA  H-004 (2026-10-10) observador solo resumen, sin filas · total 1000
+PASA  H-004 (2026-10-10) expertos sin nombre ni teléfono para el observador · 5
+FALLA H-004 paciente solo apartados propios · rules,recursos,pathOverrides,alerts,crisisLog,closedToday,consents,notifs
+PASA  H-004 observador sin apartados con personas · rules,recursos,weekBase,terrOv
+PASA  H-005 health/db sin sesión 401 · 401
+PASA  H-005 health/db experto 403 · 403
+PASA  H-005 health/db admin con missing · {"ok":true,"db":"nara_trl","missing":[]}
+PASA  H-007 verify-identity 410 · 410
+PASA  H-007 (2026-10-10) login con objetos 400 · 400
+PASA  H-015 /auth/me sin cookie 200 user null · 200
+PASA  H-014 /health con commit · 27ab152
+PASA  H-008 API sin x-powered-by y con nosniff · null / nosniff
+PASA  H-011 PUT de una porción no permitida 403 · 403
+PASA  H-003 TEO: 200 con modelo o 503 sin proveedor (nunca 200 vacío) · 200 openai gpt-4o-mini
+PASA  H-016 sesión de 12 h · Max-Age=43200
+PASA  H-006 bloqueo tras 5 fallos · 429
+PASA  H-006 correo inexistente responde igual · 401,401,401,401,401,429

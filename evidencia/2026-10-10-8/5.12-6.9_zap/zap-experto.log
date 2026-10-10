@@ -1,0 +1,116 @@
+754 [main] INFO  org.parosproxy.paros.Constant - Copying default configuration to C:\Users\DG\AppData\Local\Temp\claude\D--WORK-NARA\758ef9e4-ed94-4754-8b26-eb2a972c890f\scratchpad\zap_home\config.xml
+920 [main] INFO  org.parosproxy.paros.Constant - Creating directory C:\Users\DG\AppData\Local\Temp\claude\D--WORK-NARA\758ef9e4-ed94-4754-8b26-eb2a972c890f\scratchpad\zap_home\session
+922 [main] INFO  org.parosproxy.paros.Constant - Creating directory C:\Users\DG\AppData\Local\Temp\claude\D--WORK-NARA\758ef9e4-ed94-4754-8b26-eb2a972c890f\scratchpad\zap_home\dirbuster
+923 [main] INFO  org.parosproxy.paros.Constant - Creating directory C:\Users\DG\AppData\Local\Temp\claude\D--WORK-NARA\758ef9e4-ed94-4754-8b26-eb2a972c890f\scratchpad\zap_home\fuzzers
+924 [main] INFO  org.parosproxy.paros.Constant - Creating directory C:\Users\DG\AppData\Local\Temp\claude\D--WORK-NARA\758ef9e4-ed94-4754-8b26-eb2a972c890f\scratchpad\zap_home\plugin
+No check for updates for over 3 month - add-ons may well be out of date
+Job passiveScan-config set maxAlertsPerRule = 10
+Job passiveScan-config set scanOnlyInScope = true
+Job requestor set url = https://www.proyectonara.com/
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/ingreso
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/inicio
+Job requestor set method = GET
+Job requestor set responseCode = 200
+Job requestor set url = https://www.proyectonara.com/experto
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/experto/nueva
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/rutas
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/personas
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/territorios
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/equipos
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/perfil
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/activos
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/informes
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/auth/me
+Job requestor set method = GET
+Job requestor set responseCode = 200
+Job requestor set url = https://www.proyectonara.com/api/app-state
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/patients
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/patients/me
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/people
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/territories
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/experts
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/worklists
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/flags
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/assets
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/health
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/health/db
+Job requestor set method = GET
+Job requestor set url = https://www.proyectonara.com/api/accounts
+Job requestor set method = GET
+Job spider set context = nara-experto
+Job spider set maxDuration = 3
+Job spider set maxChildren = 20
+Job spider set processForm = false
+Job spider set postForm = false
+Job spider set threadCount = 2
+Job passiveScan-wait set maxDuration = 5
+Job report set template = traditional-html
+Job report set reportDir = D:/WORK/NARA/pruebas/evidencia/2026-10-10-8/5.12-6.9_zap
+Job report set reportFile = zap-baseline-experto.html
+Job report set reportTitle = ZAP baseline pasivo autenticado - NARA - rol experto
+Job report set template = traditional-json
+Job report set reportDir = D:/WORK/NARA/pruebas/evidencia/2026-10-10-8/5.12-6.9_zap
+Job report set reportFile = zap-baseline-experto.json
+Job passiveScan-config started
+Job passiveScan-config finished, time taken: 00:00:00
+Job requestor started
+Job requestor requesting URL https://www.proyectonara.com/
+Job requestor requesting URL https://www.proyectonara.com/ingreso
+Job requestor requesting URL https://www.proyectonara.com/inicio
+Job requestor requesting URL https://www.proyectonara.com/experto
+Job requestor requesting URL https://www.proyectonara.com/experto/nueva
+Job requestor requesting URL https://www.proyectonara.com/rutas
+Job requestor requesting URL https://www.proyectonara.com/personas
+Job requestor requesting URL https://www.proyectonara.com/territorios
+Job requestor requesting URL https://www.proyectonara.com/equipos
+Job requestor requesting URL https://www.proyectonara.com/perfil
+Job requestor requesting URL https://www.proyectonara.com/activos
+Job requestor requesting URL https://www.proyectonara.com/informes
+Job requestor requesting URL https://www.proyectonara.com/api/auth/me
+Job requestor requesting URL https://www.proyectonara.com/api/app-state
+Job requestor requesting URL https://www.proyectonara.com/api/patients
+Job requestor requesting URL https://www.proyectonara.com/api/patients/me
+Job requestor requesting URL https://www.proyectonara.com/api/people
+Job requestor requesting URL https://www.proyectonara.com/api/territories
+Job requestor requesting URL https://www.proyectonara.com/api/experts
+Job requestor requesting URL https://www.proyectonara.com/api/worklists
+Job requestor requesting URL https://www.proyectonara.com/api/flags
+Job requestor requesting URL https://www.proyectonara.com/api/assets
+Job requestor requesting URL https://www.proyectonara.com/api/health
+Job requestor requesting URL https://www.proyectonara.com/api/health/db
+Job requestor requesting URL https://www.proyectonara.com/api/accounts
+Job requestor finished, time taken: 00:00:10
+Job spider started
+Job spider requesting URL https://www.proyectonara.com
+Job spider found 115 URLs
+Job spider finished, time taken: 00:00:13
+Job passiveScan-wait started
+Job passiveScan-wait finished, time taken: 00:00:01
+Job report started
+Job report generated report D:\WORK\NARA\pruebas\evidencia\2026-10-10-8\5.12-6.9_zap\zap-baseline-experto.html
+Job report finished, time taken: 00:00:00
+Job report started
+Job report generated report D:\WORK\NARA\pruebas\evidencia\2026-10-10-8\5.12-6.9_zap\zap-baseline-experto.json
+Job report finished, time taken: 00:00:00
+Automation plan succeeded!

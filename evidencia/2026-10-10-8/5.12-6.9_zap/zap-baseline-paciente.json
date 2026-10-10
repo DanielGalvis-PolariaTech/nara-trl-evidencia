@@ -1,0 +1,697 @@
+{
+	"@programName": "ZAP",
+	"@version": "2.17.0",
+	"@generated": "Sat, 10 Oct 2026 13:03:43",
+	"created": "2026-10-10T18:03:43.880522500Z",
+	"insights":[
+		{
+			"level": "Low",
+			"reason": "Warning",
+			"site": "",
+			"key": "insight.log.error",
+			"description": "ZAP errors logged - see the zap.log file for details",
+			"statistic": "2"
+		},
+		{
+			"level": "Low",
+			"reason": "Warning",
+			"site": "",
+			"key": "insight.log.warn",
+			"description": "ZAP warnings logged - see the zap.log file for details",
+			"statistic": "3"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.code.2xx",
+			"description": "Percentage of responses with status code 2xx",
+			"statistic": "68"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.code.3xx",
+			"description": "Percentage of responses with status code 3xx",
+			"statistic": "15"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.code.4xx",
+			"description": "Percentage of responses with status code 4xx",
+			"statistic": "15"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.endpoint.ctype.application/javascript",
+			"description": "Percentage of endpoints with content type application/javascript",
+			"statistic": "29"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.endpoint.ctype.application/json",
+			"description": "Percentage of endpoints with content type application/json",
+			"statistic": "15"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.endpoint.ctype.application/manifest+json",
+			"description": "Percentage of endpoints with content type application/manifest+json",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.endpoint.ctype.application/xml",
+			"description": "Percentage of endpoints with content type application/xml",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.endpoint.ctype.image/svg+xml",
+			"description": "Percentage of endpoints with content type image/svg+xml",
+			"statistic": "3"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.endpoint.ctype.image/vnd.microsoft.icon",
+			"description": "Percentage of endpoints with content type image/vnd.microsoft.icon",
+			"statistic": "1"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.endpoint.ctype.text/css",
+			"description": "Percentage of endpoints with content type text/css",
+			"statistic": "2"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.endpoint.ctype.text/html",
+			"description": "Percentage of endpoints with content type text/html",
+			"statistic": "28"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.endpoint.ctype.text/plain",
+			"description": "Percentage of endpoints with content type text/plain",
+			"statistic": "19"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.endpoint.method.GET",
+			"description": "Percentage of endpoints with method GET",
+			"statistic": "100"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.endpoint.total",
+			"description": "Count of total endpoints",
+			"statistic": "99"
+		},
+		{
+			"level": "Info",
+			"reason": "Informational",
+			"site": "https://www.proyectonara.com",
+			"key": "insight.response.slow",
+			"description": "Percentage of slow responses",
+			"statistic": "72"
+		}
+	],
+	"site":[ 
+		{
+			"@name": "https://www.proyectonara.com",
+			"@host": "www.proyectonara.com",
+			"@port": "443",
+			"@ssl": "true",
+			"alerts": [ 
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-5",
+					"alert": "CSP: script-src unsafe-inline",
+					"name": "CSP: script-src unsafe-inline",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"id": "12",
+							"uri": "https://www.proyectonara.com/ingreso",
+							"nodeName": "https:\/\/www.proyectonara.com\/ingreso",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.tile.openstreetmap.org; font-src 'self' data:; connect-src 'self' https://polariatech.app.n8n.cloud; media-src 'self' blob:; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+							"otherinfo": "script-src includes unsafe-inline."
+						},
+						{
+							"id": "16",
+							"uri": "https://www.proyectonara.com/paciente/animo",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/animo",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.tile.openstreetmap.org; font-src 'self' data:; connect-src 'self' https://polariatech.app.n8n.cloud; media-src 'self' blob:; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+							"otherinfo": "script-src includes unsafe-inline."
+						},
+						{
+							"id": "13",
+							"uri": "https://www.proyectonara.com/paciente/clinico",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/clinico",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.tile.openstreetmap.org; font-src 'self' data:; connect-src 'self' https://polariatech.app.n8n.cloud; media-src 'self' blob:; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+							"otherinfo": "script-src includes unsafe-inline."
+						},
+						{
+							"id": "11",
+							"uri": "https://www.proyectonara.com/paciente/historial",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/historial",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.tile.openstreetmap.org; font-src 'self' data:; connect-src 'self' https://polariatech.app.n8n.cloud; media-src 'self' blob:; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+							"otherinfo": "script-src includes unsafe-inline."
+						},
+						{
+							"id": "10",
+							"uri": "https://www.proyectonara.com/paciente/tecnicas",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/tecnicas",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.tile.openstreetmap.org; font-src 'self' data:; connect-src 'self' https://polariatech.app.n8n.cloud; media-src 'self' blob:; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+							"otherinfo": "script-src includes unsafe-inline."
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>script-src includes unsafe-inline.</p>",
+					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://web.dev/articles/csp#resource-options</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "3"
+				},
+				{
+					"pluginid": "10055",
+					"alertRef": "10055-6",
+					"alert": "CSP: style-src unsafe-inline",
+					"name": "CSP: style-src unsafe-inline",
+					"riskcode": "2",
+					"confidence": "3",
+					"riskdesc": "Medium (High)",
+					"desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page \u2014 covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
+					"instances":[ 
+						{
+							"id": "20",
+							"uri": "https://www.proyectonara.com/ingreso",
+							"nodeName": "https:\/\/www.proyectonara.com\/ingreso",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.tile.openstreetmap.org; font-src 'self' data:; connect-src 'self' https://polariatech.app.n8n.cloud; media-src 'self' blob:; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"id": "25",
+							"uri": "https://www.proyectonara.com/paciente",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.tile.openstreetmap.org; font-src 'self' data:; connect-src 'self' https://polariatech.app.n8n.cloud; media-src 'self' blob:; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"id": "26",
+							"uri": "https://www.proyectonara.com/paciente/animo",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/animo",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.tile.openstreetmap.org; font-src 'self' data:; connect-src 'self' https://polariatech.app.n8n.cloud; media-src 'self' blob:; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"id": "24",
+							"uri": "https://www.proyectonara.com/paciente/pendiente",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/pendiente",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.tile.openstreetmap.org; font-src 'self' data:; connect-src 'self' https://polariatech.app.n8n.cloud; media-src 'self' blob:; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+							"otherinfo": "style-src includes unsafe-inline."
+						},
+						{
+							"id": "21",
+							"uri": "https://www.proyectonara.com/paciente/tecnicas",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/tecnicas",
+							"method": "GET",
+							"param": "Content-Security-Policy",
+							"attack": "",
+							"evidence": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.tile.openstreetmap.org; font-src 'self' data:; connect-src 'self' https://polariatech.app.n8n.cloud; media-src 'self' blob:; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'",
+							"otherinfo": "style-src includes unsafe-inline."
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.</p>",
+					"otherinfo": "<p>style-src includes unsafe-inline.</p>",
+					"reference": "<p>https://www.w3.org/TR/CSP/</p><p>https://caniuse.com/#search=content+security+policy</p><p>https://content-security-policy.com/</p><p>https://github.com/HtmlUnit/htmlunit-csp</p><p>https://web.dev/articles/csp#resource-options</p>",
+					"cweid": "693",
+					"wascid": "15",
+					"sourceid": "3"
+				},
+				{
+					"pluginid": "10098",
+					"alertRef": "10098",
+					"alert": "Cross-Domain Misconfiguration",
+					"name": "Cross-Domain Misconfiguration",
+					"riskcode": "2",
+					"confidence": "2",
+					"riskdesc": "Medium (Medium)",
+					"desc": "<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server.</p>",
+					"instances":[ 
+						{
+							"id": "29",
+							"uri": "https://www.proyectonara.com/ingreso",
+							"nodeName": "https:\/\/www.proyectonara.com\/ingreso",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"id": "33",
+							"uri": "https://www.proyectonara.com/paciente",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"id": "30",
+							"uri": "https://www.proyectonara.com/paciente/animo",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/animo",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"id": "32",
+							"uri": "https://www.proyectonara.com/paciente/pendiente",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/pendiente",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						},
+						{
+							"id": "27",
+							"uri": "https://www.proyectonara.com/paciente/tecnicas",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/tecnicas",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Access-Control-Allow-Origin: *",
+							"otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p><p>Configure the \"Access-Control-Allow-Origin\" HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>",
+					"otherinfo": "<p>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</p>",
+					"reference": "<p>https://vulncat.fortify.com/en/detail?category=HTML5&subcategory=Overly%20Permissive%20CORS%20Policy</p>",
+					"cweid": "264",
+					"wascid": "14",
+					"sourceid": "3"
+				},
+				{
+					"pluginid": "10027",
+					"alertRef": "10027",
+					"alert": "Information Disclosure - Suspicious Comments",
+					"name": "Information Disclosure - Suspicious Comments",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The response appears to contain suspicious comments which may help an attacker.</p>",
+					"instances":[ 
+						{
+							"id": "75",
+							"uri": "https://www.proyectonara.com/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+							"nodeName": "https:\/\/www.proyectonara.com\/_next\/static\/immutable\/chunks\/0c0hxoamwjsbw.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in likely comment: \"//github.com/zloirock/core-js/blob/v3.38.1/LICENSE\",source:\"https://github.com/zloirock/core-js\"})}),nt=function(t,e){return rt[\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"id": "71",
+							"uri": "https://www.proyectonara.com/_next/static/immutable/chunks/0sq6lg94b397i.js",
+							"nodeName": "https:\/\/www.proyectonara.com\/_next\/static\/immutable\/chunks\/0sq6lg94b397i.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in likely comment: \"//\"+(c||\"\"),a&&\"/\"!==a[0]&&(a=\"/\"+a)):c||(c=\"\"),l&&\"#\"!==l[0]&&(l=\"#\"+l),u&&\"?\"!==u[0]&&(u=\"?\"+u),a=a.replace(/[?#]/g,encodeURIC\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"id": "70",
+							"uri": "https://www.proyectonara.com/_next/static/immutable/chunks/10tjsg42fwwac.js",
+							"nodeName": "https:\/\/www.proyectonara.com\/_next\/static\/immutable\/chunks\/10tjsg42fwwac.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in likely comment: \"//\"+(i||\"\"),a&&\"/\"!==a[0]&&(a=\"/\"+a)):i||(i=\"\"),s&&\"#\"!==s[0]&&(s=\"#\"+s),c&&\"?\"!==c[0]&&(c=\"?\"+c),a=a.replace(/[?#]/g,encodeURIC\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"id": "79",
+							"uri": "https://www.proyectonara.com/_next/static/immutable/chunks/1as9ao1ulk69h.js",
+							"nodeName": "https:\/\/www.proyectonara.com\/_next\/static\/immutable\/chunks\/1as9ao1ulk69h.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in likely comment: \"//\"+(c||\"\"),r&&\"/\"!==r[0]&&(r=\"/\"+r)):c||(c=\"\"),o&&\"#\"!==o[0]&&(o=\"#\"+o),d&&\"?\"!==d[0]&&(d=\"?\"+d),r=r.replace(/[?#]/g,encodeURIC\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"id": "80",
+							"uri": "https://www.proyectonara.com/_next/static/immutable/chunks/1fkrxj92yyl6o.js",
+							"nodeName": "https:\/\/www.proyectonara.com\/_next\/static\/immutable\/chunks\/1fkrxj92yyl6o.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in likely comment: \"//\"+(u||\"\"),a&&\"/\"!==a[0]&&(a=\"/\"+a)):u||(u=\"\"),l&&\"#\"!==l[0]&&(l=\"#\"+l),c&&\"?\"!==c[0]&&(c=\"?\"+c),a=a.replace(/[?#]/g,encodeURIC\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"id": "76",
+							"uri": "https://www.proyectonara.com/_next/static/immutable/chunks/1s1tvu3p-8f4n.js",
+							"nodeName": "https:\/\/www.proyectonara.com\/_next\/static\/immutable\/chunks\/1s1tvu3p-8f4n.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "select",
+							"otherinfo": "The following pattern was used: \\bSELECT\\b and was detected in likely comment: \"//n\":window.location.href);return{searchParams:e.searchParams,pathname:(0,v.hasBasePath)(e.pathname)?(0,g.removeBasePath)(e.path\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"id": "74",
+							"uri": "https://www.proyectonara.com/_next/static/immutable/chunks/282l8gzrvryyu.js",
+							"nodeName": "https:\/\/www.proyectonara.com\/_next\/static\/immutable\/chunks\/282l8gzrvryyu.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in likely comment: \"//nextjs.org/docs/messages/failed-to-find-server-action`);let N=s.headers.get(\"x-action-redirect\"),[F,j]=N?.split(\";\")||[];switc\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"id": "78",
+							"uri": "https://www.proyectonara.com/_next/static/immutable/chunks/2een18lix131g.js",
+							"nodeName": "https:\/\/www.proyectonara.com\/_next\/static\/immutable\/chunks\/2een18lix131g.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "admin",
+							"otherinfo": "The following pattern was used: \\bADMIN\\b and was detected in likely comment: \"//www.w3.org/2000/svg\"}),d&&t.default.createElement(\"title\",null,d),e.children)};return void 0!==a?t.default.createElement(a.Con\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"id": "77",
+							"uri": "https://www.proyectonara.com/_next/static/immutable/chunks/2fl-10sxxqne_.js",
+							"nodeName": "https:\/\/www.proyectonara.com\/_next\/static\/immutable\/chunks\/2fl-10sxxqne_.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in likely comment: \"//\"+(c||\"\"),o&&\"/\"!==o[0]&&(o=\"/\"+o)):c||(c=\"\"),i&&\"#\"!==i[0]&&(i=\"#\"+i),s&&\"?\"!==s[0]&&(s=\"?\"+s),o=o.replace(/[?#]/g,encodeURIC\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"id": "72",
+							"uri": "https://www.proyectonara.com/_next/static/immutable/chunks/2oahsmn6z0afg.js",
+							"nodeName": "https:\/\/www.proyectonara.com\/_next\/static\/immutable\/chunks\/2oahsmn6z0afg.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in likely comment: \"//i.test(r)&&!r.startsWith(window.location.origin)||!function(e){try{let a=new URL(e,window.location.href);if(a.origin!==window.\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"id": "73",
+							"uri": "https://www.proyectonara.com/_next/static/immutable/chunks/3qflx5v0f45yg.js",
+							"nodeName": "https:\/\/www.proyectonara.com\/_next\/static\/immutable\/chunks\/3qflx5v0f45yg.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "user",
+							"otherinfo": "The following pattern was used: \\bUSER\\b and was detected in likely comment: \"//sweetalert2.github.io/#ajax-request\"),n.target&&(\"string\"!=typeof n.target||document.querySelector(n.target))&&(\"string\"==type\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"id": "81",
+							"uri": "https://www.proyectonara.com/_next/static/immutable/chunks/3qjvgpagp11q8.js",
+							"nodeName": "https:\/\/www.proyectonara.com\/_next\/static\/immutable\/chunks\/3qjvgpagp11q8.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in likely comment: \"//\"+(c||\"\"),a&&\"/\"!==a[0]&&(a=\"/\"+a)):c||(c=\"\"),i&&\"#\"!==i[0]&&(i=\"#\"+i),u&&\"?\"!==u[0]&&(u=\"?\"+u),a=a.replace(/[?#]/g,encodeURIC\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"id": "82",
+							"uri": "https://www.proyectonara.com/_next/static/immutable/chunks/3zevmfim2axjn.js",
+							"nodeName": "https:\/\/www.proyectonara.com\/_next\/static\/immutable\/chunks\/3zevmfim2axjn.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "query",
+							"otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in likely comment: \"//\"+(u||\"\"),a&&\"/\"!==a[0]&&(a=\"/\"+a)):u||(u=\"\"),l&&\"#\"!==l[0]&&(l=\"#\"+l),c&&\"?\"!==c[0]&&(c=\"?\"+c),a=a.replace(/[?#]/g,encodeURIC\", see evidence field for the suspicious comment/snippet."
+						},
+						{
+							"id": "69",
+							"uri": "https://www.proyectonara.com/_next/static/immutable/chunks/turbopack-1byz1flvc-bu1.js",
+							"nodeName": "https:\/\/www.proyectonara.com\/_next\/static\/immutable\/chunks\/turbopack-1byz1flvc-bu1.js",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "from",
+							"otherinfo": "The following pattern was used: \\bFROM\\b and was detected in likely comment: \"///${encodeURIComponent(t??\"ROOT\")}/${e.split(\"/\").map(encodeURIComponent).join(\"/\")}`},$.q=function(e,t){y.call(this,`${e}${n}`\", see evidence field for the suspicious comment/snippet."
+						}
+					],
+					"count": "14",
+					"systemic": false,
+					"solution": "<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>",
+					"otherinfo": "<p>The following pattern was used: \\bFROM\\b and was detected in likely comment: \"//github.com/zloirock/core-js/blob/v3.38.1/LICENSE\",source:\"https://github.com/zloirock/core-js\"})}),nt=function(t,e){return rt[\", see evidence field for the suspicious comment/snippet.</p>",
+					"reference": "",
+					"cweid": "615",
+					"wascid": "13",
+					"sourceid": "235"
+				},
+				{
+					"pluginid": "10109",
+					"alertRef": "10109",
+					"alert": "Modern Web Application",
+					"name": "Modern Web Application",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
+					"instances":[ 
+						{
+							"id": "43",
+							"uri": "https://www.proyectonara.com/paciente",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"/_next/static/immutable/chunks/0ykyzfd0mwwu3.js\" async=\"\"></script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"id": "41",
+							"uri": "https://www.proyectonara.com/paciente/clinico",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/clinico",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"/_next/static/immutable/chunks/0ykyzfd0mwwu3.js\" async=\"\"></script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"id": "42",
+							"uri": "https://www.proyectonara.com/paciente/historial",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/historial",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"/_next/static/immutable/chunks/0ykyzfd0mwwu3.js\" async=\"\"></script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"id": "44",
+							"uri": "https://www.proyectonara.com/paciente/pendiente",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/pendiente",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"/_next/static/immutable/chunks/0ykyzfd0mwwu3.js\" async=\"\"></script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						},
+						{
+							"id": "40",
+							"uri": "https://www.proyectonara.com/paciente/tecnicas",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/tecnicas",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "<script src=\"/_next/static/immutable/chunks/0ykyzfd0mwwu3.js\" async=\"\"></script>",
+							"otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>This is an informational alert and so no changes are required.</p>",
+					"otherinfo": "<p>No links have been found while there are scripts, which is an indication that this is a modern web application.</p>",
+					"reference": "",
+					"cweid": "-1",
+					"wascid": "-1",
+					"sourceid": "4"
+				},
+				{
+					"pluginid": "10015",
+					"alertRef": "10015",
+					"alert": "Re-examine Cache-control Directives",
+					"name": "Re-examine Cache-control Directives",
+					"riskcode": "0",
+					"confidence": "1",
+					"riskdesc": "Informational (Low)",
+					"desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
+					"instances":[ 
+						{
+							"id": "6",
+							"uri": "https://www.proyectonara.com/paciente/plan",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/plan",
+							"method": "GET",
+							"param": "cache-control",
+							"attack": "",
+							"evidence": "public, max-age=0, must-revalidate",
+							"otherinfo": ""
+						}
+					],
+					"count": "1",
+					"systemic": true,
+					"solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
+					"otherinfo": "",
+					"reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
+					"cweid": "525",
+					"wascid": "13",
+					"sourceid": "9"
+				},
+				{
+					"pluginid": "10050",
+					"alertRef": "10050-2",
+					"alert": "Retrieved from Cache",
+					"name": "Retrieved from Cache",
+					"riskcode": "0",
+					"confidence": "2",
+					"riskdesc": "Informational (Medium)",
+					"desc": "<p>The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
+					"instances":[ 
+						{
+							"id": "56",
+							"uri": "https://www.proyectonara.com/ingreso",
+							"nodeName": "https:\/\/www.proyectonara.com\/ingreso",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 2154",
+							"otherinfo": "The presence of the 'Age' header indicates that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"id": "53",
+							"uri": "https://www.proyectonara.com/paciente/clinico",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/clinico",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"id": "55",
+							"uri": "https://www.proyectonara.com/paciente/historial",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/historial",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"id": "51",
+							"uri": "https://www.proyectonara.com/paciente/resumen",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/resumen",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that a HTTP/1.1 compliant caching server is in use."
+						},
+						{
+							"id": "57",
+							"uri": "https://www.proyectonara.com/paciente/tecnicas",
+							"nodeName": "https:\/\/www.proyectonara.com\/paciente\/tecnicas",
+							"method": "GET",
+							"param": "",
+							"attack": "",
+							"evidence": "Age: 0",
+							"otherinfo": "The presence of the 'Age' header indicates that a HTTP/1.1 compliant caching server is in use."
+						}
+					],
+					"count": "5",
+					"systemic": true,
+					"solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
+					"otherinfo": "<p>The presence of the 'Age' header indicates that a HTTP/1.1 compliant caching server is in use.</p>",
+					"reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.rfc-editor.org/rfc/rfc9110.html</p>",
+					"cweid": "525",
+					"wascid": "-1",
+					"sourceid": "3"
+				}
+			]
+		}
+	],
+	"sequences":[
+	]
+
+}

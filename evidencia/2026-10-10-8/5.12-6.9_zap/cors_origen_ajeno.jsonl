@@ -1,0 +1,12 @@
+{"url":"www.proyectonara.com/clinico","origin":"https://atacante.example","http":200,"acao":"*","acac":null,"bytes":18960}
+{"url":"www.proyectonara.com/clinico","origin":"null","http":200,"acao":"*","acac":null,"bytes":18960}
+{"url":"www.proyectonara.com/ingreso","origin":"https://atacante.example","http":200,"acao":"*","acac":null,"bytes":17833}
+{"url":"www.proyectonara.com/ingreso","origin":"null","http":200,"acao":"*","acac":null,"bytes":17833}
+{"url":"www.proyectonara.com/api/patients","origin":"https://atacante.example","http":200,"acao":null,"acac":"true","bytes":11799}
+{"url":"www.proyectonara.com/api/patients","origin":"null","http":200,"acao":null,"acac":"true","bytes":11799}
+{"url":"www.proyectonara.com/api/auth/me","origin":"https://atacante.example","http":200,"acao":null,"acac":"true","bytes":280}
+{"url":"www.proyectonara.com/api/auth/me","origin":"null","http":200,"acao":null,"acac":"true","bytes":280}
+{"url":"nara-api-wyvw.onrender.com/api/patients","origin":"https://atacante.example","http":200,"acao":null,"acac":"true","bytes":11799}
+{"url":"nara-api-wyvw.onrender.com/api/patients","origin":"null","http":200,"acao":null,"acac":"true","bytes":11799}
+{"url":"nara-api-wyvw.onrender.com/api/auth/me","origin":"https://atacante.example","http":200,"acao":null,"acac":"true","bytes":280}
+{"url":"nara-api-wyvw.onrender.com/api/auth/me","origin":"null","http":200,"acao":null,"acac":"true","bytes":280}

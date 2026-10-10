@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha de evidencia — 5.17 Respaldo restaurable (versión mínima de R-06) · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha de evidencia — 5.17 Respaldo restaurable (versión mínima de R-06)</h1>
+<ul>
+<li><strong>ID de prueba:</strong> TRL 5.17</li>
+<li><strong>Fecha y hora de la evaluación:</strong> 2026-10-10, 12:00–12:10 (hora de Bogotá). La evidencia evaluada es de 03:06–10:36 del mismo día</li>
+<li><strong>Ejecutado por:</strong> subagente <code>ejecutor-pruebas-trl</code> (Opus 5.5), Claude Code. Solo evaluación de evidencia existente: no se hizo respaldo ni restauración</li>
+<li><strong>Entorno:</strong> producción tratada como staging, Atlas <code>polaria</code> / base <code>nara</code>; nara-api <code>1f04025</code></li>
+<li><strong>Datos usados:</strong> reales (respaldo de 2036–2048 documentos)</li>
+<li><strong>Objetivo:</strong> decidir si la evidencia existente cumple 5.17</li>
+<li><strong>Procedimiento:</strong> lectura de <code>evidencia/2026-10-10-4/respaldos/*</code>, de los scripts <code>respaldo.js</code>, <code>respaldo_cada_2_5h.ps1</code>, <code>restaurar_local.js</code>, del <code>_resumen.json</code> de cada respaldo, de la tarea programada (<code>Get-ScheduledTask</code>, solo lectura) y del runbook 03</li>
+<li><strong>Resultado:</strong> <strong>Parcial</strong></li>
+<li><strong>Métricas:</strong> 4 respaldos ok (03:06 manual; 05:36, 08:06, 10:36 por la tarea, intervalos 2 h 29 min 58 s – 2 h 30 min 02 s, duración 8–38 s). 2 restauraciones en Mongo local: 1,63 s y 1,564 s de inserción, 33 colecciones, 0 diferencias de conteo</li>
+<li><strong>Contra la guía 09:</strong><ul>
+<li><input disabled="" type="checkbox"> Conteos restaurados = momento del respaldo <strong>sin los 3 nuevos y con el borrado presente</strong>: no se hizo el paso 3+1; el «0 diferencias» compara contra el <code>_resumen.json</code> del propio respaldo (circular).</li>
+<li>[~] Tiempo de restauración anotado: sí, pero solo la inserción local (1,6 s), no el tiempo total.</li>
+<li><input disabled="" type="checkbox"> Pasos escritos para que otra persona los repita: el runbook 03 describe otro script (<code>restaurar.js</code> en Atlas + <code>comparar_db.js</code>), dice que los respaldos son manuales y RPO 24 h; <code>restaurar_local.js</code> no está en ningún procedimiento.</li>
+<li>No se cumple la condición de falla (no hay datos que no coincidan ni restauración fallida).</li>
+</ul>
+</li>
+<li><strong>Evidencia adjunta:</strong> <code>analisis_registro_y_restauracion.md</code>, <code>tarea_programada.txt</code>; crudos en <code>pruebas/evidencia/2026-10-10-4/respaldos/</code></li>
+<li><strong>Limitaciones declaradas:</strong> sin acceso a Atlas Admin (respaldo nativo y plan del clúster sin verificar); no se pudo leer el estado de cifrado del disco D:; no se abrió ningún archivo de respaldo más allá de <code>_resumen.json</code> (conteos)</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

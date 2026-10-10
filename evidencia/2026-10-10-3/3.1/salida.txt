@@ -1,0 +1,48 @@
+
+## admin_1366 login 2654 ms → /inicio
+  /inicio → /inicio 1184ms desborde=0 sinEtiqueta=2 imgSinAlt=0 
+  /territorios → /territorios 1308ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+  /equipos → /equipos 1144ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+  /rutas → /rutas 1222ms desborde=0 sinEtiqueta=2 imgSinAlt=0 
+  /personas → /personas 1239ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+  /usuarios → /usuarios 869ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+  /informe?t=admin-weekly&back=/inicio → /informe?t=admin-weekly&back=/inicio 846ms desborde=0 sinEtiqueta=0 imgSinAlt=0 
+
+## admin_375 login 2622 ms → /inicio
+  /inicio → /inicio 1192ms desborde=0 sinEtiqueta=2 imgSinAlt=0 
+  /informe?t=admin-weekly&back=/inicio → /informe?t=admin-weekly&back=/inicio 799ms desborde=0 sinEtiqueta=0 imgSinAlt=0 
+  /territorios → /territorios 1150ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+  /equipos → /equipos 1049ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+  /rutas → /rutas 1051ms desborde=0 sinEtiqueta=2 imgSinAlt=0 
+  /personas → /personas 1168ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+  /usuarios → /usuarios 826ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+
+## experto_1366 login 1644 ms → /experto
+  /experto → /experto 689ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+
+## experto_375 login 2270 ms → /experto
+  /experto → /experto 684ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+
+## clinico_1366 login 1497 ms → /clinico
+  /clinico → /clinico 772ms desborde=0 sinEtiqueta=2 imgSinAlt=0 
+  /clinico/aprobaciones → /clinico/aprobaciones 724ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+  /clinico/pacientes → /clinico/pacientes 761ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+  /clinico/crisis/historial → /clinico/crisis/historial 709ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+
+## clinico_375 login 1497 ms → /clinico
+  /clinico → /clinico 720ms desborde=0 sinEtiqueta=2 imgSinAlt=0 
+  /clinico/aprobaciones → /clinico/aprobaciones 713ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+  /clinico/pacientes → /clinico/pacientes 793ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+  /clinico/crisis/historial → /clinico/crisis/historial 719ms desborde=0 sinEtiqueta=1 imgSinAlt=0 
+
+## paciente_1366 login 1543 ms → /paciente
+  /paciente → /paciente 626ms desborde=0 sinEtiqueta=0 imgSinAlt=0 
+
+## paciente_375 login 1526 ms → /paciente
+  /paciente → /paciente 645ms desborde=0 sinEtiqueta=0 imgSinAlt=0 
+
+## observador_1366 login 1012 ms → /observador
+  /observador → /observador 642ms desborde=0 sinEtiqueta=2 imgSinAlt=0 
+
+## observador_375 login 1015 ms → /observador
+  /observador → /observador 656ms desborde=0 sinEtiqueta=2 imgSinAlt=0 

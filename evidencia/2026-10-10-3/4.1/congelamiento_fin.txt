@@ -1,0 +1,5 @@
+fin: 2026-10-10 01:46:38 -05:00
+nara-api tag=trl-1-4-rc2 head=27ab152 cambios=0 ultimoCommit=2026-10-10 00:23:44 -0500
+nara-web tag=trl-1-4-rc2 head=573442e cambios=0 ultimoCommit=2026-10-10 00:30:19 -0500
+health: {"ok":true,"service":"nara-gateway","commit":"27ab152"}
+web /ingreso: 200

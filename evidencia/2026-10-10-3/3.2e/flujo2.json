@@ -1,0 +1,180 @@
+{
+  "inicio": "2026-10-10T06:16:47.993Z",
+  "nombre": "TRL-QA-20261010-Ruta 07872",
+  "correo": "trl-qa+20261010-ruta07872@trl-qa.invalid",
+  "consolaExperto": [],
+  "consolaClinico": [],
+  "consolaAdmin": [],
+  "escriturasTrasBoton": [
+    {
+      "t": "2026-10-10T06:17:15.725Z",
+      "m": "PATCH",
+      "u": "/api/accounts/me",
+      "cuerpo": "{\"touch\":true}"
+    },
+    {
+      "t": "2026-10-10T06:17:15.732Z",
+      "status": 200,
+      "u": "/api/accounts/me"
+    },
+    {
+      "t": "2026-10-10T06:17:17.363Z",
+      "m": "PUT",
+      "u": "/api/app-state",
+      "cuerpo": "{\"slices\":{\"consents\":{\"n1791613012722\":{\"appAt\":1791613030672,\"appVersion\":\"app-v1\"}},\"alerts\":[{\"at\":1791613037355,\"status\":\"new\",\"id\":\"a-n1791613012722-crisis-btn-1791613037354\",\"sev\":\"crisis\",\"pid\":\"n1791613012722\",\"name\":\"TRL-QA-20261010-Ruta 07872 Prueba Sesión\",\"age\":57,\"place\":\"Vereda Prueba"
+    },
+    {
+      "t": "2026-10-10T06:17:17.363Z",
+      "m": "POST",
+      "u": "/api/people",
+      "cuerpo": "{\"id\":\"n1791613012722\",\"name\":\"TRL-QA-20261010-Ruta 07872 Prueba Sesión\",\"status\":\"Crisis\",\"signal\":\"Crisis\"}"
+    },
+    {
+      "t": "2026-10-10T06:17:17.363Z",
+      "m": "POST",
+      "u": "/api/patients",
+      "cuerpo": "{\"id\":\"n1791613012722\",\"name\":\"TRL-QA-20261010-Ruta 07872 Prueba Sesión\",\"status\":\"Crisis\",\"signal\":\"Crisis\",\"crisisLock\":true,\"crisisAttendedAt\":null,\"crisisAttendedOutcome\":null,\"crisisBtnReady\":false}"
+    },
+    {
+      "t": "2026-10-10T06:17:17.382Z",
+      "status": 200,
+      "u": "/api/app-state"
+    },
+    {
+      "t": "2026-10-10T06:17:17.396Z",
+      "status": 200,
+      "u": "/api/people"
+    },
+    {
+      "t": "2026-10-10T06:17:17.396Z",
+      "status": 200,
+      "u": "/api/patients"
+    }
+  ],
+  "consolaPaciente": [],
+  "pasos": [
+    {
+      "paso": "B1 experto registra (F-01)",
+      "ok": true,
+      "ms": 955,
+      "det": null
+    },
+    {
+      "paso": "B2 consentimiento, cuestionario (P9 = 0) y resultado (F-02, F-04)",
+      "ok": true,
+      "ms": 3979,
+      "det": {
+        "perfil": "P06 · Leve × digital alta",
+        "phq": "8 de 27",
+        "dig": "11 de 11",
+        "ruta": true
+      }
+    },
+    {
+      "paso": "B3 clínico aprueba la evaluación",
+      "ok": true,
+      "ms": 1200,
+      "det": null
+    },
+    {
+      "paso": "B4 admin crea la cuenta del paciente",
+      "ok": true,
+      "ms": 1247,
+      "det": null
+    },
+    {
+      "paso": "B5 paciente entra: P-01 consentimiento",
+      "ok": true,
+      "ms": 3657,
+      "det": {
+        "url": "/paciente"
+      }
+    },
+    {
+      "paso": "B6 P-02 ve su ruta",
+      "ok": true,
+      "ms": 202,
+      "det": {
+        "servicios": 2,
+        "textos": [
+          "Herramientas",
+          "Ánimo",
+          "TEO"
+        ]
+      }
+    },
+    {
+      "paso": "B7 P-03 resumen",
+      "ok": true,
+      "ms": 2686,
+      "det": {
+        "url": "/paciente/resumen",
+        "lineas": [
+          "1:17",
+          "Estoy en crisis",
+          "TP",
+          "← Inicio",
+          "Mi resumen",
+          "Semana del 4 al 10 de octubre",
+          "Cómo le ha ido esta semana",
+          "Cuando haya check-ins o manilla, aquí verá su progreso.",
+          "Lo que está funcionando",
+          "Todavía no hay prácticas registradas esta semana.",
+          "Su próximo paso",
+          "Primera llamada dentro de 7 días"
+        ]
+      }
+    },
+    {
+      "paso": "B8 REQ-032 botón «Estoy en crisis»",
+      "ok": true,
+      "ms": 25319,
+      "det": {
+        "pasosUI": [
+          "AYUDA"
+        ],
+        "lineas": [
+          "Ya avisamos al equipo. Nos pondremos en contacto contigo."
+        ],
+        "escrituras": 8
+      }
+    },
+    {
+      "paso": "B9 ¿la crisis llega a la cola del clínico? (API y pantalla)",
+      "ok": true,
+      "ms": 6577,
+      "det": {
+        "personaId": "n1791613012722",
+        "code": "BUC-1207",
+        "estado": "Crisis",
+        "perfil": "P06",
+        "alertas": [
+          {
+            "id": "a-n1791613012722-crisis-btn-1791613037354",
+            "sev": "crisis",
+            "source": "Botón Estoy en crisis · app"
+          }
+        ],
+        "eventosCrisisLog": 1,
+        "enColaClinico": true
+      }
+    }
+  ],
+  "bitacora": [
+    {
+      "hora": "2026-10-10T06:16:52.777Z",
+      "tipo": "Persona",
+      "id": "TRL-QA-20261010-Ruta 07872",
+      "donde": "/experto → Nueva persona",
+      "rol": "experto1"
+    },
+    {
+      "hora": "2026-10-10T06:17:06.932Z",
+      "tipo": "Cuenta",
+      "id": "trl-qa+20261010-ruta07872@trl-qa.invalid",
+      "donde": "/usuarios → Crear usuario (Paciente)",
+      "rol": "admin"
+    }
+  ],
+  "fin": "2026-10-10T06:17:47.474Z"
+}

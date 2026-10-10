@@ -1,0 +1,12 @@
+/api/auth/me 200 0.003949s
+/api/app-state 200 0.007374s
+/api/accounts 200 0.008005s
+/api/patients 200 0.099028s
+/api/patients/me 404 0.006679s
+/api/people 200 0.052519s
+/api/territories 200 0.005018s
+/api/experts 200 0.004799s
+/api/flags 200 0.004509s
+/api/worklists 200 0.006164s
+/api/assets 200 0.004603s
+/api/health/db 200 0.005184s

@@ -1,0 +1,1064 @@
+{
+  "sin": {
+    "parte1": [
+      {
+        "fila": 1,
+        "ruta": "/api/auth/me",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 151,
+        "sinUsuario": true,
+        "ok": true
+      },
+      {
+        "fila": 2,
+        "ruta": "/api/accounts/me",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 570,
+        "ok": true
+      },
+      {
+        "fila": 3,
+        "ruta": "/api/accounts",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 236,
+        "ok": true
+      },
+      {
+        "fila": 4,
+        "ruta": "/api/patients",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 205,
+        "ok": true
+      },
+      {
+        "fila": 5,
+        "ruta": "/api/patients/me",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 201,
+        "ok": true
+      },
+      {
+        "fila": 6,
+        "ruta": "/api/patients/modules",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 203,
+        "ok": true
+      },
+      {
+        "fila": 7,
+        "ruta": "/api/people",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 208,
+        "ok": true
+      },
+      {
+        "fila": 8,
+        "ruta": "/api/territories",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 170,
+        "ok": true
+      },
+      {
+        "fila": 9,
+        "ruta": "/api/experts",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 216,
+        "ok": true
+      },
+      {
+        "fila": 10,
+        "ruta": "/api/flags",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 235,
+        "ok": true
+      },
+      {
+        "fila": 11,
+        "ruta": "/api/worklists",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 176,
+        "ok": true
+      },
+      {
+        "fila": 12,
+        "ruta": "/api/assets",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 179,
+        "ok": true
+      },
+      {
+        "fila": 13,
+        "ruta": "/api/app-state",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 171,
+        "ok": true
+      },
+      {
+        "fila": 14,
+        "ruta": "/api/health/db",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 169,
+        "ok": true
+      },
+      {
+        "fila": 15,
+        "ruta": "/api/teo/chat",
+        "metodo": "POST",
+        "esperado": "401",
+        "status": 401,
+        "ms": 157,
+        "ok": true
+      },
+      {
+        "fila": 16,
+        "ruta": "/api/teo/ask",
+        "metodo": "POST",
+        "esperado": "401",
+        "status": 401,
+        "ms": 179,
+        "ok": true
+      },
+      {
+        "fila": 17,
+        "ruta": "/api/teo/conversations?patientId=sm-acc-umvpru005",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 175,
+        "ok": true
+      },
+      {
+        "fila": 18,
+        "ruta": "/api/teo/conversations?patientId=CAL-SM182",
+        "metodo": "GET",
+        "esperado": "401",
+        "status": 401,
+        "ms": 192,
+        "ok": true
+      }
+    ]
+  },
+  "paciente": {
+    "parte1": [
+      {
+        "fila": 1,
+        "ruta": "/api/auth/me",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 271,
+        "ok": true
+      },
+      {
+        "fila": 2,
+        "ruta": "/api/accounts/me",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 242,
+        "ok": true
+      },
+      {
+        "fila": 3,
+        "ruta": "/api/accounts",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 280,
+        "ok": true
+      },
+      {
+        "fila": 4,
+        "ruta": "/api/patients",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 267,
+        "ok": true
+      },
+      {
+        "fila": 5,
+        "ruta": "/api/patients/me",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 330,
+        "ok": true
+      },
+      {
+        "fila": 6,
+        "ruta": "/api/patients/modules",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 282,
+        "ok": true
+      },
+      {
+        "fila": 7,
+        "ruta": "/api/people",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 244,
+        "ok": true
+      },
+      {
+        "fila": 8,
+        "ruta": "/api/territories",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 264,
+        "ok": true
+      },
+      {
+        "fila": 9,
+        "ruta": "/api/experts",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 278,
+        "ok": true
+      },
+      {
+        "fila": 10,
+        "ruta": "/api/flags",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 247,
+        "ok": true
+      },
+      {
+        "fila": 11,
+        "ruta": "/api/worklists",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 227,
+        "ok": true
+      },
+      {
+        "fila": 12,
+        "ruta": "/api/assets",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 257,
+        "ok": true
+      },
+      {
+        "fila": 13,
+        "ruta": "/api/app-state",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 1236,
+        "ok": true
+      },
+      {
+        "fila": 14,
+        "ruta": "/api/health/db",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 387,
+        "ok": true
+      },
+      {
+        "fila": 15,
+        "ruta": "/api/teo/chat",
+        "esperado": "No correr",
+        "status": null,
+        "ok": true
+      },
+      {
+        "fila": 16,
+        "ruta": "/api/teo/ask",
+        "metodo": "POST",
+        "esperado": "400",
+        "status": 400,
+        "ms": 253,
+        "ok": true
+      },
+      {
+        "fila": 17,
+        "ruta": "/api/teo/conversations?patientId=sm-acc-umvpru005",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 316,
+        "filas": 1,
+        "territorios": [],
+        "ok": true
+      },
+      {
+        "fila": 18,
+        "ruta": "/api/teo/conversations?patientId=CAL-SM182",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 304,
+        "filas": 1,
+        "territorios": [],
+        "ok": true
+      }
+    ]
+  },
+  "experto": {
+    "parte1": [
+      {
+        "fila": 1,
+        "ruta": "/api/auth/me",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 220,
+        "ok": true
+      },
+      {
+        "fila": 2,
+        "ruta": "/api/accounts/me",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 199,
+        "ok": true
+      },
+      {
+        "fila": 3,
+        "ruta": "/api/accounts",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 243,
+        "ok": true
+      },
+      {
+        "fila": 4,
+        "ruta": "/api/patients",
+        "metodo": "GET",
+        "esperado": "200P",
+        "status": 200,
+        "ms": 407,
+        "filas": 10,
+        "territorios": [
+          "Prueba"
+        ],
+        "ok": true
+      },
+      {
+        "fila": 5,
+        "ruta": "/api/patients/me",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 203,
+        "ok": true
+      },
+      {
+        "fila": 6,
+        "ruta": "/api/patients/modules",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 404,
+        "ms": 259,
+        "ok": false
+      },
+      {
+        "fila": 7,
+        "ruta": "/api/people",
+        "metodo": "GET",
+        "esperado": "200P",
+        "status": 200,
+        "ms": 384,
+        "filas": 10,
+        "territorios": [
+          "Prueba"
+        ],
+        "ok": true
+      },
+      {
+        "fila": 8,
+        "ruta": "/api/territories",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 291,
+        "ok": true
+      },
+      {
+        "fila": 9,
+        "ruta": "/api/experts",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 275,
+        "ok": true
+      },
+      {
+        "fila": 10,
+        "ruta": "/api/flags",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 254,
+        "ok": true
+      },
+      {
+        "fila": 11,
+        "ruta": "/api/worklists",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 286,
+        "filas": 12,
+        "territorios": [],
+        "ok": true
+      },
+      {
+        "fila": 12,
+        "ruta": "/api/assets",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 230,
+        "ok": true
+      },
+      {
+        "fila": 13,
+        "ruta": "/api/app-state",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 1244,
+        "ok": true
+      },
+      {
+        "fila": 14,
+        "ruta": "/api/health/db",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 210,
+        "ok": true
+      },
+      {
+        "fila": 15,
+        "ruta": "/api/teo/chat",
+        "metodo": "POST",
+        "esperado": "403",
+        "status": 403,
+        "ms": 245,
+        "ok": true
+      },
+      {
+        "fila": 16,
+        "ruta": "/api/teo/ask",
+        "metodo": "POST",
+        "esperado": "400",
+        "status": 400,
+        "ms": 209,
+        "ok": true
+      },
+      {
+        "fila": 17,
+        "ruta": "/api/teo/conversations?patientId=sm-acc-umvpru005",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 309,
+        "filas": 0,
+        "territorios": [],
+        "ok": true
+      },
+      {
+        "fila": 18,
+        "ruta": "/api/teo/conversations?patientId=CAL-SM182",
+        "metodo": "GET",
+        "esperado": "404",
+        "status": 404,
+        "ms": 299,
+        "ok": true
+      }
+    ]
+  },
+  "clinico": {
+    "parte1": [
+      {
+        "fila": 1,
+        "ruta": "/api/auth/me",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 219,
+        "ok": true
+      },
+      {
+        "fila": 2,
+        "ruta": "/api/accounts/me",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 299,
+        "ok": true
+      },
+      {
+        "fila": 3,
+        "ruta": "/api/accounts",
+        "metodo": "GET",
+        "esperado": "200P",
+        "status": 200,
+        "ms": 320,
+        "filas": 11,
+        "territorios": [
+          "Prueba"
+        ],
+        "ok": true
+      },
+      {
+        "fila": 4,
+        "ruta": "/api/patients",
+        "metodo": "GET",
+        "esperado": "200P",
+        "status": 200,
+        "ms": 378,
+        "filas": 10,
+        "territorios": [
+          "Prueba"
+        ],
+        "ok": true
+      },
+      {
+        "fila": 5,
+        "ruta": "/api/patients/me",
+        "metodo": "GET",
+        "esperado": "200|404",
+        "status": 404,
+        "ms": 294,
+        "ok": true
+      },
+      {
+        "fila": 6,
+        "ruta": "/api/patients/modules",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 404,
+        "ms": 230,
+        "ok": false
+      },
+      {
+        "fila": 7,
+        "ruta": "/api/people",
+        "metodo": "GET",
+        "esperado": "200P",
+        "status": 200,
+        "ms": 310,
+        "filas": 10,
+        "territorios": [
+          "Prueba"
+        ],
+        "ok": true
+      },
+      {
+        "fila": 8,
+        "ruta": "/api/territories",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 289,
+        "ok": true
+      },
+      {
+        "fila": 9,
+        "ruta": "/api/experts",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 242,
+        "ok": true
+      },
+      {
+        "fila": 10,
+        "ruta": "/api/flags",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 259,
+        "ok": true
+      },
+      {
+        "fila": 11,
+        "ruta": "/api/worklists",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 294,
+        "filas": 5,
+        "territorios": [],
+        "ok": true
+      },
+      {
+        "fila": 12,
+        "ruta": "/api/assets",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 236,
+        "ok": true
+      },
+      {
+        "fila": 13,
+        "ruta": "/api/app-state",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 1258,
+        "ok": true
+      },
+      {
+        "fila": 14,
+        "ruta": "/api/health/db",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 239,
+        "ok": true
+      },
+      {
+        "fila": 15,
+        "ruta": "/api/teo/chat",
+        "metodo": "POST",
+        "esperado": "403",
+        "status": 403,
+        "ms": 232,
+        "ok": true
+      },
+      {
+        "fila": 16,
+        "ruta": "/api/teo/ask",
+        "metodo": "POST",
+        "esperado": "400",
+        "status": 400,
+        "ms": 219,
+        "ok": true
+      },
+      {
+        "fila": 17,
+        "ruta": "/api/teo/conversations?patientId=sm-acc-umvpru005",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 309,
+        "filas": 0,
+        "territorios": [],
+        "ok": true
+      },
+      {
+        "fila": 18,
+        "ruta": "/api/teo/conversations?patientId=CAL-SM182",
+        "metodo": "GET",
+        "esperado": "404",
+        "status": 404,
+        "ms": 275,
+        "ok": true
+      }
+    ]
+  },
+  "observador": {
+    "parte1": [
+      {
+        "fila": 1,
+        "ruta": "/api/auth/me",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 212,
+        "ok": true
+      },
+      {
+        "fila": 2,
+        "ruta": "/api/accounts/me",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 220,
+        "ok": true
+      },
+      {
+        "fila": 3,
+        "ruta": "/api/accounts",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 214,
+        "ok": true
+      },
+      {
+        "fila": 4,
+        "ruta": "/api/patients",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 210,
+        "ok": true
+      },
+      {
+        "fila": 5,
+        "ruta": "/api/patients/me",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 251,
+        "ok": true
+      },
+      {
+        "fila": 6,
+        "ruta": "/api/patients/modules",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 212,
+        "ok": true
+      },
+      {
+        "fila": 7,
+        "ruta": "/api/people",
+        "metodo": "GET",
+        "esperado": "200R",
+        "status": 200,
+        "ms": 4288,
+        "resumen": true,
+        "ok": true
+      },
+      {
+        "fila": 8,
+        "ruta": "/api/territories",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 300,
+        "ok": true
+      },
+      {
+        "fila": 9,
+        "ruta": "/api/experts",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 268,
+        "ok": true
+      },
+      {
+        "fila": 10,
+        "ruta": "/api/flags",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 214,
+        "ok": true
+      },
+      {
+        "fila": 11,
+        "ruta": "/api/worklists",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 254,
+        "ok": true
+      },
+      {
+        "fila": 12,
+        "ruta": "/api/assets",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 259,
+        "ok": true
+      },
+      {
+        "fila": 13,
+        "ruta": "/api/app-state",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 1155,
+        "ok": true
+      },
+      {
+        "fila": 14,
+        "ruta": "/api/health/db",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 226,
+        "ok": true
+      },
+      {
+        "fila": 15,
+        "ruta": "/api/teo/chat",
+        "metodo": "POST",
+        "esperado": "403",
+        "status": 403,
+        "ms": 269,
+        "ok": true
+      },
+      {
+        "fila": 16,
+        "ruta": "/api/teo/ask",
+        "metodo": "POST",
+        "esperado": "400",
+        "status": 400,
+        "ms": 219,
+        "ok": true
+      },
+      {
+        "fila": 17,
+        "ruta": "/api/teo/conversations?patientId=sm-acc-umvpru005",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 245,
+        "ok": true
+      },
+      {
+        "fila": 18,
+        "ruta": "/api/teo/conversations?patientId=CAL-SM182",
+        "metodo": "GET",
+        "esperado": "403",
+        "status": 403,
+        "ms": 207,
+        "ok": true
+      }
+    ]
+  },
+  "admin": {
+    "parte1": [
+      {
+        "fila": 1,
+        "ruta": "/api/auth/me",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 215,
+        "ok": true
+      },
+      {
+        "fila": 2,
+        "ruta": "/api/accounts/me",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 235,
+        "ok": true
+      },
+      {
+        "fila": 3,
+        "ruta": "/api/accounts",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 2772,
+        "filas": 478,
+        "territorios": [
+          "Bogotá",
+          "Bucaramanga",
+          "Todos",
+          "Cali",
+          "Barranquilla",
+          "Floridablanca",
+          "Prueba"
+        ],
+        "ok": true
+      },
+      {
+        "fila": 4,
+        "ruta": "/api/patients",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 11895,
+        "filas": 455,
+        "territorios": [
+          "Bucaramanga",
+          "Floridablanca",
+          "Bogotá",
+          "Cali",
+          "Barranquilla",
+          "Prueba"
+        ],
+        "ok": true
+      },
+      {
+        "fila": 5,
+        "ruta": "/api/patients/me",
+        "metodo": "GET",
+        "esperado": "200|404",
+        "status": 404,
+        "ms": 271,
+        "ok": true
+      },
+      {
+        "fila": 6,
+        "ruta": "/api/patients/modules",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 404,
+        "ms": 202,
+        "ok": false
+      },
+      {
+        "fila": 7,
+        "ruta": "/api/people",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 3701,
+        "filas": 455,
+        "territorios": [
+          "Bogotá",
+          "Bucaramanga",
+          "Cali",
+          "Barranquilla",
+          "Floridablanca",
+          "Prueba"
+        ],
+        "ok": true
+      },
+      {
+        "fila": 8,
+        "ruta": "/api/territories",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 324,
+        "ok": true
+      },
+      {
+        "fila": 9,
+        "ruta": "/api/experts",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 249,
+        "ok": true
+      },
+      {
+        "fila": 10,
+        "ruta": "/api/flags",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 224,
+        "ok": true
+      },
+      {
+        "fila": 11,
+        "ruta": "/api/worklists",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 1891,
+        "filas": 457,
+        "territorios": [],
+        "ok": true
+      },
+      {
+        "fila": 12,
+        "ruta": "/api/assets",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 258,
+        "ok": true
+      },
+      {
+        "fila": 13,
+        "ruta": "/api/app-state",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 1166,
+        "ok": true
+      },
+      {
+        "fila": 14,
+        "ruta": "/api/health/db",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 274,
+        "ok": true
+      },
+      {
+        "fila": 15,
+        "ruta": "/api/teo/chat",
+        "metodo": "POST",
+        "esperado": "403",
+        "status": 403,
+        "ms": 218,
+        "ok": true
+      },
+      {
+        "fila": 16,
+        "ruta": "/api/teo/ask",
+        "metodo": "POST",
+        "esperado": "400",
+        "status": 400,
+        "ms": 220,
+        "ok": true
+      },
+      {
+        "fila": 17,
+        "ruta": "/api/teo/conversations?patientId=sm-acc-umvpru005",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 262,
+        "filas": 0,
+        "territorios": [],
+        "ok": true
+      },
+      {
+        "fila": 18,
+        "ruta": "/api/teo/conversations?patientId=CAL-SM182",
+        "metodo": "GET",
+        "esperado": "200",
+        "status": 200,
+        "ms": 336,
+        "filas": 0,
+        "territorios": [],
+        "ok": true
+      }
+    ]
+  }
+}

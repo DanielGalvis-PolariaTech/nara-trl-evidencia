@@ -1,0 +1,10 @@
+OK   B1 experto registra (F-01) 
+OK   B2 consentimiento, cuestionario (P9 = 0) y resultado (F-02, F-04) {"perfil":"P06 · Leve × digital alta","phq":"8 de 27","dig":"11 de 11","ruta":true}
+OK   B3 clínico aprueba la evaluación 
+OK   B4 admin crea la cuenta del paciente 
+OK   B5 paciente entra: P-01 consentimiento {"url":"/paciente"}
+OK   B6 P-02 ve su ruta {"servicios":2,"textos":["Herramientas","Ánimo","TEO"]}
+OK   B7 P-03 resumen {"url":"/paciente/resumen","lineas":["1:13","Estoy en crisis","TP","← Inicio","Mi resumen","Semana del 4 al 10 de octubre","Cómo le ha ido esta semana","Cuando haya check-ins o manilla, aquí verá su progreso.","Lo que está funcionando","Todavía no hay prácticas registradas esta semana.","Su próximo paso","Primera llamada dentro de 7 días"]}
+OK   B8 P-04 TEO por la interfaz ante una señal de riesgo {"url":"/paciente/chat","lineas":["TRL-QA-20261010-Ruta, gracias por contármelo. Lo que siente es importante y no tiene que pasarlo sola. Voy a pausar esta conversación para que una persona del equipo le llame en menos de 30 minutos. Si está en peligro ahora, llame al 123. Si necesita hablar con alguien, marque la Línea 192, opción 4.","Llamar al 123","Emergencias: envía ayuda al lugar.","Línea 192, opción 4","Conversación en pausa · el equipo la llamará"]}
+OK   B9 ¿la crisis llega a la cola del clínico? (API y pantalla) {"personaId":"n1791612800248","code":"BUC-1205","estado":"Activo","perfil":"P06","alertas":[],"eventosCrisisLog":0,"enColaClinico":false}
+consolas {"e":[],"c":[],"a":[],"p":[]}

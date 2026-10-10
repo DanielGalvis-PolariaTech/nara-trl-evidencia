@@ -1,0 +1,149 @@
+{
+  "inicio": "2026-10-10T06:11:54.602Z",
+  "consolaValidacion": [],
+  "nombre": "TRL-QA-20261010-Ruta 14474",
+  "correo": "trl-qa+20261010-ruta14474@trl-qa.invalid",
+  "consolaExperto": [],
+  "consolaClinico": [],
+  "consolaAdmin": [],
+  "consolaPaciente": [],
+  "pasos": [
+    {
+      "paso": "A: alta con nacimiento 2099-01-01 y teléfono «abc123»",
+      "ok": true,
+      "ms": 5587,
+      "det": {
+        "url": "/experto/visita/n1791612719465/consentimiento",
+        "avisos": [
+          "Contacto por teléfono o WhatsApp"
+        ],
+        "avanzoAlConsentimiento": true
+      }
+    },
+    {
+      "paso": "B1 experto registra (F-01)",
+      "ok": true,
+      "ms": 989,
+      "det": null
+    },
+    {
+      "paso": "B2 consentimiento, cuestionario (P9 = 0) y resultado (F-02, F-04)",
+      "ok": true,
+      "ms": 3997,
+      "det": {
+        "perfil": "P06 · Leve × digital alta",
+        "phq": "8 de 27",
+        "dig": "11 de 11",
+        "ruta": true
+      }
+    },
+    {
+      "paso": "B3 clínico aprueba la evaluación",
+      "ok": true,
+      "ms": 1111,
+      "det": null
+    },
+    {
+      "paso": "B4 admin crea la cuenta del paciente",
+      "ok": true,
+      "ms": 1940,
+      "det": null
+    },
+    {
+      "paso": "B5 paciente entra: P-01 consentimiento",
+      "ok": true,
+      "ms": 3806,
+      "det": {
+        "url": "/paciente"
+      }
+    },
+    {
+      "paso": "B6 P-02 ve su ruta",
+      "ok": true,
+      "ms": 213,
+      "det": {
+        "servicios": 2,
+        "textos": [
+          "Herramientas",
+          "Ánimo",
+          "TEO"
+        ]
+      }
+    },
+    {
+      "paso": "B7 P-03 resumen",
+      "ok": true,
+      "ms": 2717,
+      "det": {
+        "url": "/paciente/resumen",
+        "lineas": [
+          "1:12",
+          "Estoy en crisis",
+          "TP",
+          "← Inicio",
+          "Mi resumen",
+          "Semana del 4 al 10 de octubre",
+          "Cómo le ha ido esta semana",
+          "Cuando haya check-ins o manilla, aquí verá su progreso.",
+          "Lo que está funcionando",
+          "Todavía no hay prácticas registradas esta semana.",
+          "Su próximo paso",
+          "Primera llamada dentro de 7 días"
+        ]
+      }
+    },
+    {
+      "paso": "B8 P-04 TEO por la interfaz ante una señal de riesgo",
+      "ok": true,
+      "ms": 12805,
+      "det": {
+        "url": "/paciente/chat",
+        "lineas": [
+          "TRL-QA-20261010-Ruta, gracias por contármelo. Lo que siente es importante y no tiene que pasarlo sola. Voy a pausar esta conversación para que una persona del equipo le llame en menos de 30 minutos. Si está en peligro ahora, llame al 123. Si necesita hablar con alguien, marque la Línea 192, opción 4.",
+          "Llamar al 123",
+          "Emergencias: envía ayuda al lugar.",
+          "Línea 192, opción 4",
+          "Conversación en pausa · el equipo la llamará"
+        ]
+      }
+    },
+    {
+      "paso": "B9 ¿la crisis llega a la cola del clínico? (API y pantalla)",
+      "ok": true,
+      "ms": 6649,
+      "det": {
+        "personaId": "n1791612729015",
+        "code": "BUC-1204",
+        "estado": "Activo",
+        "perfil": "P06",
+        "alertas": [],
+        "eventosCrisisLog": 0,
+        "enColaClinico": false
+      }
+    }
+  ],
+  "bitacora": [
+    {
+      "hora": "2026-10-10T06:12:04.134Z",
+      "tipo": "Persona",
+      "id": "TRL-QA-20261010-Val 14474",
+      "donde": "/experto → Nueva persona (validación)",
+      "rol": "experto1"
+    },
+    {
+      "hora": "2026-10-10T06:12:09.065Z",
+      "tipo": "Persona",
+      "id": "TRL-QA-20261010-Ruta 14474",
+      "donde": "/experto → Nueva persona",
+      "rol": "experto1"
+    },
+    {
+      "hora": "2026-10-10T06:12:23.976Z",
+      "tipo": "Cuenta",
+      "id": "trl-qa+20261010-ruta14474@trl-qa.invalid",
+      "donde": "/usuarios → Crear usuario (Paciente)",
+      "rol": "admin"
+    }
+  ],
+  "fin": "2026-10-10T06:12:51.308Z"
+}

@@ -1,0 +1,2 @@
+colecciones: 33 · people: 1000 · patients: 1000 · accounts: 36
+muestra: 20 personas · no sintéticas: 0

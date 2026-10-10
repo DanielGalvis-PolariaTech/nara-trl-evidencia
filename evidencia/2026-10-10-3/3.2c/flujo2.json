@@ -1,0 +1,142 @@
+{
+  "inicio": "2026-10-10T06:13:15.548Z",
+  "nombre": "TRL-QA-20261010-Ruta 95396",
+  "correo": "trl-qa+20261010-ruta95396@trl-qa.invalid",
+  "consolaExperto": [],
+  "consolaClinico": [],
+  "consolaAdmin": [],
+  "escriturasTrasRiesgo": [
+    {
+      "t": "2026-10-10T06:13:45.085Z",
+      "m": "POST",
+      "u": "/api/teo/conversations",
+      "cuerpo": "{\"id\":\"tc-mv200m50\",\"patientId\":\"umv200ewa\",\"patientName\":\"TRL-QA-20261010-Ruta 95396 Prueba Sesión\",\"startedAt\":1791612823572,\"close\":false,\"flujoRespiracion\":false,\"messages\":[{\"role\":\"teo\",\"text\":\"Buenos días, TRL-QA-20261010-Ruta. Aún no hay datos de manilla; vamos con cómo se siente. ¿Cómo se siente hoy?\"},{\"role\":\"paciente\",\"text\":\"Últimamente pienso que todos estarían mejor sin mí y he pens"
+    },
+    {
+      "t": "2026-10-10T06:13:45.103Z",
+      "status": 200,
+      "u": "/api/teo/conversations"
+    }
+  ],
+  "consolaPaciente": [],
+  "pasos": [
+    {
+      "paso": "B1 experto registra (F-01)",
+      "ok": true,
+      "ms": 963,
+      "det": null
+    },
+    {
+      "paso": "B2 consentimiento, cuestionario (P9 = 0) y resultado (F-02, F-04)",
+      "ok": true,
+      "ms": 4413,
+      "det": {
+        "perfil": "P06 · Leve × digital alta",
+        "phq": "8 de 27",
+        "dig": "11 de 11",
+        "ruta": true
+      }
+    },
+    {
+      "paso": "B3 clínico aprueba la evaluación",
+      "ok": true,
+      "ms": 1019,
+      "det": null
+    },
+    {
+      "paso": "B4 admin crea la cuenta del paciente",
+      "ok": true,
+      "ms": 1275,
+      "det": null
+    },
+    {
+      "paso": "B5 paciente entra: P-01 consentimiento",
+      "ok": true,
+      "ms": 3652,
+      "det": {
+        "url": "/paciente"
+      }
+    },
+    {
+      "paso": "B6 P-02 ve su ruta",
+      "ok": true,
+      "ms": 184,
+      "det": {
+        "servicios": 2,
+        "textos": [
+          "Herramientas",
+          "Ánimo",
+          "TEO"
+        ]
+      }
+    },
+    {
+      "paso": "B7 P-03 resumen",
+      "ok": true,
+      "ms": 2705,
+      "det": {
+        "url": "/paciente/resumen",
+        "lineas": [
+          "1:13",
+          "Estoy en crisis",
+          "TP",
+          "← Inicio",
+          "Mi resumen",
+          "Semana del 4 al 10 de octubre",
+          "Cómo le ha ido esta semana",
+          "Cuando haya check-ins o manilla, aquí verá su progreso.",
+          "Lo que está funcionando",
+          "Todavía no hay prácticas registradas esta semana.",
+          "Su próximo paso",
+          "Primera llamada dentro de 7 días"
+        ]
+      }
+    },
+    {
+      "paso": "B8 P-04 TEO por la interfaz ante una señal de riesgo",
+      "ok": true,
+      "ms": 33785,
+      "det": {
+        "url": "/paciente/chat",
+        "lineas": [
+          "TRL-QA-20261010-Ruta, gracias por contármelo. Lo que siente es importante y no tiene que pasarlo sola. Voy a pausar esta conversación para que una persona del equipo le llame en menos de 30 minutos. Si está en peligro ahora, llame al 123. Si necesita hablar con alguien, marque la Línea 192, opción 4.",
+          "Llamar al 123",
+          "Emergencias: envía ayuda al lugar.",
+          "Línea 192, opción 4",
+          "Conversación en pausa · el equipo la llamará"
+        ]
+      }
+    },
+    {
+      "paso": "B9 ¿la crisis llega a la cola del clínico? (API y pantalla)",
+      "ok": true,
+      "ms": 6617,
+      "det": {
+        "personaId": "n1791612800248",
+        "code": "BUC-1205",
+        "estado": "Activo",
+        "perfil": "P06",
+        "alertas": [],
+        "eventosCrisisLog": 0,
+        "enColaClinico": false
+      }
+    }
+  ],
+  "bitacora": [
+    {
+      "hora": "2026-10-10T06:13:20.311Z",
+      "tipo": "Persona",
+      "id": "TRL-QA-20261010-Ruta 95396",
+      "donde": "/experto → Nueva persona",
+      "rol": "experto1"
+    },
+    {
+      "hora": "2026-10-10T06:13:34.731Z",
+      "tipo": "Cuenta",
+      "id": "trl-qa+20261010-ruta95396@trl-qa.invalid",
+      "donde": "/usuarios → Crear usuario (Paciente)",
+      "rol": "admin"
+    }
+  ],
+  "fin": "2026-10-10T06:14:22.957Z"
+}

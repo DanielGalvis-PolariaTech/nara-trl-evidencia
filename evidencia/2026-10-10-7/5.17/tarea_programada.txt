@@ -1,0 +1,19 @@
+Tarea programada «NARA respaldo 2.5h» — leída el 2026-10-10 ~12:02 (-05:00) con Get-ScheduledTask / Get-ScheduledTaskInfo (solo lectura)
+
+Estado: Ready
+Última ejecución: 2026-10-10 10:36:01, resultado 0
+Próxima ejecución: 2026-10-10 13:06:00
+Ejecuciones perdidas: 0
+Inicio del disparador (StartBoundary): 2026-10-10T05:36:00
+Intervalo de repetición: PT2H30M (sin fecha de fin)
+StartWhenAvailable: False   (si se pierde una ejecución, no se recupera al volver a encender)
+WakeToRun: False            (no despierta el equipo si está suspendido)
+DisallowStartIfOnBatteries: True   (no arranca si el portátil está con batería)
+StopIfGoingOnBatteries: True       (se detiene si el portátil pasa a batería)
+LogonType: Interactive      (solo corre con la sesión de Windows del usuario DG abierta)
+RunLevel: Limited
+Acción: powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File D:\WORK\NARA\herramientas\qa\laboratorio\respaldo_cada_2_5h.ps1
+Equipo: portátil (Win32_Battery presente, BatteryStatus 2 = conectado a corriente en el momento de la lectura)
+
+Destino del respaldo (respaldo.js): D:\WORK\NARA\datos\respaldos_db\nara_<fecha UTC>\ — disco local del mismo portátil.
+Credencial: D:\WORK\NARA\datos\base_local\scripts\.cred existe desde 2026-10-10 03:03 (105 bytes; no se leyó su contenido). Debe quedar en disco para que la tarea funcione.

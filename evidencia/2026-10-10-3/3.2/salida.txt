@@ -1,0 +1,29 @@
+OK   experto entra 
+FALLA validación: Nueva persona sin datos no avanza el diálogo se cerró con el formulario vacío; url http://localhost:3102/experto/nueva
+OK   validación: fecha de nacimiento futura y teléfono con letras {"dialogoSigueAbierto":false,"telefonoAceptado":"abc123","mensajes":["Hoy lleva 5 de 9 visitas validadas · 2 pendientes. Le faltan 2 de 60+ para la cuota.","Fecha de nacimiento","Teléfono","Faltan datos: apellido, vereda o barrio."],"url":"/experto/nueva"}
+OK   F-01 registrar persona (tildes, ñ, HTML en vereda) {"url":"/experto/visita/n1791612297300/consentimiento"}
+OK   consentimiento: Continuar sin marcar ni firmar no avanza {"botonHabilitado":true,"url":"/experto/visita/n1791612297300/consentimiento"}
+OK   consentimiento firmado 
+OK   F-02 PHQ-9 con pregunta 9 = 1 (Varios días) {"textosDeAviso":["Crisis · protocolo activado","Ver ruta de crisis","¿Hay pacientes en crisis?"]}
+OK   capacidad digital y contexto 
+FALLA F-02/F-04 calcular: PHQ 9 de 27 (Leve), digital 11 → P06 resultado inesperado {"phq9":true,"dig11":true,"perfil":null,"ruta":false,"crisis":["Crisis · el perfil queda suspendido","P06 suspendido · Ruta de crisis","Ruta de crisis","¿Hay pacientes en crisis?"]}
+OK   guardar visita 
+OK   lectura por API (fidelidad) {"id":"n1791612297300","code":"BUC-2004","nameOk":true,"nameLeido":"TRL-QA-<suf>010-Ñandú 92157 Pérez Güiza","placeLeido":"<b>Vereda</b> \"La Ñ\" & Cía","veredaIgual":false,"phone":"ok","terr":"Bucaramanga","profile":null,"evalPhq":9,"evalDig":11,"status":"Crisis","birth":"1975-02-28","age":51}
+FALLA C-03 la alerta de pregunta 9 existe para el clínico (API app-state) no hay alerta para la persona; estado del paciente Crisis
+FALLA clínico entra y ve la alerta en la cola de crisis locator.waitFor: Timeout 20000ms exceeded.
+FALLA clínico aprueba la evaluación locator.click: Timeout 10000ms exceeded.
+OK   admin crea la cuenta de paciente de la persona {"correoPrellenadoIgual":true,"rechazaClaveCorta":false}
+FALLA P-01 paciente entra y ve el consentimiento locator.waitFor: Timeout 20000ms exceeded.
+FALLA P-02 ve su ruta locator.waitFor: Timeout 20000ms exceeded.
+OK   recarga a mitad: sigue en /paciente {"url":"/paciente/pendiente"}
+OK   P-04 TEO ante una señal de riesgo (texto inventado) {"status":200,"provider":"openai","model":"gpt-4o-mini","flags":["ok","text","model","provider"],"respuesta":"CRISIS.","alertasDeLaPersona":[],"estadoPaciente":"Crisis","riesgoEnRespuesta":null}
+
+consolas {
+ "e": [
+  "HTTP 403 POST /api/patients",
+  "error Failed to load resource: the server responded with a status of 403 (Forbidden)"
+ ],
+ "c": [],
+ "a": [],
+ "p": []
+}

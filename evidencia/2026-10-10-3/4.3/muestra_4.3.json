@@ -1,0 +1,222 @@
+[
+  {
+    "id": "sm-352",
+    "code": "CAL-SM352",
+    "name": "TRL-QA Paciente 10",
+    "terr": "Cali",
+    "phone": "3001000025",
+    "email": "trl-qa.paciente10@trl-qa.invalid",
+    "profile": "P10",
+    "status": "Aprobado",
+    "sintetica": true
+  },
+  {
+    "id": "sm-300",
+    "code": "BAR-SM300",
+    "name": "TRL-QA Paciente 15",
+    "terr": "Barranquilla",
+    "phone": "3001000030",
+    "email": "trl-qa.paciente15@trl-qa.invalid",
+    "profile": "P06",
+    "status": "Por aprobar",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0028",
+    "code": "BOG-QA0028",
+    "name": "TRL-QA Paciente trl-qa-0028",
+    "terr": "Bogotá",
+    "phone": "3001000063",
+    "email": "trl-qa.trl-qa-0028@trl-qa.invalid",
+    "profile": "P11",
+    "status": "Rechazado",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0170",
+    "code": "CAL-QA0170",
+    "name": "TRL-QA Paciente trl-qa-0170",
+    "terr": "Cali",
+    "phone": "3001000205",
+    "email": "trl-qa.trl-qa-0170@trl-qa.invalid",
+    "profile": "P10",
+    "status": "Aprobado",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0608",
+    "code": "BOG-QA0608",
+    "name": "TRL-QA Paciente trl-qa-0608",
+    "terr": "Bogotá",
+    "phone": "3001000643",
+    "email": "trl-qa.trl-qa-0608@trl-qa.invalid",
+    "profile": "P11",
+    "status": "Rechazado",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0068",
+    "code": "BOG-QA0068",
+    "name": "TRL-QA Paciente trl-qa-0068",
+    "terr": "Bogotá",
+    "phone": "3001000103",
+    "email": "trl-qa.trl-qa-0068@trl-qa.invalid",
+    "profile": "P11",
+    "status": "Rechazado",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0990",
+    "code": "CAL-QA0990",
+    "name": "TRL-QA Paciente trl-qa-0990",
+    "terr": "Cali",
+    "phone": "3001001025",
+    "email": "trl-qa.trl-qa-0990@trl-qa.invalid",
+    "profile": "P10",
+    "status": "Aprobado",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0889",
+    "code": "BOG-QA0889",
+    "name": "TRL-QA Paciente trl-qa-0889",
+    "terr": "Bogotá",
+    "phone": "3001000924",
+    "email": "trl-qa.trl-qa-0889@trl-qa.invalid",
+    "profile": "P15",
+    "status": "Por aprobar",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0216",
+    "code": "BUC-QA0216",
+    "name": "TRL-QA Paciente trl-qa-0216",
+    "terr": "Bucaramanga",
+    "phone": "3001000251",
+    "email": "trl-qa.trl-qa-0216@trl-qa.invalid",
+    "profile": null,
+    "status": "Sin evaluación",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0366",
+    "code": "FLO-QA0366",
+    "name": "TRL-QA Paciente trl-qa-0366",
+    "terr": "Floridablanca",
+    "phone": "3001000401",
+    "email": "trl-qa.trl-qa-0366@trl-qa.invalid",
+    "profile": "P12",
+    "status": "Activo",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0664",
+    "code": "FLO-QA0664",
+    "name": "TRL-QA Paciente trl-qa-0664",
+    "terr": "Floridablanca",
+    "phone": "3001000699",
+    "email": "trl-qa.trl-qa-0664@trl-qa.invalid",
+    "profile": "P04",
+    "status": "Activo",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0933",
+    "code": "BAR-QA0933",
+    "name": "TRL-QA Paciente trl-qa-0933",
+    "terr": "Barranquilla",
+    "phone": "3001000968",
+    "email": "trl-qa.trl-qa-0933@trl-qa.invalid",
+    "profile": "P13",
+    "status": "Por aprobar",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0797",
+    "code": "FLO-QA0797",
+    "name": "TRL-QA Paciente trl-qa-0797",
+    "terr": "Floridablanca",
+    "phone": "3001000832",
+    "email": "trl-qa.trl-qa-0797@trl-qa.invalid",
+    "profile": null,
+    "status": "Sin evaluación",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0399",
+    "code": "CAL-QA0399",
+    "name": "TRL-QA Paciente trl-qa-0399",
+    "terr": "Cali",
+    "phone": "3001000434",
+    "email": "trl-qa.trl-qa-0399@trl-qa.invalid",
+    "profile": null,
+    "status": "Sin evaluación",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0345",
+    "code": "FLO-QA0345",
+    "name": "TRL-QA Paciente trl-qa-0345",
+    "terr": "Floridablanca",
+    "phone": "3001000380",
+    "email": "trl-qa.trl-qa-0345@trl-qa.invalid",
+    "profile": "P08",
+    "status": "Por aprobar",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0626",
+    "code": "FLO-QA0626",
+    "name": "TRL-QA Paciente trl-qa-0626",
+    "terr": "Floridablanca",
+    "phone": "3001000661",
+    "email": "trl-qa.trl-qa-0626@trl-qa.invalid",
+    "profile": "P12",
+    "status": "Activo",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0876",
+    "code": "BUC-QA0876",
+    "name": "TRL-QA Paciente trl-qa-0876",
+    "terr": "Bucaramanga",
+    "phone": "3001000911",
+    "email": "trl-qa.trl-qa-0876@trl-qa.invalid",
+    "profile": null,
+    "status": "Sin evaluación",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0378",
+    "code": "BOG-QA0378",
+    "name": "TRL-QA Paciente trl-qa-0378",
+    "terr": "Bogotá",
+    "phone": "3001000413",
+    "email": "trl-qa.trl-qa-0378@trl-qa.invalid",
+    "profile": null,
+    "status": "Sin evaluación",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0176",
+    "code": "BUC-QA0176",
+    "name": "TRL-QA Paciente trl-qa-0176",
+    "terr": "Bucaramanga",
+    "phone": "3001000211",
+    "email": "trl-qa.trl-qa-0176@trl-qa.invalid",
+    "profile": null,
+    "status": "Sin evaluación",
+    "sintetica": true
+  },
+  {
+    "id": "trl-qa-0628",
+    "code": "BOG-QA0628",
+    "name": "TRL-QA Paciente trl-qa-0628",
+    "terr": "Bogotá",
+    "phone": "3001000663",
+    "email": "trl-qa.trl-qa-0628@trl-qa.invalid",
+    "profile": "P11",
+    "status": "Rechazado",
+    "sintetica": true
+  }
+]

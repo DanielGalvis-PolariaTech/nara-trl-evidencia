@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Análisis de la evidencia existente de respaldo y restauración (sesión 2026-10-10-7) · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Análisis de la evidencia existente de respaldo y restauración (sesión 2026-10-10-7)</h1>
+<p>Fuente: <code>pruebas/evidencia/2026-10-10-4/respaldos/</code> (registro.csv, restauracion.json, restauracion_alinear.json), <code>herramientas/qa/laboratorio/respaldo_cada_2_5h.ps1</code>, <code>restaurar_local.js</code>, <code>datos/base_local/scripts/respaldo.js</code>, <code>_resumen.json</code> de cada respaldo en <code>datos/respaldos_db/</code>, <code>docs/trl/runbooks/03_restauracion_respaldo.md</code>. No se hizo ningún respaldo ni restauración nuevos.</p>
+<h2>Frecuencia real (registro.csv)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Inicio (-05:00)</th>
+<th>Fin</th>
+<th>Duración</th>
+<th>Intervalo desde el anterior</th>
+<th>Documentos</th>
+<th>Bytes</th>
+<th>Resultado</th>
+<th>Origen</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>03:06:03</td>
+<td>03:06:11</td>
+<td>8,0 s</td>
+<td>—</td>
+<td>2036</td>
+<td>2.058.848</td>
+<td>ok</td>
+<td>Manual (la tarea arranca a las 05:36)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>05:36:01</td>
+<td>05:36:39</td>
+<td>38,2 s</td>
+<td>2 h 29 min 58 s</td>
+<td>2037</td>
+<td>2.059.386</td>
+<td>ok</td>
+<td>Tarea</td>
+</tr>
+<tr>
+<td>3</td>
+<td>08:06:03</td>
+<td>08:06:34</td>
+<td>31,2 s</td>
+<td>2 h 30 min 02 s</td>
+<td>2042</td>
+<td>2.066.387</td>
+<td>ok</td>
+<td>Tarea</td>
+</tr>
+<tr>
+<td>4</td>
+<td>10:36:02</td>
+<td>10:36:30</td>
+<td>28,0 s</td>
+<td>2 h 29 min 59 s</td>
+<td>2048</td>
+<td>2.082.700</td>
+<td>ok</td>
+<td>Tarea</td>
+</tr>
+</tbody></table>
+<ul>
+<li>Desde que arrancó la tarea (05:36), 3 de 3 ejecuciones a tiempo (desvío ≤ 3 s). Próxima: 13:06. Ejecuciones perdidas: 0.</li>
+<li>Hubo además un respaldo manual a las 08:42 (<code>nara_2026-10-10-13-42</code>, 33 colecciones, 2043 documentos) que no está en el registro.</li>
+<li>Cada respaldo lee colección por colección (<code>find({})</code>), sin instantánea ni <code>readConcern: snapshot</code>: no es un punto en el tiempo consistente entre colecciones (ventana de 8 a 38 s).</li>
+</ul>
+<h2>Pérdida de datos posible (RPO 2,5 h)</h2>
+<ul>
+<li>Intervalo = 2 h 30 min, igual al RPO: margen 0. Peor caso ≈ 2 h 30 min + duración del respaldo (hasta 38 s) &gt; 2,5 h.</li>
+<li>A las 12:02 la base en línea tenía 2077 documentos; el último respaldo (10:36) tiene 2048. No respaldados en ese momento: <code>access_log</code> 25 (0 en el respaldo) y <code>login_attempts</code> 4 (1 → 5). 2048 + 25 + 4 = 2077.</li>
+<li>La tarea no corre con el portátil en batería, suspendido, apagado o con la sesión cerrada, y no recupera ejecuciones perdidas (<code>tarea_programada.txt</code>). En esos casos el RPO no se cumple y nada avisa.</li>
+</ul>
+<h2>Restauración probada</h2>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>Respaldo</th>
+<th>Destino</th>
+<th>Restaurado</th>
+<th>Segundos</th>
+<th>Colecciones</th>
+<th>Documentos</th>
+<th>Diferencias</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>restauracion.json</td>
+<td>nara_2026-10-10-08-06 (03:06 local)</td>
+<td>127.0.0.1/nara_restore_rto (Mongo local del portátil)</td>
+<td>05:39 local</td>
+<td>1,63</td>
+<td>33</td>
+<td>2036</td>
+<td>0</td>
+</tr>
+<tr>
+<td>restauracion_alinear.json</td>
+<td>nara_2026-10-10-13-06 (08:06 local)</td>
+<td>127.0.0.1/nara_alinear</td>
+<td>08:30 local</td>
+<td>1,564</td>
+<td>33</td>
+<td>2042</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p>Observaciones:</p>
+<ol>
+<li><code>segundos</code> mide solo la inserción en el Mongo local (desde el primer <code>insertMany</code> hasta el último índice). No incluye: detectar la falla, decidir, conseguir la credencial, restaurar en Atlas (o en otro clúster), apuntar <code>MONGODB_URI</code> de Render a la base restaurada, redesplegar y verificar con la app. Ese tiempo total (el RTO real) no está medido.</li>
+<li>La comparación es solo de <strong>conteos por colección</strong> contra el <code>_resumen.json</code> del mismo respaldo, que <code>respaldo.js</code> escribe con <code>docs.length</code> de lo que él mismo exportó. Comprueba que el archivo se reinsertó completo, pero <strong>no</strong> que el respaldo coincida con la base en línea a la hora del respaldo, ni el contenido documento por documento. El runbook pide <code>comparar_db.js</code> documento por documento; no se usó.</li>
+<li>No se hizo el paso 2 de 5.17/R-06 (crear 3 registros nuevos y borrar 1 después del respaldo, y verificar que lo restaurado no tiene los 3 y sí tiene el borrado).</li>
+<li>«Entorno limpio»: base vacía en el Mongo local del mismo portátil que hace el respaldo. Es una base separada de producción, pero no un entorno separado de la máquina que guarda el respaldo; no se probó restaurar en Atlas ni que la app funcione contra la base restaurada.</li>
+<li>Los respaldos restaurados tenían 33 colecciones; desde el respaldo de las 10:36 hay 34 (aparece <code>login_attempts</code>). No se ha probado restaurar un respaldo con las 34 colecciones.</li>
+</ol>
+<h2>Dónde se guarda el respaldo</h2>
+<ul>
+<li>Solo en <code>D:\WORK\NARA\datos\respaldos_db\</code> del portátil (ignorado por git por la regla <code>/*</code> de <code>.gitignore</code>). No hay evidencia de copia fuera del portátil (otra región, otro proveedor, almacenamiento de objetos). No se pudo verificar si el disco D: está cifrado (Get-BitLockerVolume sin acceso).</li>
+<li>Los archivos son EJSON en claro con datos reales de salud mental (people, patients, clin_citas, teo_conversations).</li>
+<li>En el clúster Atlas <code>polaria</code> hay 7 bases <code>nara_restore_*</code> (alinear, claves, prueba1, prueba1b, soak, subida, test): copias en el mismo clúster que producción, no un respaldo independiente. La skill <code>mongo-acceso-nara</code> solo reconoce <code>nara_restore_test</code>.</li>
+</ul>
+<h2>Respaldo nativo de Atlas</h2>
+<p>No verificado: no hay acceso a Atlas Admin. <code>pruebas/entornos.md</code> deja el plan del clúster como PENDIENTE.</p>
+<h2>Procedimiento escrito</h2>
+<ul>
+<li><code>docs/trl/runbooks/03_restauracion_respaldo.md</code> v0.1 (2026-10-09) está desactualizado: dice que los respaldos son manuales y el RPO 24 h; usa <code>restaurar.js</code> + <code>comparar_db.js</code> (no <code>restaurar_local.js</code>); la restauración real en producción está «No definida»; «Ejecutado por alguien distinto del autor: PENDIENTE».</li>
+<li><code>pruebas/autorizaciones.md</code> dice que la tarea corre «desde las 05:36»; el registro empieza a las 03:06 (respaldo manual).</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

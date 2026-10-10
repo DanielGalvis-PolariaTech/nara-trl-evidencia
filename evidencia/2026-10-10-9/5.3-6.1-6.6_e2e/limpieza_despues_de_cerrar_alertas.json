@@ -1,0 +1,28 @@
+{
+  "fecha": "2026-10-10T19:58:50.251Z",
+  "etiqueta": "despues_de_cerrar_alertas",
+  "personasActivasConPrefijo": [],
+  "pacientesConPrefijoEnPatients": [],
+  "territoriosConPrefijo": [
+    {
+      "name": "TRL-QA-E2E-20261010-Terr-442498",
+      "active": false
+    }
+  ],
+  "cuentasTrlQa": [
+    {
+      "id": "umv2t1340",
+      "email": "trl-qa+obs442498@trl-qa.invalid",
+      "status": "Inactivo",
+      "role": "observador"
+    },
+    {
+      "id": "umv2t52io",
+      "email": "trl-qa+ruta666105@trl-qa.invalid",
+      "status": "Inactivo",
+      "role": "paciente"
+    }
+  ],
+  "alertasDePersonasDeLaSuite": [],
+  "totalAlertasEnAppState": 6
+}

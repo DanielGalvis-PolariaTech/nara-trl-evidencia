@@ -1,0 +1,376 @@
+{
+  "fecha": "2026-10-10T06:32:12.753Z",
+  "base": "http://localhost:3102",
+  "resumen": {
+    "admin_1366": {
+      "tLoginMs": 2654,
+      "urlTras3s": "/inicio",
+      "consola": [],
+      "red": [],
+      "lentas": [],
+      "pantallas": [
+        {
+          "ruta": "/inicio",
+          "final": "/inicio",
+          "ms": 1184,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 2,
+          "imgsSinAlt": 0,
+          "captura": "admin_1366__inicio_2026-10-10T06-31-03-401Z.png"
+        },
+        {
+          "ruta": "/territorios",
+          "final": "/territorios",
+          "ms": 1308,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "admin_1366__territorios_2026-10-10T06-31-04-826Z.png"
+        },
+        {
+          "ruta": "/equipos",
+          "final": "/equipos",
+          "ms": 1144,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "admin_1366__equipos_2026-10-10T06-31-06-108Z.png"
+        },
+        {
+          "ruta": "/rutas",
+          "final": "/rutas",
+          "ms": 1222,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 2,
+          "imgsSinAlt": 0,
+          "captura": "admin_1366__rutas_2026-10-10T06-31-07-463Z.png"
+        },
+        {
+          "ruta": "/personas",
+          "final": "/personas",
+          "ms": 1239,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "admin_1366__personas_2026-10-10T06-31-08-871Z.png"
+        },
+        {
+          "ruta": "/usuarios",
+          "final": "/usuarios",
+          "ms": 869,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "admin_1366__usuarios_2026-10-10T06-31-09-877Z.png"
+        },
+        {
+          "ruta": "/informe?t=admin-weekly&back=/inicio",
+          "final": "/informe?t=admin-weekly&back=/inicio",
+          "ms": 846,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 0,
+          "imgsSinAlt": 0,
+          "captura": "admin_1366__informe_t_admin_weekly_back_inicio_2026-10-10T06-31-10-856Z.png"
+        }
+      ]
+    },
+    "admin_375": {
+      "tLoginMs": 2622,
+      "urlTras3s": "/inicio",
+      "consola": [],
+      "red": [],
+      "lentas": [],
+      "pantallas": [
+        {
+          "ruta": "/inicio",
+          "final": "/inicio",
+          "ms": 1192,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 2,
+          "imgsSinAlt": 0,
+          "captura": "admin_375__inicio_2026-10-10T06-31-17-899Z.png"
+        },
+        {
+          "ruta": "/informe?t=admin-weekly&back=/inicio",
+          "final": "/informe?t=admin-weekly&back=/inicio",
+          "ms": 799,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 0,
+          "imgsSinAlt": 0,
+          "captura": "admin_375__informe_t_admin_weekly_back_inicio_2026-10-10T06-31-18-767Z.png"
+        },
+        {
+          "ruta": "/territorios",
+          "final": "/territorios",
+          "ms": 1150,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "admin_375__territorios_2026-10-10T06-31-19-980Z.png"
+        },
+        {
+          "ruta": "/equipos",
+          "final": "/equipos",
+          "ms": 1049,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "admin_375__equipos_2026-10-10T06-31-21-102Z.png"
+        },
+        {
+          "ruta": "/rutas",
+          "final": "/rutas",
+          "ms": 1051,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 2,
+          "imgsSinAlt": 0,
+          "captura": "admin_375__rutas_2026-10-10T06-31-22-221Z.png"
+        },
+        {
+          "ruta": "/personas",
+          "final": "/personas",
+          "ms": 1168,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "admin_375__personas_2026-10-10T06-31-23-469Z.png"
+        },
+        {
+          "ruta": "/usuarios",
+          "final": "/usuarios",
+          "ms": 826,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "admin_375__usuarios_2026-10-10T06-31-24-387Z.png"
+        }
+      ]
+    },
+    "experto_1366": {
+      "tLoginMs": 1644,
+      "urlTras3s": "/experto",
+      "consola": [],
+      "red": [],
+      "lentas": [],
+      "pantallas": [
+        {
+          "ruta": "/experto",
+          "final": "/experto",
+          "ms": 689,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "experto_1366__experto_2026-10-10T06-31-29-913Z.png"
+        }
+      ]
+    },
+    "experto_375": {
+      "tLoginMs": 2270,
+      "urlTras3s": "/experto",
+      "consola": [],
+      "red": [],
+      "lentas": [],
+      "pantallas": [
+        {
+          "ruta": "/experto",
+          "final": "/experto",
+          "ms": 684,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "experto_375__experto_2026-10-10T06-31-36-105Z.png"
+        }
+      ]
+    },
+    "clinico_1366": {
+      "tLoginMs": 1497,
+      "urlTras3s": "/clinico",
+      "consola": [],
+      "red": [],
+      "lentas": [],
+      "pantallas": [
+        {
+          "ruta": "/clinico",
+          "final": "/clinico",
+          "ms": 772,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 2,
+          "imgsSinAlt": 0,
+          "captura": "clinico_1366__clinico_2026-10-10T06-31-41-573Z.png"
+        },
+        {
+          "ruta": "/clinico/aprobaciones",
+          "final": "/clinico/aprobaciones",
+          "ms": 724,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "clinico_1366__clinico_aprobaciones_2026-10-10T06-31-42-423Z.png"
+        },
+        {
+          "ruta": "/clinico/pacientes",
+          "final": "/clinico/pacientes",
+          "ms": 761,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "clinico_1366__clinico_pacientes_2026-10-10T06-31-43-362Z.png"
+        },
+        {
+          "ruta": "/clinico/crisis/historial",
+          "final": "/clinico/crisis/historial",
+          "ms": 709,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "clinico_1366__clinico_crisis_historial_2026-10-10T06-31-44-205Z.png"
+        }
+      ]
+    },
+    "clinico_375": {
+      "tLoginMs": 1497,
+      "urlTras3s": "/clinico",
+      "consola": [],
+      "red": [],
+      "lentas": [],
+      "pantallas": [
+        {
+          "ruta": "/clinico",
+          "final": "/clinico",
+          "ms": 720,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 2,
+          "imgsSinAlt": 0,
+          "captura": "clinico_375__clinico_2026-10-10T06-31-49-647Z.png"
+        },
+        {
+          "ruta": "/clinico/aprobaciones",
+          "final": "/clinico/aprobaciones",
+          "ms": 713,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "clinico_375__clinico_aprobaciones_2026-10-10T06-31-50-449Z.png"
+        },
+        {
+          "ruta": "/clinico/pacientes",
+          "final": "/clinico/pacientes",
+          "ms": 793,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "clinico_375__clinico_pacientes_2026-10-10T06-31-51-352Z.png"
+        },
+        {
+          "ruta": "/clinico/crisis/historial",
+          "final": "/clinico/crisis/historial",
+          "ms": 719,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 1,
+          "imgsSinAlt": 0,
+          "captura": "clinico_375__clinico_crisis_historial_2026-10-10T06-31-52-144Z.png"
+        }
+      ]
+    },
+    "paciente_1366": {
+      "tLoginMs": 1543,
+      "urlTras3s": "/paciente",
+      "consola": [],
+      "red": [],
+      "lentas": [],
+      "pantallas": [
+        {
+          "ruta": "/paciente",
+          "final": "/paciente",
+          "ms": 626,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 0,
+          "imgsSinAlt": 0,
+          "captura": "paciente_1366__paciente_2026-10-10T06-31-57-500Z.png"
+        }
+      ]
+    },
+    "paciente_375": {
+      "tLoginMs": 1526,
+      "urlTras3s": "/paciente",
+      "consola": [],
+      "red": [],
+      "lentas": [],
+      "pantallas": [
+        {
+          "ruta": "/paciente",
+          "final": "/paciente",
+          "ms": 645,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 0,
+          "imgsSinAlt": 0,
+          "captura": "paciente_375__paciente_2026-10-10T06-32-02-920Z.png"
+        }
+      ]
+    },
+    "observador_1366": {
+      "tLoginMs": 1012,
+      "urlTras3s": "/observador",
+      "consola": [],
+      "red": [],
+      "lentas": [],
+      "pantallas": [
+        {
+          "ruta": "/observador",
+          "final": "/observador",
+          "ms": 642,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 2,
+          "imgsSinAlt": 0,
+          "captura": "observador_1366__observador_2026-10-10T06-32-07-733Z.png"
+        }
+      ]
+    },
+    "observador_375": {
+      "tLoginMs": 1015,
+      "urlTras3s": "/observador",
+      "consola": [],
+      "red": [],
+      "lentas": [],
+      "pantallas": [
+        {
+          "ruta": "/observador",
+          "final": "/observador",
+          "ms": 656,
+          "desborde": 0,
+          "plantilla": [],
+          "sinEtiqueta": 2,
+          "imgsSinAlt": 0,
+          "captura": "observador_375__observador_2026-10-10T06-32-12-623Z.png"
+        }
+      ]
+    }
+  }
+}

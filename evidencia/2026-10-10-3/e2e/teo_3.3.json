@@ -1,0 +1,38 @@
+[
+  {
+    "rol": "paciente",
+    "ruta": "/api/teo/chat",
+    "entrada": {
+      "message": "Hola TEO, esta semana he dormido mal y me despierto con miedo cuando pasa un camión."
+    },
+    "status": 200,
+    "ms": 1886,
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "respuesta": "Hola, TRL-QA. Lamento que esté pasando por eso. ¿Cómo se siente en general?"
+  },
+  {
+    "rol": "clinico",
+    "ruta": "/api/teo/ask",
+    "entrada": {
+      "question": "¿Cuántos pacientes de mi territorio están en estado Activo y cuántos sin evaluación?"
+    },
+    "status": 200,
+    "ms": 1563,
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "respuesta": "En Bucaramanga, **51 pacientes** están en estado **Activo** y **50 pacientes** están **sin evaluación**. Esto implica que hay un número significativo de personas que ya están recibiendo acompañamiento, mientras que otra parte aún no ha sido evaluada. Es importante que podamos enfocarnos en estas evaluaciones pendientes para asegurar que todos los pacientes tengan acceso a los recursos necesarios. Si necesita más información o apoyo sobre algún paciente en particular, no dude en preguntar. Estoy aquí para ayudarle con cualquier aspecto del programa NARA."
+  },
+  {
+    "rol": "clinico",
+    "ruta": "/api/teo/ask",
+    "entrada": {
+      "question": "¿Qué perfiles son los más frecuentes entre mis pacientes?"
+    },
+    "status": 200,
+    "ms": 2235,
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "respuesta": "En el programa, los perfiles más frecuentes entre sus pacientes son: - **P09**: 50 pacientes\n- **P01**: 50 pacientes\n- **P05**: 50 pacientes\n- **—** (sin perfil específico): 50 pacientes\n- **P06**: 2 pacientes Esto significa que hay una distribución equitativa entre los perfiles P01, P05, P09 y un grupo que no tiene un perfil específico, cada uno con **50 pacientes**. El perfil P06 tiene solo **2 pacientes**. Es importante observar que los perfiles P01, P05 y P09 son los más comunes, lo que puede indicar una necesidad de atención o recursos específicos relacionados con estos perfiles. Si desea profundizar en algún perfil en particular o en el estado de los pacientes, no dude en preguntar. Estoy aquí para ayudarle con NARA."
+  }
+]

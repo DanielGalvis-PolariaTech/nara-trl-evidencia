@@ -1,0 +1,16 @@
+PASA  login experto · 200
+PASA  login clinico · 200
+PASA  login observador · 200
+PASA  login paciente · 200
+PASA  experto: /patients solo su territorio · 9 en Prueba
+PASA  experto: /app-state 200 y avisos propios (por id o nombre) · claves: 2, con su nombre: true
+PASA  experto: re-guardar una ficha existente (H-007 no bloquea datos viejos) · PRU-1451 → 200 
+PASA  clínico: /app-state 200, alertas de su territorio · 7 alertas, 2 de crisis
+PASA  clínico: avisos propios · clin,clinico
+PASA  clínico: /patients solo su territorio, sin «Hoy» en phqDates · 9
+PASA  observador: sin recursos.people ni assigned · rules,recursos,weekBase,terrOv
+PASA  observador: solo resumen · total 454
+PASA  paciente: /app-state 200, solo su entrada de recursos y sus alertas · recursos: 1, alertas: 1
+PASA  paciente: /patients/me con su ficha · 200
+
+14 PASA · 0 FALLA

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha — 6.5 · Estrés MODO=estres · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha — 6.5 · Estrés MODO=estres</h1>
+<ul>
+<li><strong>ID de prueba:</strong> K6-ESTRES-01 (criterio 6.5)</li>
+<li><strong>Fecha y hora:</strong> 2026-10-10, 18:25:38 a 18:45:43 UTC (13:25 a 13:45 Bogotá)</li>
+<li><strong>Ejecutado por:</strong> subagente <code>ejecutor-pruebas-trl</code> (Claude Opus 5.5), k6 2.2.0, desde el portátil de [dato real omitido] (red doméstica, una IP)</li>
+<li><strong>Entorno:</strong> <code>https://www.proyectonara.com</code> (Vercel <code>nara-web</code> <code>dpl_xNipoZa2zjPMm81K74kDN14p33Jn</code>, <code>main</code> en <code>3596eeb</code>) → <code>nara-api</code> <strong><code>dcef48e</code></strong> (toda la prueba; <code>/api/health</code> antes, durante y después: <code>dcef48e</code>; sin despliegues en Render entre 18:21:36Z y el final) → Atlas <code>nara</code>. Render <code>1c-2g</code>, una instancia (<code>…-kf244</code>) sin reinicios durante la prueba.</li>
+<li><strong>Autorización:</strong> <code>pruebas/autorizaciones.md</code>, fila «Estrés».</li>
+<li><strong>Procedimiento:</strong> script original sin cambios <code>pruebas/scripts_ajustados/k6_estres_soak.js</code>, <code>MODO=estres</code>, <code>ROL=clinico</code>, cuenta <code>prueba.clinico</code> (territorio «Prueba», 10 pacientes). Rutas: <code>/api/auth/me</code>, <code>/api/patients</code>, <code>/api/people</code>. Rampas lineales de 3 min a 50, 100, 200, 300 y 400 VUs y bajada a 0 en 5 min. Comando: <code>k6 run --summary-export=resumen_estres.json --out csv=series_estres.csv.gz -e MODO=estres -e ROL=clinico -e BASE_URL=https://www.proyectonara.com k6_estres_soak.js</code> (claves por entorno con <code>_herramientas/k6_run.js</code>). Sonda externa cada 5 s a la web y a la API directa (<code>sonda_externa.csv</code>, con parada automática si aparecía <code>X-Vercel-Mitigated</code>: no apareció).</li>
+<li><strong>Resultado:</strong> <strong>Parcial.</strong> Hay punto de quiebre por latencia y gráficas, pero no se pudo identificar con evidencia qué componente cedió primero, y el pico de errores se atribuye al generador, no a la plataforma.</li>
+</ul>
+<h2>Resultados (tramos de 30 s, <code>analisis_30s.txt</code>; gráfica <code>grafica_estres.svg</code>)</h2>
+<table>
+<thead>
+<tr>
+<th>VUs (máx. del tramo)</th>
+<th>p50</th>
+<th>p95</th>
+<th>Errores</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤ 80</td>
+<td>320–370 ms</td>
+<td>430–650 ms</td>
+<td>0 %</td>
+</tr>
+<tr>
+<td>97</td>
+<td>676 ms</td>
+<td>1.156 ms</td>
+<td>0 %</td>
+</tr>
+<tr>
+<td>111</td>
+<td>900 ms</td>
+<td>1.577 ms</td>
+<td>0 %</td>
+</tr>
+<tr>
+<td><strong>127</strong></td>
+<td>1.019 ms</td>
+<td><strong>2.122 ms</strong></td>
+<td>0 %</td>
+</tr>
+<tr>
+<td>194–227</td>
+<td>2,0–2,1 s</td>
+<td>3,1 s</td>
+<td>0 %</td>
+</tr>
+<tr>
+<td>294–344</td>
+<td>4,0–5,1 s</td>
+<td>5,1–6,2 s</td>
+<td>0 %</td>
+</tr>
+<tr>
+<td>361–400 (18:39:00–18:41:29Z)</td>
+<td>—</td>
+<td>—</td>
+<td><strong>100 % → 33 % → 9 %</strong> (fallos de conexión TCP)</td>
+</tr>
+<tr>
+<td>350 → 0 (bajada)</td>
+<td>5,1 s → 0,33 s</td>
+<td>6,2 s → 0,41 s</td>
+<td>0 %</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>Punto de quiebre por latencia: entre 111 y 127 usuarios simultáneos</strong> (p95 supera 2 s en el tramo que llega a 127 VUs). Con este perfil ligero (3 rutas, sin <code>/api/app-state</code>).</li>
+<li><strong>Errores:</strong> 0 % hasta 344 VUs. Entre 18:39:00 y 18:41:29Z, 5.623 fallos, todos sin respuesta HTTP: <code>connectex: A connection attempt failed…</code>, <code>A socket operation was attempted to an unreachable network</code>, <code>An established connection was aborted by the software in your host machine</code> (códigos k6 1213/1000), contra las IPs de Vercel (64.29.17.65 y 216.198.79.65). En los mismos minutos, la sonda a la <strong>API directa en Render</strong> también falló (10,7 s de espera y un fallo local en 3 ms), Render registró la caída de su tráfico (3.382 → 1.867 → <strong>16</strong> peticiones/min a las 18:41) <strong>sin ningún 5xx, 401 ni 403</strong>, y la misma instancia siguió viva (CPU 0,15→0,01, memoria estable en 643 MB). Dos proveedores distintos inalcanzables a la vez y el error «aborted by the software in your host machine» apuntan a la red o la pila TCP del <strong>generador</strong> (portátil en red doméstica), no a la plataforma. No se puede descartar del todo un bloqueo de red en Vercel (no hay acceso a sus registros de firewall: el MCP no estaba conectado).</li>
+<li><strong>Throughput máximo observado en Render:</strong> ≈ 3.300–3.380 peticiones/min (≈ 55/s) desde 277 VUs: la latencia crece en proporción a los VUs mientras el throughput se queda plano.</li>
+<li><strong>Recursos de Render</strong> (<code>../5.5_capacidad/estres_*.json</code>): CPU máx. <strong>0,218</strong> de 1 CPU; memoria de 371 a 658 MB de 2 GB, sin reinicio. Ni CPU ni memoria de Render están saturadas cuando la latencia ya supera 2 s.</li>
+<li><strong>Qué cedió primero:</strong> la latencia, con CPU de Render al 15–22 %. El cuello está <strong>después</strong> de la CPU del gateway: muy probablemente la base (Atlas) o un límite de concurrencia del camino gateway → microservicio → base (pool de conexiones, cola del proxy). <strong>No identificado con evidencia</strong>: no hay métricas de Atlas ni trazas por componente.</li>
+</ul>
+<h2>Evidencia</h2>
+<p><code>resumen_estres.json</code>, <code>resumen_estres_2026-10-10T18-45-43-152Z.json</code>, <code>k6_estres.log</code> (resumen al final; código de salida 0 porque el único umbral del modo estrés es errores &lt; 50 %), <code>series_estres.csv.gz</code>, <code>analisis_por_minuto.json</code>, <code>analisis_30s.txt</code>, <code>grafica_estres.svg</code>, <code>sonda_externa.csv</code>, <code>../5.5_capacidad/estres_cpu.json</code>, <code>estres_memoria.json</code>, <code>estres_peticiones.json</code>, <code>../6.6_recuperacion/recuperacion_2026-10-10T18-25-47-383Z.*</code>.</p>
+<h2>Limitaciones</h2>
+<ul>
+<li>Un solo generador en red doméstica: no sostuvo 361–400 conexiones; el tramo alto no es válido para la plataforma. Repetir desde un generador en la nube (o varios).</li>
+<li>Perfil de un solo rol con 3 rutas ligeras, cuenta con 10 pacientes: no representa la mezcla real (la carga 5.4 muestra que <code>/api/app-state</code> tarda ≈ 1,2 s).</li>
+<li>El script sube en rampas lineales, no en escalones planos de 3 min como describe la guía: el «escalón» es el VU máximo de cada tramo de 30 s.</li>
+<li>Sin métricas de Atlas, sin latencia del lado de Render (<code>metricas latencia</code> falla).</li>
+</ul>
+<p>Saturación de throughput ≈ 55 req/s con CPU al 20 % (cuello no identificado); generador insuficiente para 400 VUs.</p>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

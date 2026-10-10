@@ -1,0 +1,152 @@
+[
+  {
+    "labels": [
+      {
+        "field": "instance",
+        "value": "srv-db3rqlqd0e5s73basggg-nl5hq"
+      },
+      {
+        "field": "service",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      },
+      {
+        "field": "resource",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      }
+    ],
+    "unit": "cpu",
+    "values": [
+      {
+        "timestamp": "2026-10-10T18:20:00Z",
+        "value": 0.1297704
+      },
+      {
+        "timestamp": "2026-10-10T18:21:00Z",
+        "value": 0.10178943
+      },
+      {
+        "timestamp": "2026-10-10T18:22:00Z",
+        "value": 0.09467458
+      }
+    ]
+  },
+  {
+    "labels": [
+      {
+        "field": "instance",
+        "value": "srv-db3rqlqd0e5s73basggg-kf244"
+      },
+      {
+        "field": "service",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      },
+      {
+        "field": "resource",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      }
+    ],
+    "unit": "cpu",
+    "values": [
+      {
+        "timestamp": "2026-10-10T18:23:00Z",
+        "value": 0.06286832
+      },
+      {
+        "timestamp": "2026-10-10T18:24:00Z",
+        "value": 0.008815567
+      },
+      {
+        "timestamp": "2026-10-10T18:25:00Z",
+        "value": 0.008398066
+      },
+      {
+        "timestamp": "2026-10-10T18:26:00Z",
+        "value": 0.0253617
+      },
+      {
+        "timestamp": "2026-10-10T18:27:00Z",
+        "value": 0.049101766
+      },
+      {
+        "timestamp": "2026-10-10T18:28:00Z",
+        "value": 0.08429695
+      },
+      {
+        "timestamp": "2026-10-10T18:29:00Z",
+        "value": 0.1044202
+      },
+      {
+        "timestamp": "2026-10-10T18:30:00Z",
+        "value": 0.12099162
+      },
+      {
+        "timestamp": "2026-10-10T18:31:00Z",
+        "value": 0.12274097
+      },
+      {
+        "timestamp": "2026-10-10T18:32:00Z",
+        "value": 0.14954065
+      },
+      {
+        "timestamp": "2026-10-10T18:33:00Z",
+        "value": 0.10943694
+      },
+      {
+        "timestamp": "2026-10-10T18:34:00Z",
+        "value": 0.20839988
+      },
+      {
+        "timestamp": "2026-10-10T18:35:00Z",
+        "value": 0.18156913
+      },
+      {
+        "timestamp": "2026-10-10T18:36:00Z",
+        "value": 0.169795
+      },
+      {
+        "timestamp": "2026-10-10T18:37:00Z",
+        "value": 0.18417092
+      },
+      {
+        "timestamp": "2026-10-10T18:38:00Z",
+        "value": 0.21273075
+      },
+      {
+        "timestamp": "2026-10-10T18:39:00Z",
+        "value": 0.15197675
+      },
+      {
+        "timestamp": "2026-10-10T18:40:00Z",
+        "value": 0.0561766
+      },
+      {
+        "timestamp": "2026-10-10T18:41:00Z",
+        "value": 0.008708017
+      },
+      {
+        "timestamp": "2026-10-10T18:42:00Z",
+        "value": 0.21750586
+      },
+      {
+        "timestamp": "2026-10-10T18:43:00Z",
+        "value": 0.12318805
+      },
+      {
+        "timestamp": "2026-10-10T18:44:00Z",
+        "value": 0.14411826
+      },
+      {
+        "timestamp": "2026-10-10T18:45:00Z",
+        "value": 0.09752535
+      },
+      {
+        "timestamp": "2026-10-10T18:46:00Z",
+        "value": 0.07157325
+      },
+      {
+        "timestamp": "2026-10-10T18:47:00Z",
+        "value": 0.0021720834
+      }
+    ]
+  }
+]

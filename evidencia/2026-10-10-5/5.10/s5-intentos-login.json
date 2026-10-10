@@ -1,0 +1,74 @@
+{
+  "fecha": "2026-10-10T15:43:38.879Z",
+  "correo": "trl-qa-20261010-noexiste@trl-qa.invalid",
+  "intentos": [
+    {
+      "n": 1,
+      "at": "2026-10-10T15:43:39.941Z",
+      "status": 401,
+      "ms": 1058,
+      "error": "Correo o contraseña incorrectos.",
+      "setCookie": false
+    },
+    {
+      "n": 2,
+      "at": "2026-10-10T15:43:40.253Z",
+      "status": 401,
+      "ms": 311,
+      "error": "Correo o contraseña incorrectos.",
+      "setCookie": false
+    },
+    {
+      "n": 3,
+      "at": "2026-10-10T15:43:40.561Z",
+      "status": 401,
+      "ms": 307,
+      "error": "Correo o contraseña incorrectos.",
+      "setCookie": false
+    },
+    {
+      "n": 4,
+      "at": "2026-10-10T15:43:40.837Z",
+      "status": 401,
+      "ms": 275,
+      "error": "Correo o contraseña incorrectos.",
+      "setCookie": false
+    },
+    {
+      "n": 5,
+      "at": "2026-10-10T15:43:41.125Z",
+      "status": 401,
+      "ms": 288,
+      "error": "Correo o contraseña incorrectos.",
+      "setCookie": false
+    },
+    {
+      "n": 6,
+      "at": "2026-10-10T15:43:41.303Z",
+      "status": 429,
+      "ms": 177,
+      "error": "Demasiados intentos. Espere unos minutos e intente de nuevo.",
+      "setCookie": false
+    }
+  ],
+  "inyeccion": [
+    {
+      "caso": "clave objeto $ne",
+      "status": 400,
+      "error": "Correo y contraseña deben ser texto.",
+      "cuerpoSiNoJson": null
+    },
+    {
+      "caso": "correo objeto $gt",
+      "status": 400,
+      "error": "Correo y contraseña deben ser texto.",
+      "cuerpoSiNoJson": null
+    },
+    {
+      "caso": "cuerpo no JSON",
+      "status": 400,
+      "error": "Bad Request",
+      "cuerpoSiNoJson": null
+    }
+  ]
+}

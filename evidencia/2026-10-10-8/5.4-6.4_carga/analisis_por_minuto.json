@@ -1,0 +1,354 @@
+{
+  "total": {
+    "peticiones": 16045,
+    "errores": 0,
+    "tasa_error_pct": 0,
+    "p50": 365,
+    "p95": 1647,
+    "p99": 3698,
+    "max": 9254
+  },
+  "estados_http": {
+    "200": 16045
+  },
+  "por_minuto": [
+    {
+      "minuto_utc": "18:06",
+      "vus_max": 6,
+      "peticiones": 41,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 401,
+      "p90": 1223,
+      "p95": 1324,
+      "p99": 3704,
+      "max": 3704
+    },
+    {
+      "minuto_utc": "18:07",
+      "vus_max": 18,
+      "peticiones": 338,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 325,
+      "p90": 1202,
+      "p95": 1257,
+      "p99": 3699,
+      "max": 3725
+    },
+    {
+      "minuto_utc": "18:08",
+      "vus_max": 26,
+      "peticiones": 629,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 332,
+      "p90": 1200,
+      "p95": 1240,
+      "p99": 3711,
+      "max": 3790
+    },
+    {
+      "minuto_utc": "18:09",
+      "vus_max": 26,
+      "peticiones": 682,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 322,
+      "p90": 1183,
+      "p95": 1215,
+      "p99": 3669,
+      "max": 3725
+    },
+    {
+      "minuto_utc": "18:10",
+      "vus_max": 26,
+      "peticiones": 682,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 325,
+      "p90": 1191,
+      "p95": 1219,
+      "p99": 3695,
+      "max": 3733
+    },
+    {
+      "minuto_utc": "18:11",
+      "vus_max": 26,
+      "peticiones": 685,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 322,
+      "p90": 1187,
+      "p95": 1210,
+      "p99": 3673,
+      "max": 3864
+    },
+    {
+      "minuto_utc": "18:12",
+      "vus_max": 26,
+      "peticiones": 687,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 321,
+      "p90": 1183,
+      "p95": 1216,
+      "p99": 3678,
+      "max": 3755
+    },
+    {
+      "minuto_utc": "18:13",
+      "vus_max": 34,
+      "peticiones": 732,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 326,
+      "p90": 1187,
+      "p95": 1215,
+      "p99": 3697,
+      "max": 3771
+    },
+    {
+      "minuto_utc": "18:14",
+      "vus_max": 53,
+      "peticiones": 1164,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 320,
+      "p90": 1187,
+      "p95": 1220,
+      "p99": 3688,
+      "max": 9254
+    },
+    {
+      "minuto_utc": "18:15",
+      "vus_max": 65,
+      "peticiones": 1431,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 607,
+      "p90": 1709,
+      "p95": 2016,
+      "p99": 3798,
+      "max": 4978
+    },
+    {
+      "minuto_utc": "18:16",
+      "vus_max": 65,
+      "peticiones": 1616,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 412,
+      "p90": 1304,
+      "p95": 1511,
+      "p99": 3700,
+      "max": 3902
+    },
+    {
+      "minuto_utc": "18:17",
+      "vus_max": 65,
+      "peticiones": 1530,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 616,
+      "p90": 1548,
+      "p95": 2113,
+      "p99": 3703,
+      "max": 5995
+    },
+    {
+      "minuto_utc": "18:18",
+      "vus_max": 65,
+      "peticiones": 1453,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 870,
+      "p90": 1894,
+      "p95": 2399,
+      "p99": 3830,
+      "max": 5740
+    },
+    {
+      "minuto_utc": "18:19",
+      "vus_max": 65,
+      "peticiones": 1632,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 388,
+      "p90": 1279,
+      "p95": 1486,
+      "p99": 3694,
+      "max": 4485
+    },
+    {
+      "minuto_utc": "18:20",
+      "vus_max": 65,
+      "peticiones": 1573,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 386,
+      "p90": 1239,
+      "p95": 1465,
+      "p99": 3696,
+      "max": 4533
+    },
+    {
+      "minuto_utc": "18:21",
+      "vus_max": 55,
+      "peticiones": 987,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 328,
+      "p90": 1196,
+      "p95": 1236,
+      "p99": 3694,
+      "max": 4059
+    },
+    {
+      "minuto_utc": "18:22",
+      "vus_max": 21,
+      "peticiones": 183,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 330,
+      "p90": 1187,
+      "p95": 1233,
+      "p99": 3714,
+      "max": 3720
+    }
+  ],
+  "por_ruta": {
+    "/api/auth/login": {
+      "peticiones": 65,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 438,
+      "p90": 577,
+      "p95": 762,
+      "p99": 2319,
+      "max": 2319
+    },
+    "/api/auth/me": {
+      "peticiones": 4459,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 265,
+      "p90": 600,
+      "p95": 811,
+      "p99": 1443,
+      "max": 2858
+    },
+    "/api/app-state": {
+      "peticiones": 4459,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 1185,
+      "p90": 1576,
+      "p95": 1838,
+      "p99": 2818,
+      "max": 4158
+    },
+    "/api/patients": {
+      "peticiones": 693,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 402,
+      "p90": 722,
+      "p95": 979,
+      "p99": 1669,
+      "max": 2660
+    },
+    "/api/people": {
+      "peticiones": 955,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 358,
+      "p90": 3720,
+      "p95": 3844,
+      "p99": 4740,
+      "max": 9254
+    },
+    "/api/territories": {
+      "peticiones": 955,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 320,
+      "p90": 616,
+      "p95": 923,
+      "p99": 1584,
+      "max": 2319
+    },
+    "/api/worklists": {
+      "peticiones": 693,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 288,
+      "p90": 676,
+      "p95": 882,
+      "p99": 1607,
+      "max": 2717
+    },
+    "/api/patients/me": {
+      "peticiones": 3504,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 339,
+      "p90": 874,
+      "p95": 1188,
+      "p99": 2137,
+      "max": 6148
+    },
+    "/api/experts": {
+      "peticiones": 262,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 274,
+      "p90": 688,
+      "p95": 906,
+      "p99": 1702,
+      "max": 1914
+    }
+  },
+  "por_rol": {
+    "experto": {
+      "peticiones": 1992,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 358,
+      "p90": 1241,
+      "p95": 1324,
+      "p99": 1988,
+      "max": 3404
+    },
+    "observador": {
+      "peticiones": 1316,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 472,
+      "p90": 3706,
+      "p95": 3752,
+      "p99": 4510,
+      "max": 9254
+    },
+    "paciente": {
+      "peticiones": 10558,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 383,
+      "p90": 1241,
+      "p95": 1536,
+      "p99": 2330,
+      "max": 6148
+    },
+    "clinico": {
+      "peticiones": 2179,
+      "errores": 0,
+      "tasa_error_pct": 0,
+      "p50": 318,
+      "p90": 1212,
+      "p95": 1355,
+      "p99": 2090,
+      "max": 3428
+    }
+  }
+}

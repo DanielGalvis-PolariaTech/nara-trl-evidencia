@@ -1,0 +1,35 @@
+{
+  "fecha": "2026-10-10T16:28:06.869Z",
+  "version": "nara-api 1f04025",
+  "pasos": [
+    {
+      "paso": "1. login fallido prueba.observador (1 intento)",
+      "hora": "2026-10-10T16:28:05.767Z",
+      "status": 401,
+      "ms": 509,
+      "error": "Correo o contraseña incorrectos."
+    },
+    {
+      "paso": "2. login correcto prueba.observador (reinicia el contador)",
+      "hora": "2026-10-10T16:28:06.196Z",
+      "status": 200,
+      "ms": 426,
+      "error": null,
+      "nota": "token descartado; la sesión previa sigue en _tmp"
+    },
+    {
+      "paso": "3. 401 sin cookie en /accounts/me",
+      "hora": "2026-10-10T16:28:06.368Z",
+      "status": 401,
+      "ms": 171,
+      "error": "No autenticado."
+    },
+    {
+      "paso": "4. 403 observador en /teo/conversations",
+      "hora": "2026-10-10T16:28:06.869Z",
+      "status": 403,
+      "ms": 499,
+      "error": "Sin permiso para esta acción."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "clinico/patients": {
+    "n": 200,
+    "porEstado": {
+      "Inactivo": 50,
+      "Activo": 50,
+      "Por aprobar": 50,
+      "Sin evaluación": 50
+    },
+    "porPerfil": {
+      "P01": 50,
+      "P05": 50,
+      "P09": 50,
+      "—": 50
+    },
+    "archivados": 0
+  },
+  "admin/patients": {
+    "n": 200,
+    "porEstado": {
+      "Inactivo": 50,
+      "Activo": 50,
+      "Por aprobar": 50,
+      "Sin evaluación": 50
+    },
+    "porPerfil": {
+      "P01": 50,
+      "P05": 50,
+      "P09": 50,
+      "—": 50
+    },
+    "archivados": 0
+  },
+  "clinico/people": {
+    "n": 200,
+    "porEstado": {
+      "Inactivo": 50,
+      "Sin evaluación": 50,
+      "Activo": 50,
+      "Por aprobar": 50
+    },
+    "porPerfil": {
+      "P01": 50,
+      "—": 50,
+      "P05": 50,
+      "P09": 50
+    },
+    "archivados": 0
+  },
+  "admin/people": {
+    "n": 200,
+    "porEstado": {
+      "Inactivo": 50,
+      "Sin evaluación": 50,
+      "Activo": 50,
+      "Por aprobar": 50
+    },
+    "porPerfil": {
+      "P01": 50,
+      "—": 50,
+      "P05": 50,
+      "P09": 50
+    },
+    "archivados": 0
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "fecha": "2026-10-10T16:27:32.041Z",
+  "version": "nara-api 1f04025",
+  "resultados": [
+    {
+      "caso": "control: token válido de prueba1.paciente",
+      "tokenEnviado": "<TOKEN VÁLIDO>",
+      "authMe": {
+        "status": 200,
+        "ms": 413,
+        "roleId": "paciente",
+        "error": null
+      }
+    },
+    {
+      "caso": "V1: un carácter de la firma cambiado",
+      "tokenEnviado": "umv037dbf.1791692835.<FIRMA>",
+      "authMe": {
+        "status": 401,
+        "ms": 149,
+        "roleId": null,
+        "error": "No autenticado."
+      }
+    },
+    {
+      "caso": "V2: id cambiado al de prueba.clinico con la firma del paciente",
+      "tokenEnviado": "umv032qm4.1791692835.<FIRMA>",
+      "authMe": {
+        "status": 401,
+        "ms": 161,
+        "roleId": null,
+        "error": "No autenticado."
+      }
+    },
+    {
+      "caso": "V3: exp extendida a +10 años con la firma original",
+      "tokenEnviado": "umv037dbf.2107009651.<FIRMA>",
+      "authMe": {
+        "status": 401,
+        "ms": 148,
+        "roleId": null,
+        "error": "No autenticado."
+      }
+    },
+    {
+      "caso": "V4: firma vacía",
+      "tokenEnviado": "umv037dbf.1791692835.",
+      "authMe": {
+        "status": 401,
+        "ms": 152,
+        "roleId": null,
+        "error": "No autenticado."
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+
+Running 37 tests using 1 worker
+
+node.exe : (node:24692) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+En línea: 1 Carácter: 1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:24692) Wa... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:24692) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 ..\..\pruebas\scripts_ajustados\e2e.spec.js:128:3 › T-01 login válido (admin) lleva a /inicio (6.0s)
+  ✓   2 ..\..\pruebas\scripts_ajustados\e2e.spec.js:128:3 › T-01 login válido (experto) lleva a /experto (4.6s)
+  ✓   3 ..\..\pruebas\scripts_ajustados\e2e.spec.js:128:3 › T-01 login válido (clinico) lleva a /clinico (4.8s)
+  ✓   4 ..\..\pruebas\scripts_ajustados\e2e.spec.js:128:3 › T-01 login válido (paciente) lleva a /paciente (4.4s)
+  ✓   5 ..\..\pruebas\scripts_ajustados\e2e.spec.js:128:3 › T-01 login válido (observador) lleva a /observador (4.6s)
+  ✓   6 ..\..\pruebas\scripts_ajustados\e2e.spec.js:135:1 › T-02 login inválido muestra un mensaje genérico y no entra (1.3s)
+  ✓   7 ..\..\pruebas\scripts_ajustados\e2e.spec.js:146:1 › T-03 tras cerrar sesión la API ya no reconoce al usuario (247ms)
+  ✓   8 ..\..\pruebas\scripts_ajustados\e2e.spec.js:158:1 › S-1 una cookie con el id de una cuenta (sin firma) no inicia sesión (72ms)
+  ✓   9 ..\..\pruebas\scripts_ajustados\e2e.spec.js:166:1 › S-1 una firma alterada no inicia sesión (209ms)
+  ✓  10 ..\..\pruebas\scripts_ajustados\e2e.spec.js:180:1 › S-1 un token vencido con firma válida no inicia sesión (182ms)
+  ✓  11 ..\..\pruebas\scripts_ajustados\e2e.spec.js:195:1 › S-1 la cookie de sesión tiene HttpOnly, SameSite=Lax y Secure (en https) (176ms)
+  ✓  12 ..\..\pruebas\scripts_ajustados\e2e.spec.js:209:1 › S-2 sin sesión las rutas responden 401 (y /auth/me dice «sin sesión» sin error) (180ms)
+  ✓  13 ..\..\pruebas\scripts_ajustados\e2e.spec.js:225:3 › S-2 matriz de rutas con el rol admin (609ms)
+  ✓  14 ..\..\pruebas\scripts_ajustados\e2e.spec.js:225:3 › S-2 matriz de rutas con el rol experto (316ms)
+  ✓  15 ..\..\pruebas\scripts_ajustados\e2e.spec.js:225:3 › S-2 matriz de rutas con el rol clinico (336ms)
+  ✓  16 ..\..\pruebas\scripts_ajustados\e2e.spec.js:225:3 › S-2 matriz de rutas con el rol paciente (282ms)
+  ✓  17 ..\..\pruebas\scripts_ajustados\e2e.spec.js:225:3 › S-2 matriz de rutas con el rol observador (293ms)
+  ✓  18 ..\..\pruebas\scripts_ajustados\e2e.spec.js:249:1 › S-3 sin sesión no se puede crear una cuenta (30ms)
+  ✓  19 ..\..\pruebas\scripts_ajustados\e2e.spec.js:256:3 › S-3 el rol experto no puede crear cuentas (159ms)
+  ✓  20 ..\..\pruebas\scripts_ajustados\e2e.spec.js:256:3 › S-3 el rol clinico no puede crear cuentas (152ms)
+  ✓  21 ..\..\pruebas\scripts_ajustados\e2e.spec.js:256:3 › S-3 el rol paciente no puede crear cuentas (242ms)
+  ✓  22 ..\..\pruebas\scripts_ajustados\e2e.spec.js:256:3 › S-3 el rol observador no puede crear cuentas (136ms)
+  ✓  23 ..\..\pruebas\scripts_ajustados\e2e.spec.js:266:1 › S-5 los intentos repetidos se frenan (BLOQUEA la cuenta LOCK_EMAIL) (99ms)
+  ✓  24 ..\..\pruebas\scripts_ajustados\e2e.spec.js:278:1 › A03 un objeto en lugar de texto en el login se rechaza con 400 (inyección en MongoDB) (62ms)
+  ✓  25 ..\..\pruebas\scripts_ajustados\e2e.spec.js:287:1 › A05 cabeceras de seguridad en la pantalla de ingreso (72ms)
+  ✓  26 ..\..\pruebas\scripts_ajustados\e2e.spec.js:303:1 › H-014 /api/health identifica la versión desplegada (27ms)
+  ✓  27 ..\..\pruebas\scripts_ajustados\e2e.spec.js:313:1 › 4.2 /api/health/db responde ok con todas las colecciones (administrador) (150ms)
+  ✓  28 ..\..\pruebas\scripts_ajustados\e2e.spec.js:415:1 › 4.4 Flujo Paciente: consentimiento, su ruta y su resumen; solo sus datos (T-01, P-01, P-02, P-03, P-06) (5.2s)
+  ✓  29 ..\..\pruebas\scripts_ajustados\e2e.spec.js:450:1 › 4.5 Flujo Experto de campo: registra, evalúa y asigna perfil en su territorio (T-01, F-01, F-02, F-04, F-06) (10.6s)
+  ✓  30 ..\..\pruebas\scripts_ajustados\e2e.spec.js:467:1 › 4.6 Flujo Clínico: lista por riesgo, ficha completa, nota y ajuste de ruta con autor y fecha (T-01, C-01, C-02, C-04) (10.1s)
+  ✓  31 ..\..\pruebas\scripts_ajustados\e2e.spec.js:507:1 › 4.7 Flujo Administrador: crea, edita y desactiva un territorio; crea y desactiva un usuario (T-01, A-01, A-02) (16.4s)
+  ✓  32 ..\..\pruebas\scripts_ajustados\e2e.spec.js:574:1 › 4.8 Flujo Observador: tablero agregado, sin datos personales y de solo lectura (T-01, O-01, O-02) (4.5s)
+  ✓  33 ..\..\pruebas\scripts_ajustados\e2e.spec.js:593:1 › T-05 con sesión de otro rol, abrir otra pantalla devuelve a su panel con acceso denegado (7.9s)
+  ✓  34 ..\..\pruebas\scripts_ajustados\e2e.spec.js:603:1 › A-05 el informe semanal del admin sale de los datos (sin cifras fijas) y con la fecha de hoy (6.0s)
+  ✓  35 ..\..\pruebas\scripts_ajustados\e2e.spec.js:618:1 › H-009 el experto ve la fecha de hoy en «Visitas de hoy» (5.3s)
+
+  ✓  36 ..\..\pruebas\scripts_ajustados\e2e.spec.js:628:1 › 3.2 Punta a punta: el experto registra y evalúa, el clínico aprueba, el admin crea la cuenta y el paciente ve su ruta (28.2s)
+Limpieza e2e: {"personas":2,"territorios":0,"cuentas":1}
+  ✓  37 ..\..\pruebas\scripts_ajustados\e2e.spec.js:682:1 › 3.3 TEO responde 3 entradas de ejemplo con proveedor y modelo (la coherencia la revisa una persona) (6.1s)
+
+  37 passed (2.4m)
+
+To open last HTML report run:
+[36m[39m
+[36m  npx playwright show-report[39m
+[36m[39m
+Internal error: step id not found: fixture@176Internal error: step id not found: fixture@176Internal error: step id 
+not found: fixture@176Internal error: step id not found: fixture@176

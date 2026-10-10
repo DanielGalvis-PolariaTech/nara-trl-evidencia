@@ -1,0 +1,402 @@
+{
+  "fecha": "2026-10-10T19:54:03.634Z",
+  "version": "nara-api dcef48e",
+  "filas": [
+    {
+      "rol": "admin",
+      "ruta": "POST /auth/login",
+      "status": 200,
+      "ms": 654
+    },
+    {
+      "rol": "admin",
+      "ronda": 1,
+      "ruta": "GET /patients",
+      "status": 200,
+      "ms": 8611,
+      "filas": 455
+    },
+    {
+      "rol": "admin",
+      "ronda": 1,
+      "ruta": "GET /people",
+      "status": 200,
+      "ms": 3649,
+      "filas": 455
+    },
+    {
+      "rol": "admin",
+      "ronda": 1,
+      "ruta": "GET /accounts",
+      "status": 200,
+      "ms": 2700,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 1,
+      "ruta": "GET /worklists",
+      "status": 200,
+      "ms": 1832,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 1,
+      "ruta": "GET /app-state",
+      "status": 200,
+      "ms": 1165,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 1,
+      "ruta": "GET /territories",
+      "status": 200,
+      "ms": 282,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 1,
+      "ruta": "GET /experts",
+      "status": 200,
+      "ms": 249,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 1,
+      "ruta": "GET /flags",
+      "status": 200,
+      "ms": 241,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 2,
+      "ruta": "GET /patients",
+      "status": 200,
+      "ms": 8542,
+      "filas": 455
+    },
+    {
+      "rol": "admin",
+      "ronda": 2,
+      "ruta": "GET /people",
+      "status": 200,
+      "ms": 3700,
+      "filas": 455
+    },
+    {
+      "rol": "admin",
+      "ronda": 2,
+      "ruta": "GET /accounts",
+      "status": 200,
+      "ms": 2700,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 2,
+      "ruta": "GET /worklists",
+      "status": 200,
+      "ms": 1830,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 2,
+      "ruta": "GET /app-state",
+      "status": 200,
+      "ms": 1286,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 2,
+      "ruta": "GET /territories",
+      "status": 200,
+      "ms": 312,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 2,
+      "ruta": "GET /experts",
+      "status": 200,
+      "ms": 454,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 2,
+      "ruta": "GET /flags",
+      "status": 200,
+      "ms": 235,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 3,
+      "ruta": "GET /patients",
+      "status": 200,
+      "ms": 8608,
+      "filas": 455
+    },
+    {
+      "rol": "admin",
+      "ronda": 3,
+      "ruta": "GET /people",
+      "status": 200,
+      "ms": 3660,
+      "filas": 455
+    },
+    {
+      "rol": "admin",
+      "ronda": 3,
+      "ruta": "GET /accounts",
+      "status": 200,
+      "ms": 2699,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 3,
+      "ruta": "GET /worklists",
+      "status": 200,
+      "ms": 1941,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 3,
+      "ruta": "GET /app-state",
+      "status": 200,
+      "ms": 1176,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 3,
+      "ruta": "GET /territories",
+      "status": 200,
+      "ms": 295,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 3,
+      "ruta": "GET /experts",
+      "status": 200,
+      "ms": 257,
+      "filas": null
+    },
+    {
+      "rol": "admin",
+      "ronda": 3,
+      "ruta": "GET /flags",
+      "status": 200,
+      "ms": 224,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ruta": "POST /auth/login",
+      "status": 200,
+      "ms": 371
+    },
+    {
+      "rol": "clinico",
+      "ronda": 1,
+      "ruta": "GET /patients",
+      "status": 200,
+      "ms": 381,
+      "filas": 10
+    },
+    {
+      "rol": "clinico",
+      "ronda": 1,
+      "ruta": "GET /people",
+      "status": 200,
+      "ms": 286,
+      "filas": 10
+    },
+    {
+      "rol": "clinico",
+      "ronda": 1,
+      "ruta": "GET /accounts",
+      "status": 200,
+      "ms": 288,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 1,
+      "ruta": "GET /worklists",
+      "status": 200,
+      "ms": 269,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 1,
+      "ruta": "GET /app-state",
+      "status": 200,
+      "ms": 1244,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 1,
+      "ruta": "GET /territories",
+      "status": 200,
+      "ms": 286,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 1,
+      "ruta": "GET /experts",
+      "status": 200,
+      "ms": 238,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 1,
+      "ruta": "GET /flags",
+      "status": 200,
+      "ms": 230,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 2,
+      "ruta": "GET /patients",
+      "status": 200,
+      "ms": 387,
+      "filas": 10
+    },
+    {
+      "rol": "clinico",
+      "ronda": 2,
+      "ruta": "GET /people",
+      "status": 200,
+      "ms": 299,
+      "filas": 10
+    },
+    {
+      "rol": "clinico",
+      "ronda": 2,
+      "ruta": "GET /accounts",
+      "status": 200,
+      "ms": 292,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 2,
+      "ruta": "GET /worklists",
+      "status": 200,
+      "ms": 305,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 2,
+      "ruta": "GET /app-state",
+      "status": 200,
+      "ms": 1250,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 2,
+      "ruta": "GET /territories",
+      "status": 200,
+      "ms": 300,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 2,
+      "ruta": "GET /experts",
+      "status": 200,
+      "ms": 240,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 2,
+      "ruta": "GET /flags",
+      "status": 200,
+      "ms": 228,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 3,
+      "ruta": "GET /patients",
+      "status": 200,
+      "ms": 367,
+      "filas": 10
+    },
+    {
+      "rol": "clinico",
+      "ronda": 3,
+      "ruta": "GET /people",
+      "status": 200,
+      "ms": 284,
+      "filas": 10
+    },
+    {
+      "rol": "clinico",
+      "ronda": 3,
+      "ruta": "GET /accounts",
+      "status": 200,
+      "ms": 303,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 3,
+      "ruta": "GET /worklists",
+      "status": 200,
+      "ms": 278,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 3,
+      "ruta": "GET /app-state",
+      "status": 200,
+      "ms": 1309,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 3,
+      "ruta": "GET /territories",
+      "status": 200,
+      "ms": 282,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 3,
+      "ruta": "GET /experts",
+      "status": 200,
+      "ms": 247,
+      "filas": null
+    },
+    {
+      "rol": "clinico",
+      "ronda": 3,
+      "ruta": "GET /flags",
+      "status": 200,
+      "ms": 227,
+      "filas": null
+    }
+  ]
+}

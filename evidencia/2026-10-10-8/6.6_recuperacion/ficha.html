@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha — 6.6 · Recuperación tras el estrés · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha — 6.6 · Recuperación tras el estrés</h1>
+<ul>
+<li><strong>ID de prueba:</strong> K6-RECUPERACION-01 (criterio 6.6)</li>
+<li><strong>Fecha y hora:</strong> 2026-10-10, 18:45:43 (fin del estrés) a 18:57 UTC</li>
+<li><strong>Ejecutado por:</strong> subagente <code>ejecutor-pruebas-trl</code> (Claude Opus 5.5)</li>
+<li><strong>Entorno:</strong> <code>https://www.proyectonara.com</code> → <code>nara-api</code> <strong><code>dcef48e</code></strong> (misma versión que el estrés; <code>/api/health</code> 18:47:13, 18:51:14 y 18:56:25Z: <code>dcef48e</code>). Render <code>1c-2g</code>, misma instancia <code>…-kf244</code> durante estrés y recuperación (sin reinicio).</li>
+<li><strong>Procedimiento:</strong><ol>
+<li><code>medir-recuperacion.js</code> (plugin) contra <code>https://www.proyectonara.com/api/health</code> desde 18:25:47Z (antes del estrés), intervalo 2 s, 5 respuestas buenas seguidas, timeout 10 s.</li>
+<li>Espera de 5 min sin tocar nada tras el fin del estrés (18:45:43 → 18:50:45Z).</li>
+<li>Foto de integridad de solo lectura (<code>_herramientas/foto_datos.js</code>): login de las 9 cuentas y huella SHA-256 de cada GET por rol, antes del estrés (18:24Z), tras la espera (18:50:49Z) y tras la carga corta (18:56:30Z).</li>
+<li>Carga corta: <code>k6_carga_mezcla.js</code> con <code>ESCALONES_CORTOS=1</code> (1 min a 65, 3 min en 65, 1 min a 0), misma mezcla de roles que 5.4.</li>
+</ol>
+</li>
+<li><strong>Resultado:</strong> <strong>Parcial.</strong> Cumple los tres umbrales, pero no se corrieron los flujos e2e que pide la guía (paso 2) y la sonda de recuperación quedó contaminada por el fallo de red del generador.</li>
+</ul>
+<h2>Métricas</h2>
+<table>
+<thead>
+<tr>
+<th>Comprobación</th>
+<th>Resultado</th>
+<th>Umbral</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Carga corta 65 VUs (k6 completo)</td>
+<td>6.731 peticiones, <strong>0 errores</strong>, p95 <strong>1.430 ms</strong>, código de salida 0</td>
+<td>p95 &lt; 2 s, errores &lt; 1 %</td>
+</tr>
+<tr>
+<td>Meseta de 65 VUs (18:52:15–18:55:15Z)</td>
+<td>4.903 peticiones, 0 errores, p50 401 ms, p95 1.481 ms, máx. 4.419 ms</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Reinicio manual</td>
+<td>Ninguno (misma instancia de Render; <code>render-nara.js estado</code>: <code>not_suspended</code>)</td>
+<td>Sin reinicio</td>
+</tr>
+<tr>
+<td>Cuentas bloqueadas</td>
+<td>0 de 9 (las 9 inician sesión en las tres fotos)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Datos</td>
+<td>0 diferencias en las huellas de 23 lecturas por rol entre antes y después (<code>comparacion_fotos.txt</code>)</td>
+<td>Sin datos corruptos</td>
+</tr>
+<tr>
+<td>Sonda externa durante el estrés</td>
+<td>96 s sin respuesta (18:38:49–18:40:25Z), recuperada sola. Coincide con el fallo de red del generador (ver 6.5); no hay 5xx en Render</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Recursos tras el estrés</td>
+<td>CPU 0,007–0,010; memoria 658 → 493 MB sin intervención</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h2>Evidencia</h2>
+<p><code>recuperacion_2026-10-10T18-25-47-383Z.csv</code> y <code>.json</code>, <code>foto_antes_estres.json</code>, <code>foto_tras_espera_5min.json</code>, <code>foto_tras_carga_corta.json</code>, <code>comparacion_fotos.txt</code>, <code>k6_carga_corta.log</code>, <code>resultado_carga_corta.json</code>, <code>resultado_carga_corta_*.json</code>, <code>series_carga_corta.csv.gz</code>, <code>analisis_meseta.txt</code>, <code>k6_carga_mezcla.js</code>.</p>
+<h2>Limitaciones</h2>
+<ul>
+<li><strong>No se corrió la suite e2e</strong> (paso 2 de la guía): necesita <code>cuenta-admin-de-prueba</code> (no existe) y crea datos; el coordinador la dejó para el siguiente subagente.</li>
+<li>La foto de integridad compara solo lo que ven las cuentas de prueba (territorio «Prueba») y quita campos volátiles (<code>lastLoginAt</code>, <code>activeAt</code>, <code>updatedAt</code>, <code>at</code>): no demuestra la integridad del resto de la base.</li>
+<li>El estrés solo leyó: «no hay datos corruptos» es esperable; la prueba no ejercita escrituras bajo estrés.</li>
+<li>Versión <code>dcef48e</code>, no la final.</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

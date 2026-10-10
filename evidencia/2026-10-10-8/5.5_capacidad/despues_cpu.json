@@ -1,0 +1,73 @@
+[
+  {
+    "labels": [
+      {
+        "field": "instance",
+        "value": "srv-db3rqlqd0e5s73basggg-kf244"
+      },
+      {
+        "field": "service",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      },
+      {
+        "field": "resource",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      }
+    ],
+    "unit": "cpu",
+    "values": [
+      {
+        "timestamp": "2026-10-10T18:45:00Z",
+        "value": 0.09752535
+      },
+      {
+        "timestamp": "2026-10-10T18:46:00Z",
+        "value": 0.07157325
+      },
+      {
+        "timestamp": "2026-10-10T18:47:00Z",
+        "value": 0.00992925
+      },
+      {
+        "timestamp": "2026-10-10T18:48:00Z",
+        "value": 0.00699685
+      },
+      {
+        "timestamp": "2026-10-10T18:49:00Z",
+        "value": 0.00937465
+      },
+      {
+        "timestamp": "2026-10-10T18:50:00Z",
+        "value": 0.0068395166
+      },
+      {
+        "timestamp": "2026-10-10T18:51:00Z",
+        "value": 0.0071748
+      },
+      {
+        "timestamp": "2026-10-10T18:52:00Z",
+        "value": 0.0752083
+      },
+      {
+        "timestamp": "2026-10-10T18:53:00Z",
+        "value": 0.18611877
+      },
+      {
+        "timestamp": "2026-10-10T18:54:00Z",
+        "value": 0.13108146
+      },
+      {
+        "timestamp": "2026-10-10T18:55:00Z",
+        "value": 0.1157154
+      },
+      {
+        "timestamp": "2026-10-10T18:56:00Z",
+        "value": 0.1342188
+      },
+      {
+        "timestamp": "2026-10-10T18:57:00Z",
+        "value": 0.02929365
+      }
+    ]
+  }
+]

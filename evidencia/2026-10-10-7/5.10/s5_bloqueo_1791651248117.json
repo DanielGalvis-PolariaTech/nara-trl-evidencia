@@ -1,0 +1,98 @@
+{
+  "fase": "bloqueo",
+  "commit_inicio": "1f04025720e8a797c724c187554f8f4789aaaafa",
+  "intentos": [
+    {
+      "n": 1,
+      "etiqueta": "clave incorrecta",
+      "correo": "cuenta soak TRL-QA-20261010-clin",
+      "at": "2026-10-10T16:54:05.397Z",
+      "status": 401,
+      "ms": 397,
+      "error": "Correo o contraseña incorrectos.",
+      "ok": false,
+      "token_en_cuerpo": "no",
+      "set_cookie": "ausente",
+      "retry_after": null
+    },
+    {
+      "n": 2,
+      "etiqueta": "clave incorrecta",
+      "correo": "cuenta soak TRL-QA-20261010-clin",
+      "at": "2026-10-10T16:54:05.796Z",
+      "status": 401,
+      "ms": 336,
+      "error": "Correo o contraseña incorrectos.",
+      "ok": false,
+      "token_en_cuerpo": "no",
+      "set_cookie": "ausente",
+      "retry_after": null
+    },
+    {
+      "n": 3,
+      "etiqueta": "clave incorrecta",
+      "correo": "cuenta soak TRL-QA-20261010-clin",
+      "at": "2026-10-10T16:54:06.133Z",
+      "status": 401,
+      "ms": 391,
+      "error": "Correo o contraseña incorrectos.",
+      "ok": false,
+      "token_en_cuerpo": "no",
+      "set_cookie": "ausente",
+      "retry_after": null
+    },
+    {
+      "n": 4,
+      "etiqueta": "clave incorrecta",
+      "correo": "cuenta soak TRL-QA-20261010-clin",
+      "at": "2026-10-10T16:54:06.524Z",
+      "status": 401,
+      "ms": 341,
+      "error": "Correo o contraseña incorrectos.",
+      "ok": false,
+      "token_en_cuerpo": "no",
+      "set_cookie": "ausente",
+      "retry_after": null
+    },
+    {
+      "n": 5,
+      "etiqueta": "clave incorrecta",
+      "correo": "cuenta soak TRL-QA-20261010-clin",
+      "at": "2026-10-10T16:54:06.866Z",
+      "status": 429,
+      "ms": 564,
+      "error": "Demasiados intentos. Espere unos minutos e intente de nuevo.",
+      "ok": false,
+      "token_en_cuerpo": "no",
+      "set_cookie": "ausente",
+      "retry_after": null
+    },
+    {
+      "n": 6,
+      "etiqueta": "clave correcta",
+      "correo": "cuenta soak TRL-QA-20261010-clin",
+      "at": "2026-10-10T16:54:07.431Z",
+      "status": 429,
+      "ms": 189,
+      "error": "Demasiados intentos. Espere unos minutos e intente de nuevo.",
+      "ok": false,
+      "token_en_cuerpo": "no",
+      "set_cookie": "ausente",
+      "retry_after": null
+    },
+    {
+      "n": 1,
+      "etiqueta": "correo inexistente con prefijo",
+      "correo": "trl-qa-20261010-noexiste-s5@nara.com",
+      "at": "2026-10-10T16:54:07.620Z",
+      "status": 401,
+      "ms": 341,
+      "error": "Correo o contraseña incorrectos.",
+      "ok": false,
+      "token_en_cuerpo": "no",
+      "set_cookie": "ausente",
+      "retry_after": null
+    }
+  ],
+  "commit_fin": "1f04025720e8a797c724c187554f8f4789aaaafa"
+}

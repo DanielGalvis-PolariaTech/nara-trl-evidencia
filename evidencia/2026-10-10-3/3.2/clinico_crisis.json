@@ -1,0 +1,53 @@
+{
+  "url": "/clinico",
+  "botones": [
+    "en crisis 1",
+    "TEO",
+    "TC TRL-QA Clinico 1 Clínico ▾",
+    "¿Quiénes empeoraron recientemente?",
+    "¿Hay un cambio de reglas pendiente?",
+    "Resuma mi caseload en tres puntos.",
+    "¿Hay cambios de ruta esperando mi visto bueno?",
+    "Preguntar",
+    "Crisis · atender ahora en crisis 1 1 en Mis pacientes · esta",
+    "Aprobaciones 50 pendientes Evaluaciones, rutas y reglas",
+    "Historial de crisis Sin eventos aún Creación, toma, respuest",
+    "TRL-QA Paciente 1 Más de 4 semanas sin contacto: el experto ",
+    "TRL-QA Paciente 2 Seguir la ruta; próxima revisión cada 4 se",
+    "TRL-QA Paciente 3 El clínico del territorio aprueba o rechaz",
+    "TRL-QA Paciente 16 El experto hace la entrevista en la visit",
+    "TRL-QA Paciente trl-qa-0021 Más de 4 semanas sin contacto: e"
+  ],
+  "lineasCrisis": [
+    "Historial de crisis",
+    "en crisis 1",
+    "Le oriento con aprobaciones, caseload, crisis e inactividad. No doy diagnósticos ni cambio rutas.",
+    "Crisis · atender ahora",
+    "en crisis 1",
+    "1 en Mis pacientes · estado Crisis",
+    "Historial de crisis"
+  ],
+  "nombreEnPanel": false,
+  "nombreEnCola": false,
+  "cola": [
+    "Historial de crisis",
+    "en crisis 1",
+    "Crisis",
+    "Organizado por estado: por tomar, en atención y resueltas",
+    "Por tomar",
+    "Todas las alertas abiertas",
+    "Por tomar",
+    "Crisis nuevas que aún nadie atendió",
+    "No hay crisis pendientes de toma. Bien.",
+    "Sobre: Crisis",
+    "Sobre: Crisis",
+    "¿Hay pacientes en crisis?"
+  ],
+  "urlCola": "/clinico/crisis",
+  "botonesCola": [
+    "en crisis 1",
+    "0 Por tomar Esperan que alguien las tome"
+  ],
+  "enListaPacientes": true,
+  "consola": []
+}

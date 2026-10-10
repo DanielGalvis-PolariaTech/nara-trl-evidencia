@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>6.17 — Clave temporal vencida (nara-api 1f04025, `apps/auth/src/login/login.service.ts:114-127`) · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>6.17 — Clave temporal vencida (nara-api 1f04025, <code>apps/auth/src/login/login.service.ts:114-127</code>)</h1>
+<ul>
+<li>Antes (00f1e6d): si la clave temporal estaba vencida se respondía «La clave temporal venció…» <strong>antes</strong> de verificar la clave y sin contar el fallo.</li>
+<li>Ahora: se verifica siempre la clave temporal; si es incorrecta → <code>fallo()</code>; si es correcta pero vencida → <code>fallo()</code>. En los dos casos el mensaje es el genérico «Correo o contraseña incorrectos.» (o el de bloqueo al llegar a 5) y el intento se cuenta en <code>login_attempts</code> y en <code>access_log</code>.</li>
+<li>Cambio de comportamiento colateral: ahora el <strong>5.º</strong> fallo ya responde 429 (antes el 5.º daba 401 y el 6.º 429).</li>
+<li>Ejecución: no hay cuenta con clave temporal vencida ni cuenta admin para crearla. Solo por código.</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

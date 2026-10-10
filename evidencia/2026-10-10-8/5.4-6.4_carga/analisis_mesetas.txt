@@ -1,0 +1,52 @@
+## Meseta 65 VUs (18:15:00-18:20:59Z)
+{"ventana":["2026-10-10T18:15:00Z","2026-10-10T18:20:59Z"],"peticiones":9235,"errores":0,"tasa_error_pct":0,"p50":512,"p90":1485,"p95":1863,"p99":3708,"max":5995,"estados":{"200":9235}}
+clinico /api/app-state           n   206 p50 1251 p95 2395 max 3428
+clinico /api/auth/login          n     1 p50 762 p95 762 max 762
+clinico /api/auth/me             n   204 p50 246 p95 791 max 1771
+clinico /api/patients            n   205 p50 391 p95 1083 max 1821
+clinico /api/people              n   206 p50 337 p95 1080 max 2113
+clinico /api/territories         n   206 p50 336 p95 1098 max 2319
+clinico /api/worklists           n   204 p50 304 p95 1015 max 2717
+experto /api/app-state           n   172 p50 1276 p95 2452 max 3404
+experto /api/auth/login          n     1 p50 2319 p95 2319 max 2319
+experto /api/auth/me             n   172 p50 239 p95 844 max 1997
+experto /api/patients            n   169 p50 429 p95 1240 max 2660
+experto /api/people              n   169 p50 413 p95 925 max 1725
+experto /api/territories         n   169 p50 333 p95 954 max 1766
+experto /api/worklists           n   170 p50 302 p95 1074 max 1908
+observador /api/app-state        n   155 p50 1139 p95 1740 max 2746
+observador /api/auth/login       n     1 p50 431 p95 431 max 431
+observador /api/auth/me          n   155 p50 247 p95 805 max 1886
+observador /api/experts          n   154 p50 288 p95 923 max 1914
+observador /api/people           n   154 p50 3716 p95 4741 max 5995
+observador /api/territories      n   154 p50 370 p95 1196 max 1607
+paciente /api/app-state          n  2067 p50 1195 p95 1962 max 3725
+paciente /api/auth/login         n     9 p50 561 p95 1694 max 1694
+paciente /api/auth/me            n  2066 p50 288 p95 1075 max 2601
+paciente /api/patients/me        n  2066 p50 357 p95 1722 max 3108
+
+## Meseta 26 VUs (18:08:00-18:12:59Z)
+{"ventana":["2026-10-10T18:08:00Z","2026-10-10T18:12:59Z"],"peticiones":3365,"errores":0,"tasa_error_pct":0,"p50":324,"p90":1188,"p95":1219,"p99":3684,"max":3864,"estados":{"200":3365}}
+clinico /api/app-state           n    78 p50 1192 p95 1255 max 1344
+clinico /api/auth/login          n     1 p50 438 p95 438 max 438
+clinico /api/auth/me             n    78 p50 222 p95 251 max 316
+clinico /api/patients            n    77 p50 265 p95 428 max 515
+clinico /api/people              n    78 p50 266 p95 367 max 417
+clinico /api/territories         n    79 p50 310 p95 398 max 536
+clinico /api/worklists           n    79 p50 281 p95 315 max 544
+experto /api/app-state           n    79 p50 1238 p95 1347 max 1571
+experto /api/auth/login          n     1 p50 477 p95 477 max 477
+experto /api/auth/me             n    80 p50 223 p95 345 max 594
+experto /api/patients            n    80 p50 412 p95 459 max 489
+experto /api/people              n    79 p50 326 p95 372 max 496
+experto /api/territories         n    80 p50 311 p95 370 max 550
+experto /api/worklists           n    80 p50 279 p95 352 max 719
+observador /api/app-state        n    45 p50 1135 p95 1200 max 1266
+observador /api/auth/me          n    44 p50 224 p95 271 max 457
+observador /api/experts          n    46 p50 269 p95 327 max 376
+observador /api/people           n    46 p50 3703 p95 3779 max 3864
+observador /api/territories      n    46 p50 312 p95 355 max 489
+paciente /api/app-state          n   727 p50 1171 p95 1231 max 1502
+paciente /api/auth/login         n     6 p50 415 p95 498 max 498
+paciente /api/auth/me            n   730 p50 261 p95 316 max 746
+paciente /api/patients/me        n   726 p50 329 p95 387 max 904

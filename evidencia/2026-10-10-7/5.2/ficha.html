@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha de evidencia — 5.2 Cargar volumen representativo · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha de evidencia — 5.2 Cargar volumen representativo</h1>
+<ul>
+<li><strong>ID de prueba:</strong> TRL 5.2</li>
+<li><strong>Fecha y hora:</strong> 2026-10-10, 12:01–12:03 (hora de Bogotá)</li>
+<li><strong>Ejecutado por:</strong> subagente <code>ejecutor-pruebas-trl</code> (Opus 5.5), Claude Code</li>
+<li><strong>Entorno:</strong> producción tratada como staging. Atlas <code>polaria</code>, base <code>nara</code>; nara-api <code>1f04025</code> (<code>/api/health</code> 12:03), nara-web <code>8378cb9</code> (dato del contexto, no reverificado)</li>
+<li><strong>Datos usados:</strong> reales de producción. No se cargó nada (decisión vigente de <code>pruebas/parametros.md</code>)</li>
+<li><strong>Objetivo:</strong> registrar el conteo exacto por colección y compararlo con el parámetro de volumen y con lo que pide 5.2 en la guía 09</li>
+<li><strong>Procedimiento:</strong> <code>list-collections</code> y <code>count</code> por colección (MCP de MongoDB, conexión preconfigurada, confirmada como Atlas). Dos conteos con filtro <code>{terr:&#39;Prueba&#39;}</code> para separar fichas de prueba. Ningún documento leído. Meta del programa: suma de <code>territories.goal</code> en la base local <code>datos/base_local/nara/territories.json</code> (metadato, sin datos personales)</li>
+<li><strong>Resultado:</strong> <strong>Parcial</strong></li>
+<li><strong>Métricas:</strong> 34 colecciones, 2077 documentos. people 455 (445 reales + 10 del territorio «Prueba»), patients 455 (445 + 10), worklist_items 454, accounts 475, clin_citas 89, teo_conversations 30, access_log 25. Meta del programa: 620 personas reales (445 = 71,8 %). Parámetro anterior: 1.000 sintéticas (445 = 44,5 %)</li>
+<li><strong>Contra la guía 09:</strong><ul>
+<li><input checked="" disabled="" type="checkbox"> El parámetro tiene valor y justificación («volumen real de producción, ≈ 454 personas»).</li>
+<li>[~] Los conteos coinciden con el valor: 455 en total, pero 10 son de prueba; reales 445. El «≈ 454» del parámetro mezcla reales y de prueba.</li>
+<li><input disabled="" type="checkbox"> Todo el volumen es sintético: no, es real (desviación declarada y aprobada por [dato real omitido]).</li>
+<li>Falla si el volumen cargado es menor al acordado: no se cumple esa condición de falla (el acordado es el real).</li>
+</ul>
+</li>
+<li><strong>Evidencia adjunta:</strong> <code>conteos_por_coleccion.json</code></li>
+<li><strong>Limitaciones declaradas:</strong> el volumen real (445) es el 72 % de la meta del programa (620); las pruebas de rendimiento con este volumen no demuestran el comportamiento con la población esperada. La meta se tomó de la base local, no de la base en línea (no se leyeron documentos en línea).</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

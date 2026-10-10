@@ -1,0 +1,78 @@
+creada 2026-10-10T06:27:32.924Z
+[
+ {
+  "seg": 1,
+  "id": "n1791613652863",
+  "code": "BUC-1209",
+  "estado": "Crisis",
+  "visita": true,
+  "alertas": [
+   "a-n1791613652863/crisis/PHQ-9 pregunta 9 > 0"
+  ],
+  "crisisLog": 1
+ },
+ {
+  "seg": 5,
+  "id": "n1791613652863",
+  "code": "BUC-1209",
+  "estado": "Crisis",
+  "visita": true,
+  "alertas": [
+   "a-n1791613652863/crisis/PHQ-9 pregunta 9 > 0"
+  ],
+  "crisisLog": 1
+ },
+ {
+  "seg": 15,
+  "id": "n1791613652863",
+  "code": "BUC-1209",
+  "estado": "Crisis",
+  "visita": true,
+  "alertas": [
+   "a-n1791613652863/crisis/PHQ-9 pregunta 9 > 0"
+  ],
+  "crisisLog": 1
+ },
+ {
+  "seg": 30,
+  "id": "n1791613652863",
+  "code": "BUC-1209",
+  "estado": "Crisis",
+  "visita": true,
+  "alertas": [
+   "a-n1791613652863/crisis/PHQ-9 pregunta 9 > 0"
+  ],
+  "crisisLog": 1
+ },
+ {
+  "seg": 45,
+  "id": "n1791613652863",
+  "code": "BUC-1209",
+  "estado": "Crisis",
+  "visita": true,
+  "alertas": [
+   "a-n1791613652863/crisis/PHQ-9 pregunta 9 > 0"
+  ],
+  "crisisLog": 1
+ }
+]
+P9+-6537ms POST /api/auth/login 
+P9+-6432ms 200 /api/auth/login 
+P9+-5458ms PUT /api/app-state alerts visitaAt open
+P9+-5441ms 200 /api/app-state 
+P9+-3283ms PATCH /api/accounts/me 
+P9+-3269ms 200 /api/accounts/me 
+P9+-2704ms POST /api/people 
+P9+-2704ms POST /api/worklists programada
+P9+-2692ms 201 /api/worklists 
+P9+-2691ms 200 /api/people 
+P9+50ms POST /api/patients Crisis
+P9+59ms 403 /api/patients 
+P9+500ms PUT /api/app-state alerts ALERTA_P9 visitaAt new
+P9+515ms 200 /api/app-state 
+P9+4897ms POST /api/people Crisis
+P9+4897ms POST /api/worklists crisis
+P9+4901ms 200 /api/people 
+P9+4911ms 201 /api/worklists 
+P9+5463ms PUT /api/app-state alerts ALERTA_P9 visitaAt new
+P9+5478ms 200 /api/app-state 

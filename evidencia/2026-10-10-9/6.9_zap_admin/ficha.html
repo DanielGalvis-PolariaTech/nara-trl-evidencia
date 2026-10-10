@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha · 6.9 ★ · ZAP baseline PASIVO autenticado, rol administrador · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha · 6.9 ★ · ZAP baseline PASIVO autenticado, rol administrador</h1>
+<ul>
+<li><strong>Fecha y hora:</strong> 2026-10-10, de 20:02:15 a 20:03:58 UTC (de 15:02 a 15:04 en Bogotá).</li>
+<li><strong>Ejecutado por:</strong> subagente <code>ejecutor-pruebas-trl</code>, desde el portátil de pruebas.</li>
+<li><strong>Entorno:</strong> producción tratada como staging. <code>https://www.proyectonara.com</code> (Vercel <code>nara-nn2lbw9b2</code>) → <code>nara-api</code> <code>dcef48e</code>. La versión no cambió entre el inicio y el final del bloque (<code>../versiones.txt</code>).</li>
+<li><strong>Herramienta:</strong> OWASP ZAP 2.17.0 portable, con Automation Framework (<code>-cmd -autorun</code>) y Java 17.0.20. El directorio de inicio es temporal (<code>-dir %TEMP%\zap_home_admin_20261010_9</code>), fuera del repo.</li>
+<li><strong>Datos usados:</strong> <code>cuenta-admin-de-prueba</code> (rol Administrador). Login por <code>POST /api/auth/login</code> de la web: 200, rol «Administrador».</li>
+<li><strong>Procedimiento:</strong> el mismo de los otros 4 roles del reporte -8.<ul>
+<li><code>_herramientas/zap_admin.js</code> es una adaptación de <code>2026-10-10-8/_herramientas/zap_rol.js</code>. Inicia sesión e inyecta la cookie <code>nara_sid</code> en la regla 0 del replacer por <code>-config</code>, nunca en archivos.</li>
+<li>El plan <code>plan-admin.yaml</code> (de <code>generar_plan.js</code>) hace, en orden:<ol>
+<li><code>passiveScan-config</code>;</li>
+<li><code>requestor</code>: GET de <code>/</code>, <code>/ingreso</code>, 13 pantallas del administrador y 13 rutas GET de la API. Exige <code>200</code> en <code>/inicio</code>, <code>/api/auth/me</code> y <code>/api/health/db</code>; esta última solo la abre el administrador;</li>
+<li><code>spider</code>: 3 min como máximo, sin formularios ni POST;</li>
+<li><code>passiveScan-wait</code>;</li>
+<li>informes HTML y JSON.</li>
+</ol>
+</li>
+<li>Excluye <code>logout|salir|cerrar-sesion</code>, <code>/api/teo</code> y <code>/api/auth/login</code>.</li>
+<li><strong>No hay <code>activeScan</code> ni <code>-quickurl</code>.</strong></li>
+</ul>
+</li>
+<li><strong>Pantallas del administrador:</strong> <code>/inicio</code>, <code>/territorios</code>, <code>/admin/territorio</code>, <code>/usuarios</code>, <code>/personas</code>, <code>/admin/persona</code>, <code>/informes</code>, <code>/informe</code>, <code>/informe?t=admin-weekly</code>, <code>/rutas</code>, <code>/equipos</code>, <code>/activos</code> y <code>/perfil</code>. Salen de las rutas que recorre la suite e2e; la revisión automática no permitió leer el código de <code>nara-web</code> para obtener la lista completa.</li>
+</ul>
+<h2>Alertas</h2>
+<table>
+<thead>
+<tr>
+<th>Rol</th>
+<th>High</th>
+<th>Medium</th>
+<th>Low</th>
+<th>Informational</th>
+<th>URL del spider</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Administrador</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>4</td>
+<td>118</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>Medium</strong> (las mismas de los otros 4 roles):<ul>
+<li>10055, CSP con <code>script-src &#39;unsafe-inline&#39;</code> (5 instancias, confianza alta);</li>
+<li>10055, CSP con <code>style-src &#39;unsafe-inline&#39;</code> (5 instancias);</li>
+<li>10098, Cross-Domain Misconfiguration: <code>ACAO: *</code> en el HTML (5 instancias).</li>
+</ul>
+</li>
+<li><strong>Informational:</strong> 10027 (13 instancias, falsos positivos en JS minificado), 10109, 10015 y 10050.</li>
+</ul>
+<h2>Umbrales de 6.9</h2>
+<table>
+<thead>
+<tr>
+<th>Condición</th>
+<th>¿Se cumple?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>5 informes, uno por rol</td>
+<td><strong>Sí</strong>: experto, clínico, observador y paciente en <code>2026-10-10-8/5.12-6.9_zap/</code> (versión <code>92d7f73</code>), y administrador aquí (versión <code>dcef48e</code>)</td>
+</tr>
+<tr>
+<td>0 High en cada uno</td>
+<td><strong>Sí</strong></td>
+</tr>
+</tbody></table>
+<p><strong>Resultado: Parcial.</strong> Ya no falta ningún informe, pero las Medium siguen sin plan. Además, los 5 informes no son de la misma versión.</p>
+<h2>Evidencia</h2>
+<p><code>plan-admin.yaml</code>, <code>generar_plan.js</code>, <code>zap-admin.log</code>, <code>zap-baseline-admin.html</code>, <code>zap-baseline-admin.json</code> y <code>../_herramientas/zap_admin.js</code>. La revisión de secretos encontró 0 cookies en esta carpeta.</p>
+<h2>Limitaciones</h2>
+<ul>
+<li>El spider es clásico, sin JavaScript. La API se cubre con la lista explícita de GET.</li>
+<li>La lista de pantallas puede no ser completa.</li>
+<li>Queda el directorio temporal de ZAP en <code>%TEMP%\zap_home_admin_20261010_9</code>, que guarda la sesión HTTP (cookie de admin, vigente 12 h). Hay que borrarlo a mano: la marca de sesión bloquea los borrados por terminal.</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

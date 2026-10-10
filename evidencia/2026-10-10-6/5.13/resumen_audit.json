@@ -1,0 +1,97 @@
+{
+  "fecha": "2026-10-10T16:39:31.341Z",
+  "nara_web_8378cb9": {
+    "vulnerabilidades": {
+      "info": 0,
+      "low": 0,
+      "moderate": 2,
+      "high": 6,
+      "critical": 0,
+      "total": 8
+    },
+    "dependencias": {
+      "prod": 227,
+      "dev": 290,
+      "optional": 88,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 554
+    },
+    "high": [
+      {
+        "paquete": "@next/eslint-plugin-next",
+        "directo": false,
+        "rango": ">=14.3.0-canary.0",
+        "correccion": {
+          "name": "eslint-config-next",
+          "version": "14.2.35",
+          "isSemVerMajor": true
+        }
+      },
+      {
+        "paquete": "braces",
+        "directo": false,
+        "rango": "*",
+        "correccion": {
+          "name": "eslint-config-next",
+          "version": "14.2.35",
+          "isSemVerMajor": true
+        }
+      },
+      {
+        "paquete": "eslint-config-next",
+        "directo": true,
+        "rango": ">=14.3.0-canary.0",
+        "correccion": {
+          "name": "eslint-config-next",
+          "version": "14.2.35",
+          "isSemVerMajor": true
+        }
+      },
+      {
+        "paquete": "fast-glob",
+        "directo": false,
+        "rango": "*",
+        "correccion": {
+          "name": "eslint-config-next",
+          "version": "14.2.35",
+          "isSemVerMajor": true
+        }
+      },
+      {
+        "paquete": "micromatch",
+        "directo": false,
+        "rango": ">=0.2.0",
+        "correccion": {
+          "name": "eslint-config-next",
+          "version": "14.2.35",
+          "isSemVerMajor": true
+        }
+      },
+      {
+        "paquete": "source-map-js",
+        "directo": false,
+        "rango": "1.0.0 - 1.2.1",
+        "correccion": true
+      }
+    ]
+  },
+  "nara_api_1f04025": {
+    "vulnerabilidades": {
+      "info": 0,
+      "low": 0,
+      "moderate": 20,
+      "high": 0,
+      "critical": 0,
+      "total": 20
+    },
+    "dependencias": {
+      "prod": 147,
+      "dev": 597,
+      "optional": 42,
+      "peer": 12,
+      "peerOptional": 0,
+      "total": 743
+    }
+  }
+}

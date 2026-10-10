@@ -1,0 +1,20 @@
+{
+  "fase": "sondeo",
+  "commit_inicio": "1f04025720e8a797c724c187554f8f4789aaaafa",
+  "intentos": [
+    {
+      "n": 0,
+      "etiqueta": "sondeo clave correcta (aún bloqueada?)",
+      "correo": "cuenta soak TRL-QA-20261010-clin",
+      "at": "2026-10-10T17:08:41.533Z",
+      "status": 429,
+      "ms": 454,
+      "error": "Demasiados intentos. Espere unos minutos e intente de nuevo.",
+      "ok": false,
+      "token_en_cuerpo": "no",
+      "set_cookie": "ausente",
+      "retry_after": null
+    }
+  ],
+  "commit_fin": "1f04025720e8a797c724c187554f8f4789aaaafa"
+}

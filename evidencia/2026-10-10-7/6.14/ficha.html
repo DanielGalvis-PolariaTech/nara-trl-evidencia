@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha 6.14 · Límite de tasa de TEO en ejecución (`POST /api/teo/ask`) · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha 6.14 · Límite de tasa de TEO en ejecución (<code>POST /api/teo/ask</code>)</h1>
+<ul>
+<li><strong>ID de prueba:</strong> 6.14 (ítem «límites de tasa en los endpoints costosos»)</li>
+<li><strong>Fecha y hora:</strong> 2026-10-10 11:54:37 a 11:55:46 (UTC-5)</li>
+<li><strong>Ejecutado por:</strong> subagente <code>ejecutor-pruebas-trl</code></li>
+<li><strong>Entorno:</strong> API directa <code>https://nara-api-wyvw.onrender.com</code> (Render <code>nara-api</code>, 1c-2g). Commit <code>/api/health</code> al inicio y al final: <code>1f04025720e8a797c724c187554f8f4789aaaafa</code> (sin cambio).</li>
+<li><strong>Datos usados:</strong> cuenta <code>prueba.clinico@nara.com</code>; 22 peticiones con <code>{&quot;question&quot;: &quot;&quot;}</code>. Ninguna llega a la IA.</li>
+<li><strong>Verificación previa en el código (1f04025):</strong> <code>apps/ai/src/teo/ask/teo-ask.service.ts:73-85</code>: primero <code>requireRoles</code>, luego <code>teoRateLimitOk</code> (l. 81), luego el rechazo de la pregunta vacía (l. 83-85) y solo después <code>llmComplete</code> (l. 115). El gateway (<code>apps/gateway/src/ai/ai.proxy.ts:11-39</code>) solo reenvía. <code>rate-limit.ts</code>: 20 por 60 s por cuenta, en memoria; la petición rechazada no se cuenta.</li>
+<li><strong>Procedimiento:</strong> login por API, 21 POST seguidos con la cookie <code>nara_sid</code>, espera hasta 65 s después de la 20.ª, 1 POST más. Script <code>teo_rate_limit.js</code>.</li>
+<li><strong>Resultado:</strong> <strong>Pasa</strong> (este ítem). 1-20 → 400 «Escriba una pregunta.»; 21 → 429 «Demasiadas peticiones a TEO. Espere un minuto e intente de nuevo.»; 22 (65 s después) → 400: el límite se liberó.</li>
+<li><strong>Métricas:</strong> ráfaga de 21 en 4,306 s; latencias 186-265 ms; la 22.ª 489 ms. 0 respuestas con <code>model</code>/<code>provider</code> (0 llamadas a la IA). El 429 no trae <code>Retry-After</code>.</li>
+<li><strong>Evidencia adjunta:</strong> <code>teo_rate_limit_resultado.json</code>, <code>teo_rate_limit.js</code>.</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-10 · Programa NARA</footer>
+</body></html>

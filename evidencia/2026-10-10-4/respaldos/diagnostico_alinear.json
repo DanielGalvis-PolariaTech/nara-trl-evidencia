@@ -1,0 +1,101 @@
+{
+ "H009_territorios": [
+  {
+   "terr": "Bucaramanga",
+   "personas": 179,
+   "cuentasClinico": 1
+  },
+  {
+   "terr": "Floridablanca",
+   "personas": 56,
+   "cuentasClinico": 1
+  },
+  {
+   "terr": "Bogotá",
+   "personas": 68,
+   "cuentasClinico": 1
+  },
+  {
+   "terr": "Cali",
+   "personas": 79,
+   "cuentasClinico": 1
+  },
+  {
+   "terr": "Barranquilla",
+   "personas": 63,
+   "cuentasClinico": 1
+  },
+  {
+   "terr": "Prueba",
+   "personas": 9,
+   "cuentasClinico": 1
+  }
+ ],
+ "H009_clin_en_fichas": {
+  "nombre de una cuenta Clínico": 450,
+  "nombre que no es una cuenta": 4
+ },
+ "H009_cuentas_clinico_terr": {
+  "Bucaramanga": 1,
+  "Floridablanca": 1,
+  "Bogotá": 1,
+  "Cali": 1,
+  "Barranquilla": 1,
+  "Prueba": 1,
+  "Todos": 1
+ },
+ "H003_notifs_claves": {
+  "rol:clin": 1,
+  "sin coincidencia": 11,
+  "rol:admin": 1,
+  "rol:inst": 1,
+  "cuenta de personal": 6,
+  "rol:clinico": 1
+ },
+ "H003_expertos_id_distinto_de_cuenta": "0 de 6",
+ "H003_recursos_people_claves": {
+  "patientId": 6
+ },
+ "H003_recursos_assigned": {},
+ "pid_alerts": {
+  "patientId": 6,
+  "cuenta de paciente": 1
+ },
+ "pid_crisisLog": {
+  "patientId": 83,
+  "cuenta de paciente": 1
+ },
+ "pid_closedToday": {
+  "patientId": 6,
+  "cuenta de paciente": 1
+ },
+ "claves_consents": {},
+ "claves_notes": {},
+ "claves_pathAdjust": {},
+ "claves_visits": {
+  "patientId": 6
+ },
+ "FR005_crisis_sin_alerta": 2,
+ "H013_phqDates_no_iso": 7,
+ "H013_valores_no_iso": {
+  "Hoy": 7
+ },
+ "H007_people_fecha": {
+  "válida": 448,
+  "menor de 18": 6
+ },
+ "H007_people_telefono": {
+  "válido": 452,
+  "otro formato": 2
+ },
+ "cuentas_paciente": {
+  "patientId existe": 454
+ },
+ "totales": {
+  "people": 454,
+  "patients": 454,
+  "cuentas": 474,
+  "expertos": 6,
+  "alertas": 7
+ }
+}

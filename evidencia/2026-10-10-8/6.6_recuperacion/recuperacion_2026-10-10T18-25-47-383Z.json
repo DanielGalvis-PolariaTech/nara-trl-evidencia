@@ -1,0 +1,17 @@
+{
+  "url": "https://www.proyectonara.com/api/health",
+  "inicio_medicion": "2026-10-10T18:25:47.386Z",
+  "fin_medicion": "2026-10-10T18:40:35.024Z",
+  "resultado": "recuperada",
+  "primera_falla": "2026-10-10T18:38:49.416Z",
+  "recuperada_desde": "2026-10-10T18:40:25.691Z",
+  "segundos_sin_servicio": 96,
+  "consultas": 369,
+  "fallas": 9,
+  "parametros": {
+    "intervalo_s": 2,
+    "estables": 5,
+    "timeout_s": 10
+  },
+  "nota": "La precisión del tiempo es ± el intervalo de consulta."
+}

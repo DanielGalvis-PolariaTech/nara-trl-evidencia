@@ -1,0 +1,586 @@
+[
+  {
+    "labels": [
+      {
+        "field": "statusCode",
+        "value": "200"
+      },
+      {
+        "field": "resource",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      }
+    ],
+    "unit": "unitless",
+    "values": [
+      {
+        "timestamp": "2026-10-10T18:00:00Z",
+        "value": 1
+      },
+      {
+        "timestamp": "2026-10-10T18:01:00Z",
+        "value": 19
+      },
+      {
+        "timestamp": "2026-10-10T18:02:00Z",
+        "value": 16
+      },
+      {
+        "timestamp": "2026-10-10T18:03:00Z",
+        "value": 13
+      },
+      {
+        "timestamp": "2026-10-10T18:04:00Z",
+        "value": 5
+      },
+      {
+        "timestamp": "2026-10-10T18:05:00Z",
+        "value": 15
+      },
+      {
+        "timestamp": "2026-10-10T18:06:00Z",
+        "value": 4
+      },
+      {
+        "timestamp": "2026-10-10T18:07:00Z",
+        "value": 10
+      },
+      {
+        "timestamp": "2026-10-10T18:08:00Z",
+        "value": 107
+      },
+      {
+        "timestamp": "2026-10-10T18:09:00Z",
+        "value": 449
+      },
+      {
+        "timestamp": "2026-10-10T18:10:00Z",
+        "value": 742
+      },
+      {
+        "timestamp": "2026-10-10T18:11:00Z",
+        "value": 640
+      },
+      {
+        "timestamp": "2026-10-10T18:12:00Z",
+        "value": 706
+      },
+      {
+        "timestamp": "2026-10-10T18:13:00Z",
+        "value": 720
+      },
+      {
+        "timestamp": "2026-10-10T18:14:00Z",
+        "value": 651
+      },
+      {
+        "timestamp": "2026-10-10T18:15:00Z",
+        "value": 915
+      },
+      {
+        "timestamp": "2026-10-10T18:16:00Z",
+        "value": 1297
+      },
+      {
+        "timestamp": "2026-10-10T18:17:00Z",
+        "value": 1466
+      },
+      {
+        "timestamp": "2026-10-10T18:18:00Z",
+        "value": 1597
+      },
+      {
+        "timestamp": "2026-10-10T18:19:00Z",
+        "value": 1572
+      },
+      {
+        "timestamp": "2026-10-10T18:20:00Z",
+        "value": 1494
+      },
+      {
+        "timestamp": "2026-10-10T18:21:00Z",
+        "value": 1645
+      },
+      {
+        "timestamp": "2026-10-10T18:22:00Z",
+        "value": 1460
+      },
+      {
+        "timestamp": "2026-10-10T18:23:00Z",
+        "value": 713
+      },
+      {
+        "timestamp": "2026-10-10T18:24:00Z",
+        "value": 72
+      }
+    ]
+  },
+  {
+    "labels": [
+      {
+        "field": "statusCode",
+        "value": "201"
+      },
+      {
+        "field": "resource",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      }
+    ],
+    "unit": "unitless",
+    "values": [
+      {
+        "timestamp": "2026-10-10T18:00:00Z",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "labels": [
+      {
+        "field": "resource",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      },
+      {
+        "field": "statusCode",
+        "value": "204"
+      }
+    ],
+    "unit": "unitless",
+    "values": [
+      {
+        "timestamp": "2026-10-10T18:00:00Z",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "labels": [
+      {
+        "field": "statusCode",
+        "value": "400"
+      },
+      {
+        "field": "resource",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      }
+    ],
+    "unit": "unitless",
+    "values": [
+      {
+        "timestamp": "2026-10-10T18:00:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:01:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:02:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:03:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:04:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:05:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:06:00Z",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "labels": [
+      {
+        "field": "statusCode",
+        "value": "401"
+      },
+      {
+        "field": "resource",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      }
+    ],
+    "unit": "unitless",
+    "values": [
+      {
+        "timestamp": "2026-10-10T18:00:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:01:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:02:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:03:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:04:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:05:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:06:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:07:00Z",
+        "value": 8
+      },
+      {
+        "timestamp": "2026-10-10T18:08:00Z",
+        "value": 2
+      },
+      {
+        "timestamp": "2026-10-10T18:09:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:10:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:11:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:12:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:13:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:14:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:15:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:16:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:17:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:18:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:19:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:20:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:21:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:22:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:23:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:24:00Z",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "labels": [
+      {
+        "field": "statusCode",
+        "value": "403"
+      },
+      {
+        "field": "resource",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      }
+    ],
+    "unit": "unitless",
+    "values": [
+      {
+        "timestamp": "2026-10-10T18:00:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:01:00Z",
+        "value": 8
+      },
+      {
+        "timestamp": "2026-10-10T18:02:00Z",
+        "value": 3
+      },
+      {
+        "timestamp": "2026-10-10T18:03:00Z",
+        "value": 13
+      },
+      {
+        "timestamp": "2026-10-10T18:04:00Z",
+        "value": 9
+      },
+      {
+        "timestamp": "2026-10-10T18:05:00Z",
+        "value": 11
+      },
+      {
+        "timestamp": "2026-10-10T18:06:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:07:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:08:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:09:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:10:00Z",
+        "value": 8
+      },
+      {
+        "timestamp": "2026-10-10T18:11:00Z",
+        "value": 2
+      },
+      {
+        "timestamp": "2026-10-10T18:12:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:13:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:14:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:15:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:16:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:17:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:18:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:19:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:20:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:21:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:22:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:23:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:24:00Z",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "labels": [
+      {
+        "field": "resource",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      },
+      {
+        "field": "statusCode",
+        "value": "404"
+      }
+    ],
+    "unit": "unitless",
+    "values": [
+      {
+        "timestamp": "2026-10-10T18:00:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:01:00Z",
+        "value": 2
+      },
+      {
+        "timestamp": "2026-10-10T18:02:00Z",
+        "value": 1
+      },
+      {
+        "timestamp": "2026-10-10T18:03:00Z",
+        "value": 5
+      },
+      {
+        "timestamp": "2026-10-10T18:04:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:05:00Z",
+        "value": 2
+      },
+      {
+        "timestamp": "2026-10-10T18:06:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:07:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:08:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:09:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:10:00Z",
+        "value": 1
+      },
+      {
+        "timestamp": "2026-10-10T18:11:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:12:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:13:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:14:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:15:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:16:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:17:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:18:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:19:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:20:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:21:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:22:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:23:00Z",
+        "value": 1
+      },
+      {
+        "timestamp": "2026-10-10T18:24:00Z",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "labels": [
+      {
+        "field": "resource",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      },
+      {
+        "field": "statusCode",
+        "value": "429"
+      }
+    ],
+    "unit": "unitless",
+    "values": [
+      {
+        "timestamp": "2026-10-10T18:00:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:01:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:02:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:03:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:04:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:05:00Z",
+        "value": 0
+      },
+      {
+        "timestamp": "2026-10-10T18:06:00Z",
+        "value": 0
+      }
+    ]
+  }
+]

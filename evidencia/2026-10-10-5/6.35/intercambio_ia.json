@@ -1,0 +1,18 @@
+{
+  "fecha": "2026-10-10T15:46:11.358Z",
+  "endpoint": "POST /api/teo/ask",
+  "rol": "clinico (prueba.clinico)",
+  "pregunta": "TRL-QA-20261010- prueba de integracion: en una frase, ¿qué es el programa NARA?",
+  "status": 200,
+  "ms": 4038,
+  "provider": "openai",
+  "model": "gpt-6-luna",
+  "largoRespuesta": 120,
+  "respuesta": "NARA es un programa de acompañamiento en salud mental para personas afectadas por el sismo en el Eje Cafetero, Colombia.",
+  "claves": [
+    "ok",
+    "text",
+    "model",
+    "provider"
+  ]
+}

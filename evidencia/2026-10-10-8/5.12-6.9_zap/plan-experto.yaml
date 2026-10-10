@@ -1,0 +1,79 @@
+env:
+  contexts:
+    - name: nara-experto
+      urls: ["https://www.proyectonara.com"]
+      includePaths: ["https://www.proyectonara.com.*"]
+      excludePaths:
+        - ".*logout.*"
+        - ".*salir.*"
+        - ".*cerrar-sesion.*"
+        - ".*/api/teo.*"
+        - ".*/api/auth/login.*"
+  parameters:
+    failOnError: true
+    progressToStdout: true
+jobs:
+  - type: passiveScan-config
+    parameters: { maxAlertsPerRule: 10, scanOnlyInScope: true }
+  - type: requestor
+    requests:
+      - url: "https://www.proyectonara.com/"
+        method: GET
+      - url: "https://www.proyectonara.com/ingreso"
+        method: GET
+      - url: "https://www.proyectonara.com/inicio"
+        method: GET
+        responseCode: 200
+      - url: "https://www.proyectonara.com/experto"
+        method: GET
+      - url: "https://www.proyectonara.com/experto/nueva"
+        method: GET
+      - url: "https://www.proyectonara.com/rutas"
+        method: GET
+      - url: "https://www.proyectonara.com/personas"
+        method: GET
+      - url: "https://www.proyectonara.com/territorios"
+        method: GET
+      - url: "https://www.proyectonara.com/equipos"
+        method: GET
+      - url: "https://www.proyectonara.com/perfil"
+        method: GET
+      - url: "https://www.proyectonara.com/activos"
+        method: GET
+      - url: "https://www.proyectonara.com/informes"
+        method: GET
+      - url: "https://www.proyectonara.com/api/auth/me"
+        method: GET
+        responseCode: 200
+      - url: "https://www.proyectonara.com/api/app-state"
+        method: GET
+      - url: "https://www.proyectonara.com/api/patients"
+        method: GET
+      - url: "https://www.proyectonara.com/api/patients/me"
+        method: GET
+      - url: "https://www.proyectonara.com/api/people"
+        method: GET
+      - url: "https://www.proyectonara.com/api/territories"
+        method: GET
+      - url: "https://www.proyectonara.com/api/experts"
+        method: GET
+      - url: "https://www.proyectonara.com/api/worklists"
+        method: GET
+      - url: "https://www.proyectonara.com/api/flags"
+        method: GET
+      - url: "https://www.proyectonara.com/api/assets"
+        method: GET
+      - url: "https://www.proyectonara.com/api/health"
+        method: GET
+      - url: "https://www.proyectonara.com/api/health/db"
+        method: GET
+      - url: "https://www.proyectonara.com/api/accounts"
+        method: GET
+  - type: spider
+    parameters: { context: nara-experto, maxDuration: 3, maxChildren: 20, processForm: false, postForm: false, threadCount: 2 }
+  - type: passiveScan-wait
+    parameters: { maxDuration: 5 }
+  - type: report
+    parameters: { template: traditional-html, reportDir: "D:/WORK/NARA/pruebas/evidencia/2026-10-10-8/5.12-6.9_zap", reportFile: "zap-baseline-experto.html", reportTitle: "ZAP baseline pasivo autenticado - NARA - rol experto" }
+  - type: report
+    parameters: { template: traditional-json, reportDir: "D:/WORK/NARA/pruebas/evidencia/2026-10-10-8/5.12-6.9_zap", reportFile: "zap-baseline-experto.json" }
