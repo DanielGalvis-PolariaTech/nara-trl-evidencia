@@ -1,0 +1,36 @@
+{
+  "archivo": "pruebas/evidencia/2026-10-10-4/soak2/series.csv",
+  "inicio": "2026-10-10T15:08:16.000Z",
+  "fin": "2026-10-10T16:13:11.000Z",
+  "horas_medidas": 1.1,
+  "horas_completas": 0,
+  "umbral_pct": 10,
+  "comparacion": null,
+  "resultado_lado_cliente": "Falla",
+  "motivos": [
+    "Menos de dos horas completas: no se puede comparar la degradación."
+  ],
+  "nota": "Esto mide solo el lado del cliente. La memoria, CPU y conexiones del servidor se revisan aparte con las métricas de la plataforma para el mismo período.",
+  "por_hora": [
+    {
+      "hora": 1,
+      "desde": "2026-10-10T15:08:16.000Z",
+      "minutos": 60,
+      "peticiones": 33297,
+      "p50_ms": 233.4,
+      "p95_ms": 286,
+      "tasa_error_pct": 0,
+      "completa": false
+    },
+    {
+      "hora": 2,
+      "desde": "2026-10-10T16:08:16.000Z",
+      "minutos": 5,
+      "peticiones": 2862,
+      "p50_ms": 236.6,
+      "p95_ms": 288,
+      "tasa_error_pct": 0,
+      "completa": false
+    }
+  ]
+}

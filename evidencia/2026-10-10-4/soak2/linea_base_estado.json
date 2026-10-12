@@ -1,0 +1,12 @@
+{
+  "id": "srv-db3rqlqd0e5s73basggg",
+  "nombre": "nara-api",
+  "suspendido": "not_suspended",
+  "plan": "1c-2g",
+  "region": "ohio",
+  "url": "https://nara-api-wyvw.onrender.com",
+  "rama": "main",
+  "repo": "https://github.com/luiscantilloo/nara-api",
+  "autoDeploy": "yes",
+  "actualizado": "2026-10-10T15:00:19.738115Z"
+}

@@ -1,0 +1,10 @@
+{
+  "pid": 25924,
+  "maquina": "DANIELGALVIS-PC",
+  "inicio": "2026-10-10T10:08:15.1561832-05:00",
+  "finEsperado": "2026-10-10T12:08:15.1561832-05:00",
+  "comando": "k6 run -e MODO=soak -e DURACION=110m -e VUS_SOAK=20 -e BASE_URL=https://www.proyectonara.com -e ROL=clinico (USER_EMAIL/USER_PASS desde soak_prod.local) --out csv=series.csv --summary-export=resumen.json k6_estres_soak.js",
+  "carpetaEvidencia": "D:\\WORK\\NARA\\pruebas\\evidencia\\2026-10-10-4\\soak2",
+  "entorno": "produccion (como staging)",
+  "version": "nara-api 00f1e6d (dep-db555k49v7es738ov8vg, incluye rc3), Render 1c-2g; nara-web main c2107c0"
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "dep-db555k49v7es738ov8vg",
+    "estado": "live",
+    "disparador": "new_commit",
+    "commit": "00f1e6d",
+    "mensaje": "Merge pull request #4 from luiscantilloo/prueba",
+    "creado": "2026-10-10T14:59:28.302994Z",
+    "terminado": "2026-10-10T15:00:19.734087Z"
+  },
+  {
+    "id": "dep-db53lug473hc739otrg0",
+    "estado": "deactivated",
+    "disparador": "service_updated",
+    "commit": "861be00",
+    "mensaje": "Incluye moodLogs en las rebanadas de app-state para sync clínico.",
+    "creado": "2026-10-10T13:17:46.604993Z",
+    "terminado": "2026-10-10T13:18:09.402048Z"
+  },
+  {
+    "id": "dep-db4u4v6k1f9s73drilsg",
+    "estado": "deactivated",
+    "disparador": "new_commit",
+    "commit": "861be00",
+    "mensaje": "Incluye moodLogs en las rebanadas de app-state para sync clínico.",
+    "creado": "2026-10-10T07:00:13.068889Z",
+    "terminado": "2026-10-10T07:01:23.487797Z"
+  },
+  {
+    "id": "dep-db4q9vbrjlhs73a58us0",
+    "estado": "deactivated",
+    "disparador": "new_commit",
+    "commit": "58dede1",
+    "mensaje": "Merge pull request #3 from luiscantilloo/feat/fix-path-requests-types",
+    "creado": "2026-10-10T02:37:49.601944Z",
+    "terminado": "2026-10-10T02:38:35.812202Z"
+  },
+  {
+    "id": "dep-db4q8pivcj2c73e1son0",
+    "estado": "build_failed",
+    "disparador": "new_commit",
+    "commit": "3a0b1cb",
+    "mensaje": "Merge pull request #2 from luiscantilloo/feat/path-requests-merge",
+    "creado": "2026-10-10T02:35:18.275673Z",
+    "terminado": "2026-10-10T02:35:35.38839Z"
+  },
+  {
+    "id": "dep-db4ppnrbc2fs7384cn4g",
+    "estado": "deactivated",
+    "disparador": "new_commit",
+    "commit": "6220a3d",
+    "mensaje": "Merge pull request #1 from luiscantilloo/feat/teo-conversations",
+    "creado": "2026-10-10T02:03:11.588224Z",
+    "terminado": "2026-10-10T02:04:16.916666Z"
+  },
+  {
+    "id": "dep-db4m94142hec73dogbg0",
+    "estado": "deactivated",
+    "disparador": "new_commit",
+    "commit": "10e0c54",
+    "mensaje": "Maqueta",
+    "creado": "2026-10-09T22:02:57.011753Z",
+    "terminado": "2026-10-09T22:03:56.651869Z"
+  },
+  {
+    "id": "dep-db4h4lrbc2fs73bpbdrg",
+    "estado": "deactivated",
+    "disparador": "service_updated",
+    "commit": "45ea4f6",
+    "mensaje": "TEO",
+    "creado": "2026-10-09T16:12:07.983013Z",
+    "terminado": "2026-10-09T16:13:13.565374Z"
+  },
+  {
+    "id": "dep-db42f06q1p3s73dbtveg",
+    "estado": "deactivated",
+    "disparador": "new_commit",
+    "commit": "45ea4f6",
+    "mensaje": "TEO",
+    "creado": "2026-10-08T23:30:09.017784Z",
+    "terminado": "2026-10-08T23:31:52.986898Z"
+  },
+  {
+    "id": "dep-db42d2hsrm7s73aloe10",
+    "estado": "deactivated",
+    "disparador": "manual",
+    "commit": "6e27674",
+    "mensaje": "nada",
+    "creado": "2026-10-08T23:26:02.696284Z",
+    "terminado": "2026-10-08T23:27:26.629246Z"
+  }
+]

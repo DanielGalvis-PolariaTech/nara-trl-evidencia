@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha del soak — 2026-10-10 · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha del soak — 2026-10-10</h1>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Entorno</td>
+<td>Producción tratada como staging (decisión de [dato real omitido]): <code>https://www.proyectonara.com</code> → Vercel → <code>nara-api</code> en Render → Atlas <code>nara</code></td>
+</tr>
+<tr>
+<td>Versión</td>
+<td><code>nara-api</code> <code>861be00</code> (<code>dep-db4u4v6k1f9s73drilsg</code>); instancia <code>0.5c-512mb</code> según la API de Render, Ohio</td>
+</tr>
+<tr>
+<td>Autorización</td>
+<td><code>pruebas/autorizaciones.md</code>, fila Soak</td>
+</tr>
+<tr>
+<td>Perfil</td>
+<td>20 usuarios simultáneos, rol clínico (<code>TRL-QA-20261010-clin</code>), <code>GET /api/auth/me</code>, <code>/api/patients</code> y <code>/api/people</code> en bucle; 5 min de subida + 4 h + 5 min de bajada</td>
+</tr>
+<tr>
+<td>Periodo</td>
+<td>03:09 a 07:20 (hora de Bogotá); 08:09 a 12:20 UTC</td>
+</tr>
+<tr>
+<td>Generador</td>
+<td>Este portátil (k6 v2.2.0)</td>
+</tr>
+<tr>
+<td>Intento 1</td>
+<td>Descartado: el script no conservaba las cookies entre iteraciones y todo daba 401 desde la 2.ª vuelta. Se corrigió <code>noCookiesReset</code> en <code>k6_estres_soak.js</code> (evidencia en <code>intento1_401_cookies/</code>)</td>
+</tr>
+</tbody></table>
+<h2>Resultado del lado del cliente (k6)</h2>
+<table>
+<thead>
+<tr>
+<th>Medida</th>
+<th>Valor</th>
+<th>Umbral</th>
+<th>Estado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Peticiones</td>
+<td>35.858 (2,4/s)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Tasa de error</td>
+<td>0,003 % (1 de 35.858, <code>/api/patients</code>, estado 0)</td>
+<td>&lt; 1 %</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>p95 de la duración</td>
+<td>12,24 s</td>
+<td>&lt; 2 s</td>
+<td><strong>Falla</strong></td>
+</tr>
+<tr>
+<td>Mediana</td>
+<td>8,66 s</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Degradación p95 (hora 2 contra hora 4)</td>
+<td>+0,8 %</td>
+<td>≤ 10 %</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>Datos recibidos</td>
+<td>10 GB (≈ 830 KB por iteración)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<p>Tabla hora por hora: <code>soak_por_hora.md</code>.</p>
+<h2>Lado del servidor (Render, <code>servidor_cpu.json</code> y <code>servidor_memoria.json</code>)</h2>
+<table>
+<thead>
+<tr>
+<th>Hora UTC</th>
+<th>CPU media (máx)</th>
+<th>Memoria media (máx)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>07 (línea base, sin carga)</td>
+<td>0,008 (0,010)</td>
+<td>403 MB (405 MB)</td>
+</tr>
+<tr>
+<td>08 (subida)</td>
+<td>0,096 (0,335)</td>
+<td>482 MB (513 MB)</td>
+</tr>
+<tr>
+<td>09</td>
+<td>0,107 (0,134)</td>
+<td>508 MB (517 MB)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0,107 (0,133)</td>
+<td>511 MB (520 MB)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>0,104 (0,135)</td>
+<td>514 MB (522 MB)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>0,093 (0,134)</td>
+<td>516 MB (523 MB)</td>
+</tr>
+</tbody></table>
+<p>No hubo reinicios ni despliegues durante el periodo (<code>render-nara.js eventos</code>).</p>
+<h2>Lectura</h2>
+<ul>
+<li><strong>Estable, pero saturado desde el inicio.</strong> No hay degradación en el tiempo ni errores. Sin embargo, la latencia ya es de 8 a 12 s en la primera hora: la instancia queda topada en unos 0,1 de CPU todo el periodo.</li>
+<li><strong>Memoria al límite.</strong> Pasó de 403 MB a 508–523 MB, alrededor del 97 % de 512 MiB, y subió unos 2–3 MB por hora entre la hora 2 y la 4. En 4 h no alcanza a demostrar una fuga, pero el margen para picos es casi nulo.</li>
+<li><strong>Respuestas pesadas.</strong> <code>/api/patients</code> y <code>/api/people</code> devuelven la lista completa (≈ 830 KB por iteración, sin paginar). Es la causa más probable de la CPU y la memoria.</li>
+<li><strong>Limitaciones.</strong> Se midió un solo rol, en el plan vigente, con el generador en el mismo portátil. Durante los últimos minutos el portátil compiló el laboratorio, lo que pudo sumar algo de latencia del lado del cliente.</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-12 · Programa NARA</footer>
+</body></html>

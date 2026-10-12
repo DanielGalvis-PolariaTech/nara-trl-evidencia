@@ -1,0 +1,288 @@
+[
+  {
+    "labels": [
+      {
+        "field": "instance",
+        "value": "srv-db3rqlqd0e5s73basggg-wnkvh"
+      },
+      {
+        "field": "service",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      },
+      {
+        "field": "resource",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      }
+    ],
+    "unit": "bytes",
+    "values": [
+      {
+        "timestamp": "2026-10-10T15:01:00Z",
+        "value": 381468670
+      },
+      {
+        "timestamp": "2026-10-10T15:02:00Z",
+        "value": 426868740
+      },
+      {
+        "timestamp": "2026-10-10T15:03:00Z",
+        "value": 423981060
+      },
+      {
+        "timestamp": "2026-10-10T15:04:00Z",
+        "value": 461254660
+      },
+      {
+        "timestamp": "2026-10-10T15:05:00Z",
+        "value": 546762750
+      },
+      {
+        "timestamp": "2026-10-10T15:06:00Z",
+        "value": 554881000
+      },
+      {
+        "timestamp": "2026-10-10T15:07:00Z",
+        "value": 559456260
+      },
+      {
+        "timestamp": "2026-10-10T15:08:00Z",
+        "value": 572493800
+      }
+    ]
+  },
+  {
+    "labels": [
+      {
+        "field": "service",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      },
+      {
+        "field": "resource",
+        "value": "srv-db3rqlqd0e5s73basggg"
+      },
+      {
+        "field": "instance",
+        "value": "srv-db3rqlqd0e5s73basggg-x4wl8"
+      }
+    ],
+    "unit": "bytes",
+    "values": [
+      {
+        "timestamp": "2026-10-10T14:08:00Z",
+        "value": 662593540
+      },
+      {
+        "timestamp": "2026-10-10T14:09:00Z",
+        "value": 544055300
+      },
+      {
+        "timestamp": "2026-10-10T14:10:00Z",
+        "value": 447074300
+      },
+      {
+        "timestamp": "2026-10-10T14:11:00Z",
+        "value": 447365120
+      },
+      {
+        "timestamp": "2026-10-10T14:12:00Z",
+        "value": 447397900
+      },
+      {
+        "timestamp": "2026-10-10T14:13:00Z",
+        "value": 447516670
+      },
+      {
+        "timestamp": "2026-10-10T14:14:00Z",
+        "value": 449036300
+      },
+      {
+        "timestamp": "2026-10-10T14:15:00Z",
+        "value": 448172030
+      },
+      {
+        "timestamp": "2026-10-10T14:16:00Z",
+        "value": 450633730
+      },
+      {
+        "timestamp": "2026-10-10T14:17:00Z",
+        "value": 452268030
+      },
+      {
+        "timestamp": "2026-10-10T14:18:00Z",
+        "value": 452268030
+      },
+      {
+        "timestamp": "2026-10-10T14:19:00Z",
+        "value": 453287940
+      },
+      {
+        "timestamp": "2026-10-10T14:20:00Z",
+        "value": 453468160
+      },
+      {
+        "timestamp": "2026-10-10T14:21:00Z",
+        "value": 453472260
+      },
+      {
+        "timestamp": "2026-10-10T14:22:00Z",
+        "value": 454508540
+      },
+      {
+        "timestamp": "2026-10-10T14:23:00Z",
+        "value": 454340600
+      },
+      {
+        "timestamp": "2026-10-10T14:24:00Z",
+        "value": 453279740
+      },
+      {
+        "timestamp": "2026-10-10T14:25:00Z",
+        "value": 453521400
+      },
+      {
+        "timestamp": "2026-10-10T14:26:00Z",
+        "value": 454287360
+      },
+      {
+        "timestamp": "2026-10-10T14:27:00Z",
+        "value": 455094270
+      },
+      {
+        "timestamp": "2026-10-10T14:28:00Z",
+        "value": 455073800
+      },
+      {
+        "timestamp": "2026-10-10T14:29:00Z",
+        "value": 454926340
+      },
+      {
+        "timestamp": "2026-10-10T14:30:00Z",
+        "value": 455938050
+      },
+      {
+        "timestamp": "2026-10-10T14:31:00Z",
+        "value": 456826880
+      },
+      {
+        "timestamp": "2026-10-10T14:32:00Z",
+        "value": 456421380
+      },
+      {
+        "timestamp": "2026-10-10T14:33:00Z",
+        "value": 456941570
+      },
+      {
+        "timestamp": "2026-10-10T14:34:00Z",
+        "value": 457764860
+      },
+      {
+        "timestamp": "2026-10-10T14:35:00Z",
+        "value": 457515000
+      },
+      {
+        "timestamp": "2026-10-10T14:36:00Z",
+        "value": 457875460
+      },
+      {
+        "timestamp": "2026-10-10T14:37:00Z",
+        "value": 458244100
+      },
+      {
+        "timestamp": "2026-10-10T14:38:00Z",
+        "value": 459640830
+      },
+      {
+        "timestamp": "2026-10-10T14:39:00Z",
+        "value": 459321340
+      },
+      {
+        "timestamp": "2026-10-10T14:40:00Z",
+        "value": 459677700
+      },
+      {
+        "timestamp": "2026-10-10T14:41:00Z",
+        "value": 459464700
+      },
+      {
+        "timestamp": "2026-10-10T14:42:00Z",
+        "value": 459902980
+      },
+      {
+        "timestamp": "2026-10-10T14:43:00Z",
+        "value": 460107780
+      },
+      {
+        "timestamp": "2026-10-10T14:44:00Z",
+        "value": 460578800
+      },
+      {
+        "timestamp": "2026-10-10T14:45:00Z",
+        "value": 460914700
+      },
+      {
+        "timestamp": "2026-10-10T14:46:00Z",
+        "value": 460808200
+      },
+      {
+        "timestamp": "2026-10-10T14:47:00Z",
+        "value": 461336580
+      },
+      {
+        "timestamp": "2026-10-10T14:48:00Z",
+        "value": 460812300
+      },
+      {
+        "timestamp": "2026-10-10T14:49:00Z",
+        "value": 461602800
+      },
+      {
+        "timestamp": "2026-10-10T14:50:00Z",
+        "value": 461860860
+      },
+      {
+        "timestamp": "2026-10-10T14:51:00Z",
+        "value": 461623300
+      },
+      {
+        "timestamp": "2026-10-10T14:52:00Z",
+        "value": 461103100
+      },
+      {
+        "timestamp": "2026-10-10T14:53:00Z",
+        "value": 461373440
+      },
+      {
+        "timestamp": "2026-10-10T14:54:00Z",
+        "value": 461115400
+      },
+      {
+        "timestamp": "2026-10-10T14:55:00Z",
+        "value": 460853250
+      },
+      {
+        "timestamp": "2026-10-10T14:56:00Z",
+        "value": 461131780
+      },
+      {
+        "timestamp": "2026-10-10T14:57:00Z",
+        "value": 461393920
+      },
+      {
+        "timestamp": "2026-10-10T14:58:00Z",
+        "value": 461664260
+      },
+      {
+        "timestamp": "2026-10-10T14:59:00Z",
+        "value": 460623870
+      },
+      {
+        "timestamp": "2026-10-10T15:00:00Z",
+        "value": 461398000
+      },
+      {
+        "timestamp": "2026-10-10T15:01:00Z",
+        "value": 461598720
+      }
+    ]
+  }
+]

@@ -1,0 +1,70 @@
+{
+  "archivo": "pruebas/evidencia/2026-10-10-4/soak/series.csv",
+  "inicio": "2026-10-10T08:09:52.000Z",
+  "fin": "2026-10-10T12:19:54.000Z",
+  "horas_medidas": 4.2,
+  "horas_completas": 3,
+  "umbral_pct": 10,
+  "comparacion": {
+    "primera_hora": 2,
+    "ultima_hora": 4,
+    "p95_variacion_pct": 0.8,
+    "tasa_error_primera_pct": 0,
+    "tasa_error_ultima_pct": 0
+  },
+  "resultado_lado_cliente": "Pasa",
+  "motivos": [],
+  "nota": "Esto mide solo el lado del cliente. La memoria, CPU y conexiones del servidor se revisan aparte con las métricas de la plataforma para el mismo período.",
+  "por_hora": [
+    {
+      "hora": 1,
+      "desde": "2026-10-10T08:09:52.000Z",
+      "minutos": 60,
+      "peticiones": 9148,
+      "p50_ms": 8080.4,
+      "p95_ms": 11994.5,
+      "tasa_error_pct": 0,
+      "completa": false
+    },
+    {
+      "hora": 2,
+      "desde": "2026-10-10T09:09:53.000Z",
+      "minutos": 60,
+      "peticiones": 8564,
+      "p50_ms": 8671.8,
+      "p95_ms": 12280.3,
+      "tasa_error_pct": 0,
+      "completa": true
+    },
+    {
+      "hora": 3,
+      "desde": "2026-10-10T10:09:52.000Z",
+      "minutos": 60,
+      "peticiones": 8514,
+      "p50_ms": 8682.1,
+      "p95_ms": 12386.5,
+      "tasa_error_pct": 0,
+      "completa": true
+    },
+    {
+      "hora": 4,
+      "desde": "2026-10-10T11:09:52.000Z",
+      "minutos": 60,
+      "peticiones": 8474,
+      "p50_ms": 8696.8,
+      "p95_ms": 12377.8,
+      "tasa_error_pct": 0,
+      "completa": true
+    },
+    {
+      "hora": 5,
+      "desde": "2026-10-10T12:09:56.000Z",
+      "minutos": 10,
+      "peticiones": 1158,
+      "p50_ms": 8684,
+      "p95_ms": 11995.2,
+      "tasa_error_pct": 0,
+      "completa": false
+    }
+  ]
+}

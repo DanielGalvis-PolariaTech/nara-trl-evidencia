@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ficha del soak 2 — 1 hora, Render 1 CPU / 2 GB — 2026-10-10 · NARA TRL</title><link rel="stylesheet" href="../../../estilo.css"></head>
+<body><header class="barra"><div class="ancho"><a class="marca" href="../../../index.html">NARA · Evidencia TRL</a><nav class="migas"><a href="../../../index.html">Inicio</a> <span class="sep">/</span> <span>Evidencia</span></nav></div></header>
+<main class="ancho"><article class="doc"><h1>Ficha del soak 2 — 1 hora, Render 1 CPU / 2 GB — 2026-10-10</h1>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Objetivo</td>
+<td>Medir la mejora de rendimiento con el nuevo cómputo de Render, con el mismo perfil del soak 1</td>
+</tr>
+<tr>
+<td>Entorno</td>
+<td>Producción, que hace de staging: <code>https://www.proyectonara.com</code> → Vercel → <code>nara-api</code> en Render → Atlas <code>nara</code></td>
+</tr>
+<tr>
+<td>Versión</td>
+<td><code>nara-api</code> <code>00f1e6d</code> (<code>dep-db555k49v7es738ov8vg</code>, incluye rc3) · <code>nara-web</code> <code>main</code> <code>c2107c0</code> · Render plan <code>1c-2g</code> (1 CPU / 2 GB)</td>
+</tr>
+<tr>
+<td>Autorización</td>
+<td><code>pruebas/autorizaciones.md</code>, fila «Soak 2»</td>
+</tr>
+<tr>
+<td>Perfil</td>
+<td>Igual al soak 1: 20 usuarios simultáneos, rol clínico (<code>TRL-QA-20261010-clin</code>), <code>GET /api/auth/me</code>, <code>/api/patients</code> y <code>/api/people</code> en bucle</td>
+</tr>
+<tr>
+<td>Duración</td>
+<td><strong>1 h de meseta con 20 usuarios</strong> (más 5 min de subida). Programado a 1 h 50 min y detenido a mano al cumplir 1 h (11:13:11, hora de Bogotá), para comparar con el soak 1</td>
+</tr>
+<tr>
+<td>Periodo</td>
+<td>10:08:16 a 11:13:11 (hora de Bogotá); 15:08:16 a 16:13:11 UTC</td>
+</tr>
+<tr>
+<td>Generador</td>
+<td>Este portátil (k6 v2.2.0)</td>
+</tr>
+<tr>
+<td>Cómo se calculó el resumen</td>
+<td>Al detener el proceso, k6 no escribe <code>resumen.json</code>; todas las cifras salen de <code>series.csv</code>, que guarda cada medición en el momento</td>
+</tr>
+</tbody></table>
+<h2>Resultado del lado del cliente (k6, meseta de 1 h)</h2>
+<table>
+<thead>
+<tr>
+<th>Medida</th>
+<th>Soak 2 (1 CPU / 2 GB, rc3)</th>
+<th>Soak 1 (0,5 CPU / 512 MB)</th>
+<th>Umbral</th>
+<th>Estado del soak 2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Peticiones</td>
+<td>36.159 en 1 h 5 min (≈ 9,3/s)</td>
+<td>35.858 en 4 h 10 min (≈ 2,4/s)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Tasa de error</td>
+<td>0 % (0 de 36.159)</td>
+<td>0,003 %</td>
+<td>&lt; 1 %</td>
+<td>Pasa</td>
+</tr>
+<tr>
+<td>p50</td>
+<td>234 ms</td>
+<td>8.660 ms</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>p95</td>
+<td><strong>286 ms</strong></td>
+<td>12.240 ms</td>
+<td>&lt; 2 s</td>
+<td><strong>Pasa</strong></td>
+</tr>
+<tr>
+<td>p99</td>
+<td>402 ms</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Máximo</td>
+<td>1.336 ms</td>
+<td>18.200 ms</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Degradación del p95 (primer cuarto de hora contra el último)</td>
+<td>+3,1 % (282 → 291 ms)</td>
+<td>+0,8 % (hora 2 contra hora 4)</td>
+<td>≤ 10 %</td>
+<td>Pasa</td>
+</tr>
+</tbody></table>
+<p>Por cuarto de hora (meseta): p95 de 282, 291, 281 y 291 ms; p50 de 231, 235, 232 y 236 ms.</p>
+<h2>Lado del servidor (Render, <code>servidor_cpu.json</code> y <code>servidor_memoria.json</code>)</h2>
+<table>
+<thead>
+<tr>
+<th>Tramo (UTC)</th>
+<th>CPU media (máx)</th>
+<th>Memoria media (máx)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>15:00 (línea base y subida)</td>
+<td>0,035 (0,046)</td>
+<td>478 MB (553 MB)</td>
+</tr>
+<tr>
+<td>15:10</td>
+<td>0,056 (0,071)</td>
+<td>538 MB (570 MB)</td>
+</tr>
+<tr>
+<td>15:20</td>
+<td>0,054 (0,065)</td>
+<td>549 MB (569 MB)</td>
+</tr>
+<tr>
+<td>15:30</td>
+<td>0,040 (0,044)</td>
+<td>466 MB (496 MB)</td>
+</tr>
+<tr>
+<td>15:40</td>
+<td>0,037 (0,050)</td>
+<td>510 MB (521 MB)</td>
+</tr>
+<tr>
+<td>15:50</td>
+<td>0,037 (0,046)</td>
+<td>526 MB (527 MB)</td>
+</tr>
+<tr>
+<td>16:00</td>
+<td>0,037 (0,040)</td>
+<td>527 MB (528 MB)</td>
+</tr>
+<tr>
+<td>16:10</td>
+<td>0,033 (0,040)</td>
+<td>526 MB (527 MB)</td>
+</tr>
+</tbody></table>
+<p>La API de Render reporta 2 series de instancia en el periodo; la tabla usa la primera.</p>
+<h2>Lectura</h2>
+<ul>
+<li><strong>Mejora de rendimiento:</strong> con el mismo perfil, el p95 bajó de 12,2 s a 286 ms (≈ 43 veces menos) y el throughput se multiplicó por ≈ 3,9, porque cada usuario ya no espera respuestas de 8 a 12 s. Pasa el umbral de p95 &lt; 2 s, que el soak 1 no cumplía.</li>
+<li><strong>Holgura del servidor:</strong> la CPU usa entre el 3 % y el 6 % de 1 CPU (en el soak 1 estaba topada en ≈ 0,1). La memoria se estabiliza en ≈ 527 MB de 2 GB (26 %), sin tendencia creciente en la última media hora.</li>
+<li><strong>Qué cambió entre los dos soaks:</strong> el plan de Render (0,5 CPU / 512 MB → 1 CPU / 2 GB) y el código (861be00 → 00f1e6d, con rc3). Las rutas medidas (<code>/api/patients</code> y <code>/api/people</code>) no cambiaron en rc3, así que la mejora se atribuye al cómputo.</li>
+<li><strong>Limitaciones:</strong> dura 1 h (la decisión vigente pide más de 3 h para el criterio 6.7, así que este soak es comparativo y no reemplaza esa regla); un solo rol; el generador es el mismo portátil; con menos de 2 horas completas no se puede hacer la comparación hora contra hora de <code>analizar-soak.js</code>, por eso la degradación se mide por cuartos de hora.</li>
+</ul>
+</article></main>
+<footer class="ancho pie">Generado el 2026-10-12 · Programa NARA</footer>
+</body></html>

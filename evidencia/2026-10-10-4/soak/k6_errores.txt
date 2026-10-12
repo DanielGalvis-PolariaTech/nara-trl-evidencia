@@ -1,0 +1,2 @@
+time="2026-10-10T04:23:32-05:00" level=warning msg="Request Failed" error="Get \"https://www.proyectonara.com/api/patients\": unexpected EOF"
+time="2026-10-10T07:20:00-05:00" level=error msg="thresholds on metrics 'http_req_duration' have been crossed"
